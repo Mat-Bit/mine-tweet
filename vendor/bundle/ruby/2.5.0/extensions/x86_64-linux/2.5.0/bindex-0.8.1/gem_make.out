@@ -1,0 +1,15 @@
+current directory: /home/matbit/Documents/Projetos/MineTweet/mine-tweet/mine_tweets/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+/usr/bin/ruby2.5 -r ./siteconf20191226-10304-1d9ln4k.rb extconf.rb
+creating Makefile
+
+current directory: /home/matbit/Documents/Projetos/MineTweet/mine-tweet/mine_tweets/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/matbit/Documents/Projetos/MineTweet/mine-tweet/mine_tweets/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/matbit/Documents/Projetos/MineTweet/mine-tweet/mine_tweets/vendor/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20191226-10304-1ry8bpj/skiptrace/internal
