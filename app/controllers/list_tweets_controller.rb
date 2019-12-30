@@ -1,35 +1,39 @@
-# require twurl
+require 'rest-client'
 require 'json'
 
 # class ListTweetsController < ApplicationController
 #   # include twurl
 
-#   base_api_url = "/1.1/search/tweets.json"
 
 #   hashtag = ""
 #   count = 100
 
-  
+
 #   def index
 
 #   end
 # end
 
-arq_json = File.read("../../db/freehk.json")
+base_api_url = "https://api.twitter.com/1.1/search/tweets.json"
+auth = "Bearer AAAAAAAAAAAAAAAAAAAAAOsABgEAAAAAtUA16lT7ybdFpBpamME9Dp7L4X4%3DioSiudZDIQjkRZuRor1O68dI8y7RvZTrhBlHSciNea9lOODsWH"
 
-parsed_freehk = JSON.parse(arq_json)
+q = "#freehongkong"
 
-stat_one = parsed_freehk["statuses"][0]
+url = base_api_url + "?q=%23" + q[1..q.length]
 
-text = stat_one["text"]
-date_post = stat_one["created_at"]
-user = stat_one["user"]["screen_name"]
+# url2 = base_api_url + "?q=" + q.force_encoding(Encoding::UTF_8)
+# print url2
 
+puts url
+puts
 
-print text
-print "\n"
-print date_post
-print "\n"
-print user
-print "\n"
+resp = RestClient.get(url, {accept: :json, authorization: auth})
 
+parsed_resp = JSON.parse(resp)
+
+parsed_resp["statuses"].each do |tweet|
+    puts "Texto:", tweet["text"]
+    puts "Data post:", tweet["created_at"]
+    puts "User:", tweet["user"]["screen_name"]
+    puts
+end
