@@ -1,18 +1,13 @@
 require 'rest-client'
 require 'json'
 
-# class ListTweetsController < ApplicationController
-#   # include twurl
+class ListTweetsController < ApplicationController
 
 
-#   hashtag = ""
-#   count = 100
+  def index
 
-
-#   def index
-
-#   end
-# end
+  end
+end
 
 base_api_url = "https://api.twitter.com/1.1/search/tweets.json"
 auth = "Bearer AAAAAAAAAAAAAAAAAAAAAOsABgEAAAAAtUA16lT7ybdFpBpamME9Dp7L4X4%3DioSiudZDIQjkRZuRor1O68dI8y7RvZTrhBlHSciNea9lOODsWH"
