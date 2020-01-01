@@ -2571,3 +2571,721 @@ Processing by TweetsController#new as HTML
 Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-01-01 12:03:56 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (9.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/index.html.erb:13
+  Rendered tweets/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 1153ms (Views: 1119.7ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/tweets/new" for ::1 at 2020-01-01 12:04:14 -0300
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (91.1ms)
+Completed 200 OK in 125ms (Views: 116.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/tweets" for ::1 at 2020-01-01 12:04:30 -0300
+Processing by TweetsController#create as HTML
+  Parameters: {"hash"=>"#nasa", "body"=>"", "author"=>""}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.4.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.4.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.4.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.8) lib/rack/session/abstract/id.rb:259:in `context'
+rack (2.0.8) lib/rack/session/abstract/id.rb:253:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tweets/new" for ::1 at 2020-01-01 12:27:49 -0300
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 44ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/new" for ::1 at 2020-01-01 12:29:46 -0300
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets" for ::1 at 2020-01-01 12:30:01 -0300
+Processing by TweetsController#create as HTML
+  Parameters: {"hash"=>"#nasa"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.4.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.4.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.4.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.8) lib/rack/session/abstract/id.rb:259:in `context'
+rack (2.0.8) lib/rack/session/abstract/id.rb:253:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tweets/new" for ::1 at 2020-01-01 14:26:04 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 276ms (Views: 266.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tweets" for ::1 at 2020-01-01 14:26:09 -0300
+Processing by TweetsController#create as HTML
+  Parameters: {"hash"=>"#nasa"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:31
+  [1m[36mTweet Create (80.5ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 17:26:09.768306"], ["updated_at", "2020-01-01 17:26:09.768306"]]
+  ↳ app/controllers/tweets_controller.rb:31
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tweets_controller.rb:31
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 80.9ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `tweet_id`):
+  
+app/controllers/tweets_controller.rb:31:in `block in create'
+app/controllers/tweets_controller.rb:30:in `create'
+Started GET "/tweets" for ::1 at 2020-01-01 14:29:56 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/index.html.erb:13
+  Rendered tweets/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 276ms (Views: 268.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweets/new" for ::1 at 2020-01-01 14:30:05 -0300
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 45ms (Views: 35.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/tweets" for ::1 at 2020-01-01 14:30:19 -0300
+Processing by TweetsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hjd9AsBQcsydfZ7xH6vkVLnTBfEeXqjPp/XvLth5iLHEC7wzhFZVM7j8yng5Ofa8PPzLdHlsZjqF0vtB5Y8aCA==", "q"=>"#nasa", "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:31
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 17:30:19.444907"], ["updated_at", "2020-01-01 17:30:19.444907"]]
+  ↳ app/controllers/tweets_controller.rb:31
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tweets_controller.rb:31
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `tweet_id`):
+  
+app/controllers/tweets_controller.rb:31:in `block in create'
+app/controllers/tweets_controller.rb:30:in `create'
+Started POST "/tweets" for ::1 at 2020-01-01 14:30:26 -0300
+Processing by TweetsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hjd9AsBQcsydfZ7xH6vkVLnTBfEeXqjPp/XvLth5iLHEC7wzhFZVM7j8yng5Ofa8PPzLdHlsZjqF0vtB5Y8aCA==", "q"=>"#nasa", "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:31
+  [1m[36mTweet Create (1.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 17:30:26.014314"], ["updated_at", "2020-01-01 17:30:26.014314"]]
+  ↳ app/controllers/tweets_controller.rb:31
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tweets_controller.rb:31
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.7ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `tweet_id`):
+  
+app/controllers/tweets_controller.rb:31:in `block in create'
+app/controllers/tweets_controller.rb:30:in `create'
+Started GET "/tweets/new" for ::1 at 2020-01-01 14:46:11 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 267ms (Views: 249.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tweets/new" for ::1 at 2020-01-01 14:46:36 -0300
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-01 14:46:45 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2fHPNVeU8Ey/nKzZBbKZNul6XGUXZ1R6LV2f/ma6HzqbzQ4EE5LXs5od+FAjIIvebFWS4HBVmo8PeouRW0yNgw==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+No template found for TweetsController#search, rendering head :no_content
+Completed 204 No Content in 1209ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets/" for ::1 at 2020-01-01 15:20:18 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/index.html.erb:13
+  Rendered tweets/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 261ms (Views: 249.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tweets/new" for ::1 at 2020-01-01 15:20:56 -0300
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 41ms (Views: 33.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-01 15:21:01 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6cHQjI581t3h/gmtNrU+e9fFRp36NFH4318nB1jmQ4Gr/RG9ynrxIsR/XSQQJyyTUuqIGJ0Gnw39eDNoZRDROA==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+Completed 500 Internal Server Error in 377ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant TweetsController::User):
+  
+app/controllers/tweets_controller.rb:44:in `search'
+Started GET "/tweets/new" for ::1 at 2020-01-01 15:22:55 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 256ms (Views: 243.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-01 15:22:59 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zazxqwaBJPQmLUlIvChT3tHbvmxGHLf/c1QiWNJHzHKPkDCaQocDCwOsHcGaukE2VPRw6SEueQpRczY377Feyw==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+Completed 500 Internal Server Error in 374ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'hashtag' for Tweet.):
+  
+app/controllers/tweets_controller.rb:46:in `block in search'
+app/controllers/tweets_controller.rb:44:in `each'
+app/controllers/tweets_controller.rb:44:in `search'
+Started GET "/tweets/new" for ::1 at 2020-01-01 15:25:05 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 273ms (Views: 263.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-01 15:25:08 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tl9OMHWa61VWeBORWperpyqwoiVUrIlv4FLoSk+YgP/0Y48BMZzMqnP5Rxh8BblPr59soDOeR5rCdfwlcm4SRg==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+Completed 500 Internal Server Error in 304ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'hashtag' for Tweet.):
+  
+app/controllers/tweets_controller.rb:46:in `block in search'
+app/controllers/tweets_controller.rb:44:in `each'
+app/controllers/tweets_controller.rb:44:in `search'
+Started GET "/tweets/new" for ::1 at 2020-01-01 15:26:08 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 271ms (Views: 257.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-01 15:26:13 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJbh8rovDAiBT7JzLiFchfSKm8zs3kxkT8bWq0xZsKbGqiDD/ikr96TO5voIs05tcaVVSYvsgpFt4cLEca8iHw==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+Completed 500 Internal Server Error in 349ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'hashtag' for Tweet.):
+  
+app/controllers/tweets_controller.rb:46:in `block in search'
+app/controllers/tweets_controller.rb:44:in `each'
+app/controllers/tweets_controller.rb:44:in `search'
+Started GET "/tweets/new" for ::1 at 2020-01-01 15:26:47 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 259ms (Views: 243.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-01 15:26:51 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Rxai2RObpzKZ+Y4Je9QWoFuP6jCLH/njl6ZXVLntYGrIJu6IEhJY+/msrEDfUKyBEHxLaUesRKseY0ybxEnOA==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+Completed 500 Internal Server Error in 317ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'tweet_id' for Tweet.):
+  
+app/controllers/tweets_controller.rb:46:in `block in search'
+app/controllers/tweets_controller.rb:44:in `each'
+app/controllers/tweets_controller.rb:44:in `search'
+Started GET "/tweets/new" for ::1 at 2020-01-01 15:29:00 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 255ms (Views: 237.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-01 15:29:04 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hC5UkAe2vkNjK9nm4JL+WYJebupo/HB7L880vU+B9aDGEpWhQ7CZvEaqjW/GAOyxB3Ggbw/Ovo4N6CDScndnGQ==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+Completed 500 Internal Server Error in 326ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'tweet_id' for Tweet.):
+  
+app/controllers/tweets_controller.rb:46:in `block in search'
+app/controllers/tweets_controller.rb:44:in `each'
+app/controllers/tweets_controller.rb:44:in `search'
+Started GET "/tweets/new" for ::1 at 2020-01-01 15:37:45 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#new as HTML
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `attr_accessible' for Tweet(id: integer, created_at: datetime, updated_at: datetime):Class
+Did you mean?  attr_accessor):
+  
+app/models/tweet.rb:2:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<top (required)>'
+app/controllers/tweets_controller.rb:21:in `new'
+Started GET "/tweets/new" for ::1 at 2020-01-01 15:39:57 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 280ms (Views: 267.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-01 15:40:01 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OTlujTtHgv2oIN+DrNJ4xG1zufL3jDN2qk2kurCqQTx7Ba+8f0GlAo2hiwqKQGos6Fx3d5C+/YOIarDVjVzThQ==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 18:40:02.003274"], ["updated_at", "2020-01-01 18:40:02.003274"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+Completed 500 Internal Server Error in 326ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `tweet_id`):
+  
+app/controllers/tweets_controller.rb:51:in `block in search'
+app/controllers/tweets_controller.rb:44:in `each'
+app/controllers/tweets_controller.rb:44:in `search'
+Started GET "/tweets/new" for ::1 at 2020-01-01 15:57:47 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 321ms (Views: 299.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-01 15:57:51 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DRD8vL8BrsK6lnrDYVAWYGBDSZG+uVF+vRmG09lruMVPLD2N+weJPZ8XLkpHwgSI5WyHFNmLn4ufPpK85J0qfA==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 18:57:52.076306"], ["updated_at", "2020-01-01 18:57:52.076306"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+Completed 500 Internal Server Error in 395ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `i_tweet`):
+  
+app/controllers/tweets_controller.rb:51:in `block in search'
+app/controllers/tweets_controller.rb:44:in `each'
+app/controllers/tweets_controller.rb:44:in `search'
+Started GET "/tweets/new" for ::1 at 2020-01-01 16:02:30 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 259ms (Views: 248.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-01 16:02:46 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4sPek0/xDG/eC5u234iqPl469HZXCf/oAs4AwmhiQRGg/x+iC/crkPuKzz/5GrjW2xU68zA7MR0g6RStVZTTqA==", "hashtag"=>"#freehongkong", "commit"=>"Buscar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:02:47.075426"], ["updated_at", "2020-01-01 19:02:47.075426"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (85.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:60
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:60
+Redirected to http://localhost:3000/tweets/2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:02:47.169848"], ["updated_at", "2020-01-01 19:02:47.169848"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (93.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:60
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:60
+Redirected to 
+Completed 500 Internal Server Error in 532ms (ActiveRecord: 179.6ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/tweets_controller.rb:61:in `block (3 levels) in search'
+app/controllers/tweets_controller.rb:59:in `block in search'
+app/controllers/tweets_controller.rb:44:in `each'
+app/controllers/tweets_controller.rb:44:in `search'
+Started GET "/" for ::1 at 2020-01-01 16:05:12 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/index.html.erb:13
+  Rendered tweets/index.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 92ms (Views: 84.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-01-01 16:15:03 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:1
+  Rendered tweets/_feed.html.erb (7.0ms)
+  Rendered tweets/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 247ms (Views: 234.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/new" for ::1 at 2020-01-01 16:15:12 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/tweets/new" for ::1 at 2020-01-01 16:15:22 -0300
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-01 16:15:26 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8rnpoVHuBtDZc3O44EdDSaX12xbj/tXgPIi3od3esy2whSiQFeghL/zyJzHG1VGhINoVk4TMGxUer6PO4CghlA==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (1.2ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:15:28.035477"], ["updated_at", "2020-01-01 19:15:28.035477"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (82.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:15:28.123200"], ["updated_at", "2020-01-01 19:15:28.123200"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (73.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:15:28.200796"], ["updated_at", "2020-01-01 19:15:28.200796"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (118.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:15:28.322861"], ["updated_at", "2020-01-01 19:15:28.322861"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (95.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:15:28.422828"], ["updated_at", "2020-01-01 19:15:28.422828"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (83.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:15:28.510749"], ["updated_at", "2020-01-01 19:15:28.510749"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (62.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:15:28.577433"], ["updated_at", "2020-01-01 19:15:28.577433"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (150.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.2ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:15:28.731881"], ["updated_at", "2020-01-01 19:15:28.731881"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (174.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.2ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:15:28.909065"], ["updated_at", "2020-01-01 19:15:28.909065"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (163.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:15:29.075528"], ["updated_at", "2020-01-01 19:15:29.075528"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (73.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:15:29.152677"], ["updated_at", "2020-01-01 19:15:29.152677"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (74.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:15:29.230923"], ["updated_at", "2020-01-01 19:15:29.230923"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (95.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:15:29.330413"], ["updated_at", "2020-01-01 19:15:29.330413"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (95.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:15:29.430214"], ["updated_at", "2020-01-01 19:15:29.430214"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (93.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-01 19:15:29.529198"], ["updated_at", "2020-01-01 19:15:29.529198"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (73.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:62
+Redirected to http://localhost:3000/tweets/18
+Completed 200 OK in 2839ms (ActiveRecord: 1516.4ms)
+
+
+Started GET "/tweets/18" for ::1 at 2020-01-01 16:15:29 -0300
+Processing by TweetsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:116
+  Rendering tweets/show.html.erb within layouts/application
+  Rendered tweets/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 121ms (Views: 77.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-01-01 16:15:37 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:1
+  Rendered tweets/_feed.html.erb (1.7ms)
+  Rendered tweets/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 53ms (Views: 46.1ms | ActiveRecord: 0.2ms)
+
+

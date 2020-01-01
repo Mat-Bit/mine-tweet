@@ -1,5 +1,9 @@
+require 'rest-client'
+require 'json'
+
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   # GET /tweets
   # GET /tweets.json
@@ -19,6 +23,51 @@ class TweetsController < ApplicationController
 
   # GET /tweets/1/edit
   def edit
+  end
+
+  # POST /tweets_search
+  def search
+    q = params["hashtag"]
+
+    base_api_url = "https://api.twitter.com/1.1/search/tweets.json"
+    auth = "Bearer AAAAAAAAAAAAAAAAAAAAAOsABgEAAAAAtUA16lT7ybdFpBpamME9Dp7L4X4%3DioSiudZDIQjkRZuRor1O68dI8y7RvZTrhBlHSciNea9lOODsWH"
+
+    url = base_api_url + "?q=%23" + q[1..q.length]
+
+    puts url
+    puts
+
+    resp = RestClient.get(url, {accept: :json, authorization: auth})
+
+    parsed_resp = JSON.parse(resp)
+
+    parsed_resp["statuses"].each do |tw|
+
+      puts "Texto:", tw["text"]
+      puts "Data post:", tw["created_at"]
+      puts "User:", tw["user"]["screen_name"]
+      puts
+
+      @tweet = Tweet.create(
+        i_tweet: tw["id_str"],
+        tweet_desc: tw["text"],
+        date_post: tw["created_at"],
+        user_name: tw["user"]["name"],
+        user_screen_name: tw["user"]["screen_name"]
+      )
+
+    end
+
+    respond_to do |format|
+      if @tweet.save
+        format.html { redirect_to @tweet, notice: 'Tweet was successfully created.' }
+        format.json { render :show, status: :created, location: @tweet }
+      else
+        format.html { render :new }
+        format.json { render json: @tweet.errors, status: :unprocessable_entity }
+      end
+    end
+
   end
 
   # POST /tweets

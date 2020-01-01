@@ -13,12 +13,15 @@
 ActiveRecord::Schema.define(version: 2019_12_31_121306) do
 
   create_table "tweets", force: :cascade do |t|
-    t.text "hashtag", null: false
-    t.integer "tweet_id", null: false
+    t.string "hashtag"
+    t.string "i_tweet", null: false
     t.text "tweet_desc"
+    t.text "date_post", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "user_name"
+    t.text "user_name", null: false
+    t.string "user_screen_name"
+    t.index ["i_tweet"], name: "index_tweets", unique: true
   end
 
 end
