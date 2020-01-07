@@ -43,6 +43,10 @@ https://github.com/justalever/twittter
 
 https://www.youtube.com/watch?v=5gUysPm64a4
 
+https://github.com/twbs/bootstrap-rubygem
+
+http://zetcode.com/db/postgresqlruby/
+
 
 
 

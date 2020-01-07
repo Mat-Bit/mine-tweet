@@ -1,13 +1,13 @@
-<% @tweets.each do | tw | %>
-    <div class="box">
-        <article class="media">
-            <div class="media-content">
-                <div class="content">
-                    <strong><%= tw.user_name %></strong><br />
-                    <small><%= tw.user_screen_name %></small><br/>
-                    <p><%= tw.tweet_desc %></p>
-                </div>
-            </div>
-        </article>
-    </div>
-<% end %>
+<div class="tweetEntry-tweetHolder">
+  <h2>Mostrar Tweets</h2>
+
+  <div class="tweetEntry">
+    <% @tweets.each do | tw | %>
+      <div class="tweetEntry-content">
+        <strong class="tweetEntry-fullname"> <%= truncate(tw.user_name) %> </strong>
+        <span class="tweetEntry-username"> @ <b> <%= truncate(tw.user_screen_name) %> </b> </span> 
+        <div class="tweetEntry-text-container"> <%= truncate(tw.tweet_desc) %> </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -3289,3 +3289,568 @@ Processing by TweetsController#index as HTML
 Completed 200 OK in 53ms (Views: 46.1ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for ::1 at 2020-01-06 08:07:14 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:1
+  Rendered tweets/_feed.html.erb (5.8ms)
+  Rendered tweets/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 542ms (Views: 523.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tweets/new" for ::1 at 2020-01-06 08:07:59 -0300
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 47ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-06 08:11:50 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+ZBLRBW4rBROarluAjr/mujUejLNzuNtW8+C5UC8Rku7rIp1Ub6L62vr7eckqO1ybfu0t6r8LZh56JaKfUrU8g==", "hashtag"=>"#hongkong", "commit"=>"Buscar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (34.9ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-06 11:11:51.093226"], ["updated_at", "2020-01-06 11:11:51.093226"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (165.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-06 11:11:51.297067"], ["updated_at", "2020-01-06 11:11:51.297067"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (60.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-06 11:11:51.365532"], ["updated_at", "2020-01-06 11:11:51.365532"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (71.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-06 11:11:51.441657"], ["updated_at", "2020-01-06 11:11:51.441657"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (65.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-06 11:11:51.511883"], ["updated_at", "2020-01-06 11:11:51.511883"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (79.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-06 11:11:51.595999"], ["updated_at", "2020-01-06 11:11:51.595999"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (96.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-06 11:11:51.696635"], ["updated_at", "2020-01-06 11:11:51.696635"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (73.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-06 11:11:51.773432"], ["updated_at", "2020-01-06 11:11:51.773432"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (72.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-06 11:11:51.854565"], ["updated_at", "2020-01-06 11:11:51.854565"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (81.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-06 11:11:51.940110"], ["updated_at", "2020-01-06 11:11:51.940110"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (48.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-06 11:11:51.995560"], ["updated_at", "2020-01-06 11:11:51.995560"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (72.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-06 11:11:52.073330"], ["updated_at", "2020-01-06 11:11:52.073330"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (60.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-06 11:11:52.139805"], ["updated_at", "2020-01-06 11:11:52.139805"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (182.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-06 11:11:52.326530"], ["updated_at", "2020-01-06 11:11:52.326530"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (108.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-06 11:11:52.438755"], ["updated_at", "2020-01-06 11:11:52.438755"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (82.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+No template found for TweetsController#search, rendering head :no_content
+Completed 204 No Content in 2386ms (ActiveRecord: 1364.3ms)
+
+
+Started GET "/tweets/new" for ::1 at 2020-01-06 09:37:30 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 7083ms (Views: 7067.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2020-01-06 11:43:00 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:6
+  Rendered tweets/_feed.html.erb (67.4ms)
+  Rendered tweets/index.html.erb within layouts/application (68.7ms)
+Completed 200 OK in 154ms (Views: 149.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-01-06 13:35:06 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:6
+  Rendered tweets/_feed.html.erb (4.9ms)
+  Rendered tweets/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 109ms (Views: 105.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-01-06 13:35:17 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (3.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:6
+  Rendered tweets/_feed.html.erb (7.2ms)
+  Rendered tweets/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 108ms (Views: 101.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2020-01-06 13:37:48 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:6
+  Rendered tweets/_feed.html.erb (3.9ms)
+  Rendered tweets/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 113ms (Views: 107.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-01-06 13:38:07 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:6
+  Rendered tweets/_feed.html.erb (1.7ms)
+  Rendered tweets/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 1100ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( tweets.css )` to `config/initializers/assets.rb` and restart your server):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'tweets', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10: 
+    11:     <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__1231735779548639563_70173124222480'
+Started GET "/" for ::1 at 2020-01-06 13:39:27 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:6
+  Rendered tweets/_feed.html.erb (9.3ms)
+  Rendered tweets/index.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 4937ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( tweets.css )` to `config/initializers/assets.rb` and restart your server):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'tweets', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10: 
+    11:     <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3831548804580453177_69884495137520'
+Started GET "/" for ::1 at 2020-01-06 13:39:55 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:6
+  Rendered tweets/_feed.html.erb (3.4ms)
+  Rendered tweets/index.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (The asset "tweets.scss.css" is not present in the asset pipeline.):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'tweets.scss', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10: 
+    11:     <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3831548804580453177_69884520240860'
+Started GET "/" for ::1 at 2020-01-06 13:41:49 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:6
+  Rendered tweets/_feed.html.erb (2.0ms)
+  Rendered tweets/index.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 1257ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (Asset was not declared to be precompiled in production.
+Add `Rails.application.config.assets.precompile += %w( tweets.css )` to `config/initializers/assets.rb` and restart your server):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'tweets', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10: 
+    11:     <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3831548804580453177_69884507875260'
+Started GET "/" for ::1 at 2020-01-06 13:43:15 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:6
+  Rendered tweets/_feed.html.erb (10.6ms)
+  Rendered tweets/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 508ms (Views: 493.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-01-06 13:54:02 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:6
+  Rendered tweets/_feed.html.erb (9.5ms)
+  Rendered tweets/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 346ms (Views: 332.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2020-01-06 13:59:03 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:5
+  Rendered tweets/_feed.html.erb (12.8ms)
+  Rendered tweets/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 375ms (Views: 365.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2020-01-06 14:00:38 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:5
+  Rendered tweets/_feed.html.erb (4.0ms)
+  Rendered tweets/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-01-06 14:00:59 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:5
+  Rendered tweets/_feed.html.erb (1.9ms)
+  Rendered tweets/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 58ms (Views: 56.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-01-06 14:08:01 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:5
+  Rendered tweets/_feed.html.erb (9.0ms)
+  Rendered tweets/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 4791ms (Views: 4780.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-01-06 15:04:33 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:5
+  Rendered tweets/_feed.html.erb (8.2ms)
+  Rendered tweets/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 402ms (Views: 390.5ms | ActiveRecord: 2.0ms)
+
+
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" ORDER BY "tweets"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" ORDER BY "tweets"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 2]]
+  [1m[35m (88.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 3]]
+  [1m[35m (86.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 4]]
+  [1m[35m (74.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 5]]
+  [1m[35m (63.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 6]]
+  [1m[35m (63.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 7]]
+  [1m[35m (84.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 8]]
+  [1m[35m (53.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 9]]
+  [1m[35m (69.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 10]]
+  [1m[35m (76.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 11]]
+  [1m[35m (73.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 12]]
+  [1m[35m (99.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 13]]
+  [1m[35m (73.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 14]]
+  [1m[35m (63.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 15]]
+  [1m[35m (63.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 16]]
+  [1m[35m (63.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 17]]
+  [1m[35m (85.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 18]]
+  [1m[35m (63.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 19]]
+  [1m[35m (84.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 20]]
+  [1m[35m (85.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 21]]
+  [1m[35m (62.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 22]]
+  [1m[35m (64.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 23]]
+  [1m[35m (62.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 24]]
+  [1m[35m (63.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 25]]
+  [1m[35m (74.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 26]]
+  [1m[35m (85.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 27]]
+  [1m[35m (74.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 28]]
+  [1m[35m (63.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 29]]
+  [1m[35m (74.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 30]]
+  [1m[35m (52.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 31]]
+  [1m[35m (96.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 32]]
+  [1m[35m (62.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTweet Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = ?[0m  [["id", 33]]
+  [1m[35m (74.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-01-06 22:41:12 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:5
+  Rendered tweets/_feed.html.erb (1.3ms)
+  Rendered tweets/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 1780ms (Views: 1740.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tweets/new" for ::1 at 2020-01-06 22:41:24 -0300
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 98ms (Views: 77.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-06 22:41:30 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vEyM623s8WMn/Bm4qHdIK1EsSPM8j14B6ZtrR+QHchj+cE3aKerWnAJ9TTGO5VrD1AOGdlu9kPTLvH8o2fHgoQ==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (18.5ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-07 01:41:31.864934"], ["updated_at", "2020-01-07 01:41:31.864934"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (87.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-07 01:41:31.975720"], ["updated_at", "2020-01-07 01:41:31.975720"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (73.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-07 01:41:32.053501"], ["updated_at", "2020-01-07 01:41:32.053501"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (63.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-07 01:41:32.119529"], ["updated_at", "2020-01-07 01:41:32.119529"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (108.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-07 01:41:32.231358"], ["updated_at", "2020-01-07 01:41:32.231358"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (62.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-07 01:41:32.296876"], ["updated_at", "2020-01-07 01:41:32.296876"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (62.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-07 01:41:32.363858"], ["updated_at", "2020-01-07 01:41:32.363858"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (62.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-07 01:41:32.430157"], ["updated_at", "2020-01-07 01:41:32.430157"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (84.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-07 01:41:32.518869"], ["updated_at", "2020-01-07 01:41:32.518869"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (72.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-07 01:41:32.595983"], ["updated_at", "2020-01-07 01:41:32.595983"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (62.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-07 01:41:32.662574"], ["updated_at", "2020-01-07 01:41:32.662574"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (84.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-07 01:41:32.750786"], ["updated_at", "2020-01-07 01:41:32.750786"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (85.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-07 01:41:32.839270"], ["updated_at", "2020-01-07 01:41:32.839270"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (63.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-07 01:41:32.906243"], ["updated_at", "2020-01-07 01:41:32.906243"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (139.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (0.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-01-07 01:41:33.049574"], ["updated_at", "2020-01-07 01:41:33.049574"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (84.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:51
+No template found for TweetsController#search, rendering head :no_content
+Completed 204 No Content in 2291ms (ActiveRecord: 1220.2ms)
+
+
+Started GET "/" for ::1 at 2020-01-06 22:42:44 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:5
+  Rendered tweets/_feed.html.erb (56.0ms)
+  Rendered tweets/index.html.erb within layouts/application (57.0ms)
+Completed 200 OK in 115ms (Views: 112.8ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" ORDER BY "tweets"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]

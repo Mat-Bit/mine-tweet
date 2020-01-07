@@ -1,32 +1,44 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import "bootstrap";
 
- @import "bulma";
+.tweetEntry-tweetHolder {
+  border-left: 1px solid #e1e8ed;
+  border-right: 1px solid #e1e8ed;
+  border-top: 1px solid #e1e8ed;
+  width: 588px;
+  margin: auto;
+  border-radius: 5px;
+}
 
- .navbar-brand .title {
-     color: white;
- }
- 
- // round images
- .image {
-     border-radius: 50%;
-     img {
-         border-radius: 50%;
-     }
- }
- .notification:not(:last-child) {
-     margin-bottom: 0;
- }
+.tweetEntry {
+  border-bottom: 1px solid #e1e8ed;
+  cursor: pointer;
+  min-height: 51px;
+  padding: 9px 12px;
+}
+
+.tweetEntry-content {
+  display: block;
+  font-size: 14px;
+  margin-left: 58px;
+  font-size: 14px;
+}
+
+.tweetEntry-fullname {
+  font-weight: bold;
+  font-size: 14px;
+  color: #292f33;
+  padding: 0px;
+}
+
+.tweetEntry-username {
+  font-weight: bold;
+  font-size: 14px;
+  color: #b1bbc3;
+  padding: 0px;
+}
+
+.tweetEntry-text-container {
+  font-size: 14px;
+  color: #292f33;
+  line-height: 18px;
+}

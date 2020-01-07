@@ -48,7 +48,8 @@ class TweetsController < ApplicationController
       puts "User:", tw["user"]["screen_name"]
       puts
 
-      @tweet = Tweet.create(
+      tweet = Tweet.create(
+        hashtag: q,
         i_tweet: tw["id_str"],
         tweet_desc: tw["text"],
         date_post: tw["created_at"],
@@ -56,16 +57,6 @@ class TweetsController < ApplicationController
         user_screen_name: tw["user"]["screen_name"]
       )
 
-    end
-
-    respond_to do |format|
-      if @tweet.save
-        format.html { redirect_to @tweet, notice: 'Tweet was successfully created.' }
-        format.json { render :show, status: :created, location: @tweet }
-      else
-        format.html { render :new }
-        format.json { render json: @tweet.errors, status: :unprocessable_entity }
-      end
     end
 
   end
