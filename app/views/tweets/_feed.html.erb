@@ -6,15 +6,15 @@
 
       <div class="tweetEntry-content">
 
-        <img class="tweetEntry-avatar" src= <%= truncate(tw.url_img_user) %> >
+        <img class="tweetEntry-avatar" src= <%= tw.url_img_user %> >
 
-        <strong class="tweetEntry-fullname"> <%= truncate(tw.user_name) %> </strong>
+        <strong class="tweetEntry-fullname"> <%= tw.user_name %> </strong>
 
-        <span class="tweetEntry-username"> <b> @<%= truncate(tw.user_screen_name) %> </b> </span>
+        <span class="tweetEntry-username"> <b> @<%= tw.user_screen_name %> </b> </span>
 
-        <span class="tweetEntry-timestamp"> <%= truncate(tw.date_post) %> </span>
+        <span class="tweetEntry-timestamp"> <%= tw.date_post %> </span>
 
-        <div class="tweetEntry-text-container"> <%= truncate(tw.tweet_desc) %> </div>
+        <div class="tweetEntry-text-container"> <%= tw.tweet_desc %> </div>
 
       </div>
     </div>

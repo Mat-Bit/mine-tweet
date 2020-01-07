@@ -4723,3 +4723,447 @@ Completed 200 OK in 99ms (Views: 95.2ms | ActiveRecord: 0.6ms)
 
 
   [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(268846700903996565)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(268846700903996565)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2020-01-07 15:16:08 -0300
+  
+PG::ConnectionBad (could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+):
+  
+pg (0.18.4) lib/pg.rb:45:in `initialize'
+pg (0.18.4) lib/pg.rb:45:in `new'
+pg (0.18.4) lib/pg.rb:45:in `connect'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.4.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.4.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.4.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-07 15:21:57 -0300
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "minetweets_development" does not exist
+):
+  
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.4.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.4.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.4.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (1289.6ms)[0m  [1m[35mCREATE DATABASE "minetweets_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (655.1ms)[0m  [1m[35mCREATE DATABASE "minetweets_test" ENCODING = 'utf8'[0m
+  ↳ bin/rails:4
+  [1m[35mSQL (0.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (25.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tweets" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (98.6ms)[0m  [1m[35mCREATE TABLE "tweets" ("id" bigserial primary key, "hashtag" character varying NOT NULL, "i_tweet" character varying NOT NULL, "tweet_desc" text, "date_post" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_name" character varying NOT NULL, "user_screen_name" character varying, "url_img_user" character varying NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (74.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (23.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191231121306)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (90.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-07 18:22:36.484137"], ["updated_at", "2020-01-07 18:22:36.484137"]]
+  ↳ db/schema.rb:13
+  [1m[35m (18.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "tweets" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (87.7ms)[0m  [1m[35mCREATE TABLE "tweets" ("id" bigserial primary key, "hashtag" character varying NOT NULL, "i_tweet" character varying NOT NULL, "tweet_desc" text, "date_post" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_name" character varying NOT NULL, "user_screen_name" character varying, "url_img_user" character varying NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (73.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191231121306)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (87.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-07 18:22:36.806135"], ["updated_at", "2020-01-07 18:22:36.806135"]]
+  ↳ db/schema.rb:13
+  [1m[35m (10.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Update (0.8ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-01-07 18:22:36.824519"], ["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2020-01-07 15:22:48 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (1.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:3
+  Rendered tweets/_feed.html.erb (5.0ms)
+  Rendered tweets/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 8189ms (Views: 8158.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/tweets/new" for ::1 at 2020-01-07 15:23:08 -0300
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 133ms (Views: 93.0ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-07 15:23:15 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MtphZ91bArVN1pcQ2Vu4Eo1PQuafGUmLiQ1c9p/YdKJw5qBWmV0lSmhXw5n/yar6CGCMY/grh36rKkiZoi7mGw==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214613365177405441"], ["tweet_desc", "Transcend Reality (EVERYDAY 499) #everyday\n-\n#cinema4d #maxon @maxon3d #3d #design #3dart #aftereffects #photoshop… https://t.co/r3VKY0O56q"], ["date_post", "Tue Jan 07 18:22:47 +0000 2020"], ["created_at", "2020-01-07 18:23:15.569242"], ["updated_at", "2020-01-07 18:23:15.569242"], ["user_name", "will harvey"], ["user_screen_name", "revilo_stuff"], ["url_img_user", "http://pbs.twimg.com/profile_images/1129159227661062144/Bie5LsVl_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214613354397999104"], ["tweet_desc", "RT @HonDomey: Look at those who have been calling themselves they are fighting for democracy 2 Years ago starting with @RailaOdinga @orengo…"], ["date_post", "Tue Jan 07 18:22:44 +0000 2020"], ["created_at", "2020-01-07 18:23:15.590415"], ["updated_at", "2020-01-07 18:23:15.590415"], ["user_name", "Mad Tilapia Princess ❤️ | LDGH"], ["user_screen_name", "lets_discuss_gh"], ["url_img_user", "http://pbs.twimg.com/profile_images/1213176949574635521/FG-CxJ2L_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214613286802657286"], ["tweet_desc", "NASA Invites Media to Northrop Grumman’s February Space Station Launch #NASA https://t.co/NBD9eYT59X"], ["date_post", "Tue Jan 07 18:22:28 +0000 2020"], ["created_at", "2020-01-07 18:23:15.600454"], ["updated_at", "2020-01-07 18:23:15.600454"], ["user_name", "Todd G Smith"], ["user_screen_name", "LaVieDeTodd"], ["url_img_user", "http://pbs.twimg.com/profile_images/699748475169173504/AFEKlMvK_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (29.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214613238966411264"], ["tweet_desc", "RT @wayfaringwilly: Whenever I tell people I grew up in Titusville, Florida, I usually get blank stares. When I say I live in the town wher…"], ["date_post", "Tue Jan 07 18:22:17 +0000 2020"], ["created_at", "2020-01-07 18:23:15.634403"], ["updated_at", "2020-01-07 18:23:15.634403"], ["user_name", "Keva (kay-va) 🏳️‍🌈"], ["user_screen_name", "Synergy3k"], ["url_img_user", "http://pbs.twimg.com/profile_images/687147722390941696/0AEbLrMI_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (16.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214612998536531968"], ["tweet_desc", "Darshan Bhambiru\nhttps://t.co/cJbUdOG36j\nTESS Finds First Earth-Size Planet in the Habitable Zone January 07, 2020… https://t.co/mDgyXuzL3i"], ["date_post", "Tue Jan 07 18:21:19 +0000 2020"], ["created_at", "2020-01-07 18:23:15.656872"], ["updated_at", "2020-01-07 18:23:15.656872"], ["user_name", "Darshan K Bhambiru"], ["user_screen_name", "Dare2Bare"], ["url_img_user", "http://pbs.twimg.com/profile_images/942677875651592192/N0pLQn1l_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (18.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (1.0ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214612917200572421"], ["tweet_desc", "RT @revilo_stuff: Portal to Dust (EVERYDAY 498) #everyday\n-\n#cinema4d #maxon @maxon3d #3d #design #3dart #aftereffects #photoshop #lightroo…"], ["date_post", "Tue Jan 07 18:21:00 +0000 2020"], ["created_at", "2020-01-07 18:23:15.679914"], ["updated_at", "2020-01-07 18:23:15.679914"], ["user_name", "A R T I S T I C ➐"], ["user_screen_name", "Artistic_3D"], ["url_img_user", "http://pbs.twimg.com/profile_images/1143913094005108737/6CpX1jjX_normal.png"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214612891430768640"], ["tweet_desc", "RT @revilo_stuff: Space Duudes (EVERYDAY 497) #everyday\n-\n#cinema4d #maxon @maxon3d #3d #design #3dart #aftereffects #photoshop #lightroom…"], ["date_post", "Tue Jan 07 18:20:54 +0000 2020"], ["created_at", "2020-01-07 18:23:15.692724"], ["updated_at", "2020-01-07 18:23:15.692724"], ["user_name", "A R T I S T I C ➐"], ["user_screen_name", "Artistic_3D"], ["url_img_user", "http://pbs.twimg.com/profile_images/1143913094005108737/6CpX1jjX_normal.png"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (13.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214612857209401345"], ["tweet_desc", "RT @revilo_stuff: Orbital (EVERYDAY 495) #everyday\n-\n#cinema4d #maxon @maxon3d #3d #design #3dart #aftereffects #photoshop #lightroom #rend…"], ["date_post", "Tue Jan 07 18:20:46 +0000 2020"], ["created_at", "2020-01-07 18:23:15.712486"], ["updated_at", "2020-01-07 18:23:15.712486"], ["user_name", "A R T I S T I C ➐"], ["user_screen_name", "Artistic_3D"], ["url_img_user", "http://pbs.twimg.com/profile_images/1143913094005108737/6CpX1jjX_normal.png"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214612757905100800"], ["tweet_desc", "Direct from @NASA #NASA | NASA Invites Media to Northrop Grumman’s February Space Station Launch https://t.co/1xXdymcKnX"], ["date_post", "Tue Jan 07 18:20:22 +0000 2020"], ["created_at", "2020-01-07 18:23:15.737313"], ["updated_at", "2020-01-07 18:23:15.737313"], ["user_name", "The World News Network"], ["user_screen_name", "TWNNetworkNews"], ["url_img_user", "http://pbs.twimg.com/profile_images/1153792449656967169/pet9IipA_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (14.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214612648836227072"], ["tweet_desc", "RT @AnsariK786: .\n@narendramodi की इस अद्भुत अज्ञानता के बाद एहसास हुवा कि जनता ने #Nityananda जैसे बहुमूल्य गोबड़ (कोहिनूर) को खो दिया!\n\nइ…"], ["date_post", "Tue Jan 07 18:19:56 +0000 2020"], ["created_at", "2020-01-07 18:23:15.756697"], ["updated_at", "2020-01-07 18:23:15.756697"], ["user_name", "AAP Ke Mirza G"], ["user_screen_name", "iMirzaG"], ["url_img_user", "http://pbs.twimg.com/profile_images/835715067299520513/-wp3QDSl_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (1.3ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214612644914700288"], ["tweet_desc", "RT @DiabetesCxns: \"Be a rule questioner\" \nApril Blackwell works at NASA's Mission Control - she was dx'd with #T1D at age 11 and told the s…"], ["date_post", "Tue Jan 07 18:19:55 +0000 2020"], ["created_at", "2020-01-07 18:23:15.767928"], ["updated_at", "2020-01-07 18:23:15.767928"], ["user_name", "Aubsorama"], ["user_screen_name", "aubsorama"], ["url_img_user", "http://pbs.twimg.com/profile_images/1160265881781510144/wtNr_6LE_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214612566745464832"], ["tweet_desc", "RT @eha_medya: 📍#NASA'nın #Tess uydusu 'öte Dünya' keşfetti\n\n📌#Dünya'ya 101,5 ışık yılı uzaklıktaki Yunus (#Dorado) Takımyıldızı'nda, bir c…"], ["date_post", "Tue Jan 07 18:19:36 +0000 2020"], ["created_at", "2020-01-07 18:23:15.778884"], ["updated_at", "2020-01-07 18:23:15.778884"], ["user_name", "🇹🇷 Sevim Güler"], ["user_screen_name", "sevguler"], ["url_img_user", "http://pbs.twimg.com/profile_images/1028992181489623041/WHYmin7W_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214612456833798144"], ["tweet_desc", "RT @serhatoguz06: #Avustralya’daki yangın faciasında şu ana kadar 500 milyon hayvanın, 24 insanın öldüğü ve 1200 evin yandığı tahmin ediliy…"], ["date_post", "Tue Jan 07 18:19:10 +0000 2020"], ["created_at", "2020-01-07 18:23:15.793572"], ["updated_at", "2020-01-07 18:23:15.793572"], ["user_name", "🇹🇷Emre ALKAŞ 🇹🇷"], ["user_screen_name", "EmreALKAS06"], ["url_img_user", "http://pbs.twimg.com/profile_images/1100167012536541184/-G9zE66g_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (13.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214612375367823360"], ["tweet_desc", "RT @HonDomey: Look at those who have been calling themselves they are fighting for democracy 2 Years ago starting with @RailaOdinga @orengo…"], ["date_post", "Tue Jan 07 18:18:51 +0000 2020"], ["created_at", "2020-01-07 18:23:15.812881"], ["updated_at", "2020-01-07 18:23:15.812881"], ["user_name", "The Guy"], ["user_screen_name", "TheRealisticGuy"], ["url_img_user", "http://pbs.twimg.com/profile_images/1136099448705167367/3Q34tiFH_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (27.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214612314911064066"], ["tweet_desc", "RT @sonicgabe: PRINTS AVAILABLE of the 01.06.20 @SpaceX #Falcon9 #Starlink2 #rocketlaunch, two size options each printed on aluminum (12x18…"], ["date_post", "Tue Jan 07 18:18:36 +0000 2020"], ["created_at", "2020-01-07 18:23:15.846071"], ["updated_at", "2020-01-07 18:23:15.846071"], ["user_name", "Gabe Loewenberg"], ["user_screen_name", "sonicgabe"], ["url_img_user", "http://pbs.twimg.com/profile_images/562133710431330304/jL_OvoW8_normal.jpeg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+No template found for TweetsController#search, rendering head :no_content
+Completed 204 No Content in 685ms (ActiveRecord: 213.5ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:23:22 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:3
+  Rendered tweets/_feed.html.erb (3.5ms)
+  Rendered tweets/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 91ms (Views: 87.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:26:03 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:3
+  Rendered tweets/_feed.html.erb (3.0ms)
+  Rendered tweets/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:27:25 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:3
+  Rendered tweets/_feed.html.erb (2.1ms)
+  Rendered tweets/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 1627ms (Views: 1624.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tweets/new" for ::1 at 2020-01-07 15:28:10 -0300
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-07 15:28:26 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RQQ5ZlL19rSzd6q2A7fNvVgwP6JWr6hBDhMeVKudy0UHOPhXFvPRS5b2/j8lJd9V3R/xJzGdZrQsNAo7lmtZ/A==", "hashtag"=>"#australia", "commit"=>"Buscar"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#australia"], ["i_tweet", "1214614776195801090"], ["tweet_desc", "RT @rihanna: devastating. 😢 #Australia https://t.co/VB2cziPXux"], ["date_post", "Tue Jan 07 18:28:23 +0000 2020"], ["created_at", "2020-01-07 18:28:27.124521"], ["updated_at", "2020-01-07 18:28:27.124521"], ["user_name", "💋feb7biiiitch♒"], ["user_screen_name", "Kysten_Elyse96"], ["url_img_user", "http://pbs.twimg.com/profile_images/1093644682058317824/nL4FfXMf_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (59.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#australia"], ["i_tweet", "1214614769648320512"], ["tweet_desc", "RT @FIFI_Egypt: オーストラリアの山火事の被害が深刻化。強烈な熱波が広大な土地を襲い、4億8000の動物が死亡、三分の一のコアラが焼死しました。2019年の9月から各地で続いている山火事では、多くの人が避難を余儀なくされ、これまでにおよそ525万haが焼失したほか…"], ["date_post", "Tue Jan 07 18:28:22 +0000 2020"], ["created_at", "2020-01-07 18:28:27.188603"], ["updated_at", "2020-01-07 18:28:27.188603"], ["user_name", "ち～パパ☺︎"], ["user_screen_name", "chama18non19"], ["url_img_user", "http://pbs.twimg.com/profile_images/816310464439164928/k2G4DnHR_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#australia"], ["i_tweet", "1214614765009604608"], ["tweet_desc", "RT @zenitespanol: Oramos a Dios, para que cesen los incendios en #Australia 🇦🇺. \n#PrayForAustralia https://t.co/dKqNJTiTNA"], ["date_post", "Tue Jan 07 18:28:21 +0000 2020"], ["created_at", "2020-01-07 18:28:27.199208"], ["updated_at", "2020-01-07 18:28:27.199208"], ["user_name", "Oscar Antonio García Càrdenas"], ["user_screen_name", "oagc41"], ["url_img_user", "http://pbs.twimg.com/profile_images/1171972401338421248/WaqOhwDm_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#australia"], ["i_tweet", "1214614753508810752"], ["tweet_desc", "RT @teleSURtv: La humareda proveniente de los incendios forestales en #Australia se transportó hasta el territorio suramericano https://t.c…"], ["date_post", "Tue Jan 07 18:28:18 +0000 2020"], ["created_at", "2020-01-07 18:28:27.209817"], ["updated_at", "2020-01-07 18:28:27.209817"], ["user_name", "Bethy"], ["user_screen_name", "cruz_bethy"], ["url_img_user", "http://pbs.twimg.com/profile_images/1193028453920100353/drOBiBNX_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#australia"], ["i_tweet", "1214614750295973889"], ["tweet_desc", "He visto muchas catástrofes el mis 37 años de vida, pero quizás nada tan caótico como lo que está pasando en… https://t.co/utDhPsnqFE"], ["date_post", "Tue Jan 07 18:28:17 +0000 2020"], ["created_at", "2020-01-07 18:28:27.221679"], ["updated_at", "2020-01-07 18:28:27.221679"], ["user_name", "John Segador"], ["user_screen_name", "johnsegador"], ["url_img_user", "http://pbs.twimg.com/profile_images/1174267161365401600/UgP1XUZq_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#australia"], ["i_tweet", "1214614743870312449"], ["tweet_desc", "RT @eloyumin: Pensar que pessoas e vários animaizinhos se foram por conta dessa droga de incêndio. Lamentável demais. 💔\n\n#PrayForAustralia…"], ["date_post", "Tue Jan 07 18:28:16 +0000 2020"], ["created_at", "2020-01-07 18:28:27.232087"], ["updated_at", "2020-01-07 18:28:27.232087"], ["user_name", "Gabriel Start 🤫"], ["user_screen_name", "GabrielSt4rt"], ["url_img_user", "http://pbs.twimg.com/profile_images/1208912105954586624/M4JY6yYg_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (1.3ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#australia"], ["i_tweet", "1214614743832416256"], ["tweet_desc", "RT @taran_adarsh: #GoodNewwz crosses $ 8.5 million in the international markets... Total till 6 Jan 2020: $ 8.57 million [₹ 61.55 cr]... Ke…"], ["date_post", "Tue Jan 07 18:28:16 +0000 2020"], ["created_at", "2020-01-07 18:28:27.243907"], ["updated_at", "2020-01-07 18:28:27.243907"], ["user_name", "Anurag Pandey #TFZ 🇮🇳"], ["user_screen_name", "AnuragpandeyG"], ["url_img_user", "http://pbs.twimg.com/profile_images/1206623651522465793/uVugPYdp_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (16.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (1.2ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#australia"], ["i_tweet", "1214614742234472448"], ["tweet_desc", "RT @NaniPeralta22: #PrayForAustralia\nEl Comandante Presidente Daniel Ortega y la Vice Presidenta Compañera Rosario Murillo enviaron un  men…"], ["date_post", "Tue Jan 07 18:28:15 +0000 2020"], ["created_at", "2020-01-07 18:28:27.265476"], ["updated_at", "2020-01-07 18:28:27.265476"], ["user_name", "Carlos Córdoba 🇳🇮❤🖤"], ["user_screen_name", "ElChinoNica8"], ["url_img_user", "http://pbs.twimg.com/profile_images/1186400981703114752/OlZQ4GQL_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#australia"], ["i_tweet", "1214614738749054978"], ["tweet_desc", "RT @green4EMA: RT if you agree with Golden Globe Winner Russell Crowe. We need to act based on science. #climateaction #Australia https://t…"], ["date_post", "Tue Jan 07 18:28:14 +0000 2020"], ["created_at", "2020-01-07 18:28:27.276382"], ["updated_at", "2020-01-07 18:28:27.276382"], ["user_name", "Jay Jasinski"], ["user_screen_name", "jayjasinski"], ["url_img_user", "http://pbs.twimg.com/profile_images/1068165878707978240/8CD1Q93Y_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#australia"], ["i_tweet", "1214614732872699904"], ["tweet_desc", "RT @FIFI_Egypt: オーストラリアの山火事の被害が深刻化。強烈な熱波が広大な土地を襲い、4億8000の動物が死亡、三分の一のコアラが焼死しました。2019年の9月から各地で続いている山火事では、多くの人が避難を余儀なくされ、これまでにおよそ525万haが焼失したほか…"], ["date_post", "Tue Jan 07 18:28:13 +0000 2020"], ["created_at", "2020-01-07 18:28:27.287216"], ["updated_at", "2020-01-07 18:28:27.287216"], ["user_name", "ラブ"], ["user_screen_name", "zH2mgIdKDjb3V99"], ["url_img_user", "http://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#australia"], ["i_tweet", "1214614724551163904"], ["tweet_desc", "RT @rihanna: devastating. 😢 #Australia https://t.co/VB2cziPXux"], ["date_post", "Tue Jan 07 18:28:11 +0000 2020"], ["created_at", "2020-01-07 18:28:27.299508"], ["updated_at", "2020-01-07 18:28:27.299508"], ["user_name", "maira"], ["user_screen_name", "mairaacortez"], ["url_img_user", "http://pbs.twimg.com/profile_images/1168221351242432512/LJyGx4n1_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#australia"], ["i_tweet", "1214614718800809985"], ["tweet_desc", "RT @StatCan_eng: Sending our thoughts to #Australia and our @ABSStats colleagues during these devastating #bushfires. #AustralianWildfires…"], ["date_post", "Tue Jan 07 18:28:10 +0000 2020"], ["created_at", "2020-01-07 18:28:27.310106"], ["updated_at", "2020-01-07 18:28:27.310106"], ["user_name", "Andy Yan"], ["user_screen_name", "Ayan604"], ["url_img_user", "http://pbs.twimg.com/profile_images/1011132342880989184/Y5gsQpmm_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#australia"], ["i_tweet", "1214614718385729536"], ["tweet_desc", "RT @SDG2030: These graphics put the horrific scale of #Australia's fires into perspective. #AustralianWildFires \n\nEach dot is a fire curren…"], ["date_post", "Tue Jan 07 18:28:09 +0000 2020"], ["created_at", "2020-01-07 18:28:27.320463"], ["updated_at", "2020-01-07 18:28:27.320463"], ["user_name", "Ana Gascón"], ["user_screen_name", "AnaGascon2016"], ["url_img_user", "http://pbs.twimg.com/profile_images/847150978977710080/tQgWmyA__normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (1.0ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#australia"], ["i_tweet", "1214614718171795456"], ["tweet_desc", "RT @puenteadrian: Esta foto de #Australia no es real. Es un collage de imágenes satelitales del último mes. Sólo están activos los focos de…"], ["date_post", "Tue Jan 07 18:28:09 +0000 2020"], ["created_at", "2020-01-07 18:28:27.331833"], ["updated_at", "2020-01-07 18:28:27.331833"], ["user_name", "#LucasDavid ⚽"], ["user_screen_name", "Lukssuardi"], ["url_img_user", "http://pbs.twimg.com/profile_images/1117657431314763781/3ZmO0iq8_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#australia"], ["i_tweet", "1214614716749950977"], ["tweet_desc", "RT @LFdCesmas: 480 millones de animales en Nueva Gales del Sur han perdido su vida por los incendios #Australia 🔥\n¿Alguien es capaz aún de…"], ["date_post", "Tue Jan 07 18:28:09 +0000 2020"], ["created_at", "2020-01-07 18:28:27.343457"], ["updated_at", "2020-01-07 18:28:27.343457"], ["user_name", "ClubOficial MAS BsAs"], ["user_screen_name", "FansClubMASbsas"], ["url_img_user", "http://pbs.twimg.com/profile_images/1211610443892056064/38XI4t6O_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+No template found for TweetsController#search, rendering head :no_content
+Completed 204 No Content in 677ms (ActiveRecord: 181.7ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 15:28:32 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:3
+  Rendered tweets/_feed.html.erb (4.9ms)
+  Rendered tweets/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 83ms (Views: 81.2ms | ActiveRecord: 0.6ms)
+
+
