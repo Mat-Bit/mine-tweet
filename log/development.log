@@ -3854,3 +3854,872 @@ Completed 200 OK in 115ms (Views: 112.8ms | ActiveRecord: 0.1ms)
   [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" ORDER BY "tweets"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" LIMIT ?[0m  [["LIMIT", 11]]
   [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (1008.5ms)[0m  [1m[35mCREATE DATABASE "minetweets_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (655.2ms)[0m  [1m[35mCREATE DATABASE "minetweets_test" ENCODING = 'utf8'[0m
+  ↳ bin/rails:4
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (11.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "tweets" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (101.6ms)[0m  [1m[35mCREATE TABLE "tweets" ("id" bigserial primary key, "hashtag" character varying, "i_tweet" character varying NOT NULL, "tweet_desc" text, "date_post" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_name" text NOT NULL, "user_screen_name" character varying)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (127.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (12.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191231121306)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (93.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-07 12:55:25.812812"], ["updated_at", "2020-01-07 12:55:25.812812"]]
+  ↳ db/schema.rb:13
+  [1m[35m (13.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "tweets" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (84.7ms)[0m  [1m[35mCREATE TABLE "tweets" ("id" bigserial primary key, "hashtag" character varying, "i_tweet" character varying NOT NULL, "tweet_desc" text, "date_post" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_name" text NOT NULL, "user_screen_name" character varying)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (85.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191231121306)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (85.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-01-07 12:55:26.144894"], ["updated_at", "2020-01-07 12:55:26.144894"]]
+  ↳ db/schema.rb:13
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-01-07 12:55:26.156060"], ["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2020-01-07 09:56:06 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (1.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:5
+  Rendered tweets/_feed.html.erb (2.6ms)
+  Rendered tweets/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 1809ms (Views: 1781.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/tweets/new" for ::1 at 2020-01-07 09:56:40 -0300
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 124ms (Views: 77.1ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-07 09:56:44 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+NeGukqvl3o/tW+wJSJR/NfQVlksTEF8ND3WMYNfLhS660eLDqmwhRo0OzkDsEMUUv+Y3Et+j4kWGsJevqm8rQ==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[36mTweet Create (1.3ms)[0m  [1m[32mINSERT INTO "tweets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2020-01-07 12:56:45.327856"], ["updated_at", "2020-01-07 12:56:45.327856"]]
+  ↳ app/controllers/tweets_controller.rb:51
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/tweets_controller.rb:51
+Completed 500 Internal Server Error in 884ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "i_tweet" violates not-null constraint
+DETAIL:  Failing row contains (1, null, null, null, null, 2020-01-07 12:56:45.327856, 2020-01-07 12:56:45.327856, null, null).
+: INSERT INTO "tweets" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"):
+  
+app/controllers/tweets_controller.rb:51:in `block in search'
+app/controllers/tweets_controller.rb:44:in `each'
+app/controllers/tweets_controller.rb:44:in `search'
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" ORDER BY "tweets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/tweets/new" for ::1 at 2020-01-07 10:28:36 -0300
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/matbit/Documents/Projetos/MineTweet/mine-tweet/app/controllers/tweets_controller.rb:64: syntax error, unexpected ':', expecting keyword_end
+        notice: "Tweet criado com sucesso"
+              ^
+/home/matbit/Documents/Projetos/MineTweet/mine-tweet/app/controllers/tweets_controller.rb:120: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/tweets_controller.rb:64: syntax error, unexpected ':', expecting keyword_end
+app/controllers/tweets_controller.rb:120: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/tweets/new" for ::1 at 2020-01-07 10:29:52 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/matbit/Documents/Projetos/MineTweet/mine-tweet/app/controllers/tweets_controller.rb:64: syntax error, unexpected ':', expecting keyword_end
+        notice: "Tweet criado com sucesso"
+              ^):
+  
+app/controllers/tweets_controller.rb:64: syntax error, unexpected ':', expecting keyword_end
+Started GET "/tweets/new" for ::1 at 2020-01-07 10:31:54 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/matbit/Documents/Projetos/MineTweet/mine-tweet/app/controllers/tweets_controller.rb:64: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+        :notice "Tweet criado com sucesso"
+                ^
+/home/matbit/Documents/Projetos/MineTweet/mine-tweet/app/controllers/tweets_controller.rb:66: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+        :notice "Falha na criacao do tweet"
+                ^):
+  
+app/controllers/tweets_controller.rb:64: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+app/controllers/tweets_controller.rb:66: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+Started GET "/tweets/new" for ::1 at 2020-01-07 10:32:32 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/matbit/Documents/Projetos/MineTweet/mine-tweet/app/controllers/tweets_controller.rb:64: syntax error, unexpected ':', expecting keyword_end
+        notice: "Tweet criado com sucesso"
+              ^
+/home/matbit/Documents/Projetos/MineTweet/mine-tweet/app/controllers/tweets_controller.rb:66: syntax error, unexpected ':', expecting keyword_end
+        notice: "Falha na criacao do tweet"
+              ^):
+  
+app/controllers/tweets_controller.rb:64: syntax error, unexpected ':', expecting keyword_end
+app/controllers/tweets_controller.rb:66: syntax error, unexpected ':', expecting keyword_end
+Started GET "/tweets/new" for ::1 at 2020-01-07 10:33:28 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 372ms (Views: 342.8ms | ActiveRecord: 10.9ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-07 10:33:35 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G2jFJMUwNx3id9C/8ALiM8t82yqILAJLjqt66hGyxBpZVAQVgTYQ4sf2hDbWkPDbTlMVr+8ezL6sjG6FLERWow==", "hashtag"=>"#hongkong", "commit"=>"Buscar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (1.2ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#hongkong"], ["i_tweet", "1214540573316538368"], ["tweet_desc", "RT @NZZ: Der neue höchste Vertreter Pekings in #Hongkong hatte bisher keine Beziehung zur einstigen britischen Kolonie. Sein Vorgänger soll…"], ["date_post", "Tue Jan 07 13:33:32 +0000 2020"], ["created_at", "2020-01-07 13:33:36.061376"], ["updated_at", "2020-01-07 13:33:36.061376"], ["user_name", "man"], ["user_screen_name", "man12642556"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (39.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+Completed 500 Internal Server Error in 1022ms (ActiveRecord: 41.1ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/tweets_controller.rb:64:in `block in search'
+app/controllers/tweets_controller.rb:44:in `each'
+app/controllers/tweets_controller.rb:44:in `search'
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 2]]
+  [1m[35m (38.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/tweets_search" for ::1 at 2020-01-07 10:40:26 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G2jFJMUwNx3id9C/8ALiM8t82yqILAJLjqt66hGyxBpZVAQVgTYQ4sf2hDbWkPDbTlMVr+8ezL6sjG6FLERWow==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[36mTweet Create (1.1ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214542294340124674"], ["tweet_desc", "RT @spacenewslab: 【過去記事】 自分の名前を火星へ送ろう！NASAが募集開始！ https://t.co/VXQaZIfuFc\n#宇宙 #宇宙ニュース #HIU公認宇宙ニュースブログ #insight #MARS2020 #NASA"], ["date_post", "Tue Jan 07 13:40:22 +0000 2020"], ["created_at", "2020-01-07 13:40:27.308872"], ["updated_at", "2020-01-07 13:40:27.308872"], ["user_name", "kazumi Matsuzaka"], ["user_screen_name", "KazumiMatsuzaka"]]
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (198.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[36mTweet Create (1.1ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214542004446748674"], ["tweet_desc", "#NASA descubre otro planeta del tamaño de la Tierra en una zona ‘habitable’ https://t.co/wBeWs77Djs https://t.co/271FgAGJry"], ["date_post", "Tue Jan 07 13:39:13 +0000 2020"], ["created_at", "2020-01-07 13:40:27.513836"], ["updated_at", "2020-01-07 13:40:27.513836"], ["user_name", "La Razón Digital"], ["user_screen_name", "LaRazon_Bolivia"]]
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214541983949164544"], ["tweet_desc", "RT @AndySaunders_1: I've never seen a spacecraft and stars in an image before so have processed 24 frames from that amazing @nasa footage t…"], ["date_post", "Tue Jan 07 13:39:08 +0000 2020"], ["created_at", "2020-01-07 13:40:27.537561"], ["updated_at", "2020-01-07 13:40:27.537561"], ["user_name", "Matthias Ahlhelm"], ["user_screen_name", "Anduminas"]]
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[36mTweet Create (5.4ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214541709784289280"], ["tweet_desc", "The #InternationalSpaceStation is passing over us right now! January 07, 2020 at 08:56AM, for 205 seconds. #ISS #NASA #space"], ["date_post", "Tue Jan 07 13:38:03 +0000 2020"], ["created_at", "2020-01-07 13:40:27.548950"], ["updated_at", "2020-01-07 13:40:27.548950"], ["user_name", "CHAiNBREAk Bassist"], ["user_screen_name", "jrthompson1988"]]
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214541573775675393"], ["tweet_desc", "RT @SweIpad: @Petrus24550953 @Historiekritisk 1/ #NASA IN HEBREW MEANS “TO DECEIVE”...\nhttps://t.co/ddRCm67CrN\n\n2/ Neil Armstrong interview…"], ["date_post", "Tue Jan 07 13:37:30 +0000 2020"], ["created_at", "2020-01-07 13:40:27.568937"], ["updated_at", "2020-01-07 13:40:27.568937"], ["user_name", "🌿🕊Carminda B🕊🌿"], ["user_screen_name", "carmindabrendel"]]
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (14.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[36mTweet Create (3.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214541500966690818"], ["tweet_desc", "RT @BoschPress: Soundsee hears what’s broken in space – with #AI from Bosch. The Bosch sensor box is included in #NASA’s Astrobee mini-robo…"], ["date_post", "Tue Jan 07 13:37:13 +0000 2020"], ["created_at", "2020-01-07 13:40:27.591487"], ["updated_at", "2020-01-07 13:40:27.591487"], ["user_name", "discoursemagnet"], ["user_screen_name", "LValleeSmith"]]
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[36mTweet Create (1.3ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214541486915805185"], ["tweet_desc", "RT @SalamiLea: #reformedesretraites : #EdouardPhilippe reprend espoir dans les négociations après la découverte par la #NASA d'une planète…"], ["date_post", "Tue Jan 07 13:37:10 +0000 2020"], ["created_at", "2020-01-07 13:40:27.602546"], ["updated_at", "2020-01-07 13:40:27.602546"], ["user_name", "fredfromfrance"], ["user_screen_name", "fredfromfrance3"]]
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[36mTweet Create (1.0ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214541416787009536"], ["tweet_desc", "RT @HonDomey: Look at those who have been calling themselves they are fighting for democracy 2 Years ago starting with @RailaOdinga @orengo…"], ["date_post", "Tue Jan 07 13:36:53 +0000 2020"], ["created_at", "2020-01-07 13:40:27.614983"], ["updated_at", "2020-01-07 13:40:27.614983"], ["user_name", "ElgeiyoMarakwetFinest™"], ["user_screen_name", "EMC_finest"]]
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214541392288071685"], ["tweet_desc", "RT @HonDomey: Look at those who have been calling themselves they are fighting for democracy 2 Years ago starting with @RailaOdinga @orengo…"], ["date_post", "Tue Jan 07 13:36:47 +0000 2020"], ["created_at", "2020-01-07 13:40:27.627231"], ["updated_at", "2020-01-07 13:40:27.627231"], ["user_name", "≣ᴏsᴀs ʙɪɢ ᴇɴɢɪɴᴇ🍆≣"], ["user_screen_name", "OsasBigEngine"]]
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214541077845336065"], ["tweet_desc", "The Universe May Be Flooded with a Cobweb Network of Invisible Strings (via @NewsfusionApps #NASA News)\nhttps://t.co/G0Q0SCfPVZ"], ["date_post", "Tue Jan 07 13:35:32 +0000 2020"], ["created_at", "2020-01-07 13:40:27.635265"], ["updated_at", "2020-01-07 13:40:27.635265"], ["user_name", "AstroBlanca"], ["user_screen_name", "aurora113311"]]
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214541076209422336"], ["tweet_desc", "RT @24matins_tech: Découverte d’une planète de la taille de la Terre dans une “zone habitable” https://t.co/ecd6GSWkDB #Sciences #Espace #N…"], ["date_post", "Tue Jan 07 13:35:32 +0000 2020"], ["created_at", "2020-01-07 13:40:27.649582"], ["updated_at", "2020-01-07 13:40:27.649582"], ["user_name", "24matins.fr"], ["user_screen_name", "24matins"]]
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214540950535647233"], ["tweet_desc", "RT @mrderrick_: #NASA #EarthlikeExoplanet #TESS \n\nFirst potentially habitable Earth-size planet discovered by TESS mission, and it's nearby…"], ["date_post", "Tue Jan 07 13:35:02 +0000 2020"], ["created_at", "2020-01-07 13:40:27.657568"], ["updated_at", "2020-01-07 13:40:27.657568"], ["user_name", "Ich_fass_es_nicht"], ["user_screen_name", "es_fass"]]
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214540928402235393"], ["tweet_desc", "RT @HonDomey: Look at those who have been calling themselves they are fighting for democracy 2 Years ago starting with @RailaOdinga @orengo…"], ["date_post", "Tue Jan 07 13:34:57 +0000 2020"], ["created_at", "2020-01-07 13:40:27.670349"], ["updated_at", "2020-01-07 13:40:27.670349"], ["user_name", "Ndiema KE™"], ["user_screen_name", "ndiema002_"]]
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (13.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214540817567752192"], ["tweet_desc", "@Petrus24550953 @Historiekritisk 1/ #NASA IN HEBREW MEANS “TO DECEIVE”...\nhttps://t.co/ddRCm67CrN\n\n2/ Neil Armstron… https://t.co/pvDgEwGgrn"], ["date_post", "Tue Jan 07 13:34:30 +0000 2020"], ["created_at", "2020-01-07 13:40:27.690756"], ["updated_at", "2020-01-07 13:40:27.690756"], ["user_name", "IPAD-SWE 🇸🇪 also on GAB"], ["user_screen_name", "SweIpad"]]
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214540733736046595"], ["tweet_desc", "Ok, globehead in an \"ok, boomer\" tone.\n\n#okboomer #NASA #earth #FlatEarth #globe #world #globestarwars #geek… https://t.co/4gkq4ctt75"], ["date_post", "Tue Jan 07 13:34:10 +0000 2020"], ["created_at", "2020-01-07 13:40:27.701825"], ["updated_at", "2020-01-07 13:40:27.701825"], ["user_name", "Gadi Evron"], ["user_screen_name", "gadievron"]]
+  ↳ app/controllers/tweets_controller.rb:61
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:61
+No template found for TweetsController#search, rendering head :no_content
+Completed 204 No Content in 1400ms (ActiveRecord: 346.3ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 10:41:12 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.9ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:5
+  Rendered tweets/_feed.html.erb (4.4ms)
+  Rendered tweets/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 376ms (Views: 374.0ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" ORDER BY "tweets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" ORDER BY "tweets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTweet Load (1.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 3]]
+  [1m[35m (56.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 4]]
+  [1m[35m (10.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 5]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 6]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 7]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 8]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 9]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 10]]
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 11]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 12]]
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 13]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 14]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 15]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 16]]
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 17]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE DATABASE "minetweets_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE "minetweets_test" ENCODING = 'utf8'[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (12.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "tweets" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (77.6ms)[0m  [1m[35mCREATE TABLE "tweets" ("id" bigserial primary key, "hashtag" character varying NOT NULL, "i_tweet" character varying NOT NULL, "tweet_desc" text, "date_post" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_name" character varying NOT NULL, "user_screen_name" character varying, "url_img_user" character varying NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (16.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "tweets" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (132.5ms)[0m  [1m[35mCREATE TABLE "tweets" ("id" bigserial primary key, "hashtag" character varying NOT NULL, "i_tweet" character varying NOT NULL, "tweet_desc" text, "date_post" text NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_name" character varying NOT NULL, "user_screen_name" character varying, "url_img_user" character varying NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2020-01-07 14:45:28.693049"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (10.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-01-07 14:45:28.708229"], ["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/tweets/new" for ::1 at 2020-01-07 11:46:18 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/matbit/Documents/Projetos/MineTweet/mine-tweet/app/controllers/tweets_controller.rb:61: syntax error, unexpected tIDENTIFIER, expecting ')'
+        url_img_user: tw["user"]["profile_image_u...
+        ^~~~~~~~~~~~
+/home/matbit/Documents/Projetos/MineTweet/mine-tweet/app/controllers/tweets_controller.rb:62: syntax error, unexpected ')', expecting keyword_end
+      ).save
+      ^
+/home/matbit/Documents/Projetos/MineTweet/mine-tweet/app/controllers/tweets_controller.rb:119: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/tweets_controller.rb:61: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/tweets_controller.rb:62: syntax error, unexpected ')', expecting keyword_end
+app/controllers/tweets_controller.rb:119: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/tweets/new" for ::1 at 2020-01-07 11:47:24 -0300
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 6097ms (Views: 6074.7ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-07 11:47:37 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aA+mIy2Y//ZMgLmMcGCx13VtuSKejc0LsHQ0lG74AFwqM2cSaZ7YCWkB7QVW8qM/8EJ3p/m/A/6SUyD7Uw6S5Q==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (1.0ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214559022193377280"], ["tweet_desc", "RT @SallyRideSci: #NASA will honor its newest class of astronaut candidates Jan 10 for completing 2 years of training and becoming eligible…"], ["date_post", "Tue Jan 07 14:46:50 +0000 2020"], ["created_at", "2020-01-07 14:47:38.265571"], ["updated_at", "2020-01-07 14:47:38.265571"], ["user_name", "Cy07"], ["user_screen_name", "Zombie1cy"], ["url_img_user", "http://pbs.twimg.com/profile_images/1205983969478623233/ZIlZtHbq_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (45.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214558991394594821"], ["tweet_desc", "RT @SalamiLea: #reformedesretraites : #EdouardPhilippe reprend espoir dans les négociations après la découverte par la #NASA d'une planète…"], ["date_post", "Tue Jan 07 14:46:43 +0000 2020"], ["created_at", "2020-01-07 14:47:38.317040"], ["updated_at", "2020-01-07 14:47:38.317040"], ["user_name", "EuropeanSpringMember"], ["user_screen_name", "member_spring"], ["url_img_user", "http://pbs.twimg.com/profile_images/1127331984899018752/QLCJFM11_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214558844262600704"], ["tweet_desc", "RT @Tarhan_Nuray: #NASA’nın #gezegen avlama birimi #TESS, ilk kez dünya büyüklüğünde #dışgezegen bulduklarını açıkladı. Dünyadan 100 ışık y…"], ["date_post", "Tue Jan 07 14:46:08 +0000 2020"], ["created_at", "2020-01-07 14:47:38.326725"], ["updated_at", "2020-01-07 14:47:38.326725"], ["user_name", "hakan kızak"], ["user_screen_name", "hakankzak"], ["url_img_user", "http://pbs.twimg.com/profile_images/985361968650489856/dXcPh2AL_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.4ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214558642478796807"], ["tweet_desc", "RT @Ambitocom: #NASA descubrió un planeta similar a la 🌎 Tierra en una zona habitable https://t.co/Bh9vK325jT https://t.co/NaDS8LjHCb"], ["date_post", "Tue Jan 07 14:45:20 +0000 2020"], ["created_at", "2020-01-07 14:47:38.338769"], ["updated_at", "2020-01-07 14:47:38.338769"], ["user_name", "Jesus Escobar"], ["user_screen_name", "JesusEs66408808"], ["url_img_user", "http://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214558611143196674"], ["tweet_desc", "@welt Wir wollen nur Planeten, wo es noch nie einen #Klimawandel gegeben hat. #Nasa"], ["date_post", "Tue Jan 07 14:45:12 +0000 2020"], ["created_at", "2020-01-07 14:47:38.348616"], ["updated_at", "2020-01-07 14:47:38.348616"], ["user_name", "Admiral Ackbar"], ["user_screen_name", "Admiral55133937"], ["url_img_user", "http://pbs.twimg.com/profile_images/1168974834979749888/eve_soeO_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (29.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214558549746937856"], ["tweet_desc", "RT @HonDomey: Look at those who have been calling themselves they are fighting for democracy 2 Years ago starting with @RailaOdinga @orengo…"], ["date_post", "Tue Jan 07 14:44:58 +0000 2020"], ["created_at", "2020-01-07 14:47:38.381417"], ["updated_at", "2020-01-07 14:47:38.381417"], ["user_name", "George"], ["user_screen_name", "jorge_timona"], ["url_img_user", "http://pbs.twimg.com/profile_images/1212784246059872257/KZEpmz8j_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214558487356665857"], ["tweet_desc", "RT @HonDomey: Look at those who have been calling themselves they are fighting for democracy 2 Years ago starting with @RailaOdinga @orengo…"], ["date_post", "Tue Jan 07 14:44:43 +0000 2020"], ["created_at", "2020-01-07 14:47:38.392723"], ["updated_at", "2020-01-07 14:47:38.392723"], ["user_name", "Thomas Khaemba7"], ["user_screen_name", "Ingasiathomas"], ["url_img_user", "http://pbs.twimg.com/profile_images/1165550290994716673/EEhA5MoX_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214558320461139968"], ["tweet_desc", "RT @HonDomey: Look at those who have been calling themselves they are fighting for democracy 2 Years ago starting with @RailaOdinga @orengo…"], ["date_post", "Tue Jan 07 14:44:03 +0000 2020"], ["created_at", "2020-01-07 14:47:38.404332"], ["updated_at", "2020-01-07 14:47:38.404332"], ["user_name", "Mandy_baby🧞‍♂️🤓🇬🇭"], ["user_screen_name", "kansangamanda"], ["url_img_user", "http://pbs.twimg.com/profile_images/1209911374551363585/qdzRrkrS_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214558316086493185"], ["tweet_desc", "#Nasa Flugleiterin Rebecca Wingfield hatte heute wieder alles im Griff beim Abdockmanöver des Dragon Frachtschiffs… https://t.co/V8di58xVy1"], ["date_post", "Tue Jan 07 14:44:02 +0000 2020"], ["created_at", "2020-01-07 14:47:38.415233"], ["updated_at", "2020-01-07 14:47:38.415233"], ["user_name", "Sascha S."], ["user_screen_name", "Unikatze"], ["url_img_user", "http://pbs.twimg.com/profile_images/1160999969513463809/qc12M8Ic_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214558245257273345"], ["tweet_desc", "RT @HonDomey: Look at those who have been calling themselves they are fighting for democracy 2 Years ago starting with @RailaOdinga @orengo…"], ["date_post", "Tue Jan 07 14:43:45 +0000 2020"], ["created_at", "2020-01-07 14:47:38.426526"], ["updated_at", "2020-01-07 14:47:38.426526"], ["user_name", "nsarko 🧞‍♂️"], ["user_screen_name", "nsarko2131"], ["url_img_user", "http://pbs.twimg.com/profile_images/1211720934987579393/5oFLTxed_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214558224159916039"], ["tweet_desc", "Earth-sized exoplanet found in habitable zone https://t.co/WQyCxlYvr9 #exoplanet #exoplanets #TOI700d #TOI700 #TESS… https://t.co/bHC6wA4VkF"], ["date_post", "Tue Jan 07 14:43:40 +0000 2020"], ["created_at", "2020-01-07 14:47:38.438095"], ["updated_at", "2020-01-07 14:47:38.438095"], ["user_name", "Future Timeline"], ["user_screen_name", "future_timeline"], ["url_img_user", "http://pbs.twimg.com/profile_images/948972680304357378/A-uTY_h7_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214558214445944832"], ["tweet_desc", "Robot’s Journey to an Icy Alien Moon Starts Beneath Antarctica\n\nhttps://t.co/ZTjqMseWHU\n\n#science #polarscience… https://t.co/QQ0Ud4dcaw"], ["date_post", "Tue Jan 07 14:43:38 +0000 2020"], ["created_at", "2020-01-07 14:47:38.448301"], ["updated_at", "2020-01-07 14:47:38.448301"], ["user_name", "PGC"], ["user_screen_name", "polargeospatial"], ["url_img_user", "http://pbs.twimg.com/profile_images/847137448702312449/YdSHB4MP_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (2.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214558116555026432"], ["tweet_desc", "RT @HonDomey: Look at those who have been calling themselves they are fighting for democracy 2 Years ago starting with @RailaOdinga @orengo…"], ["date_post", "Tue Jan 07 14:43:15 +0000 2020"], ["created_at", "2020-01-07 14:47:38.459509"], ["updated_at", "2020-01-07 14:47:38.459509"], ["user_name", "@mo"], ["user_screen_name", "mo01039514"], ["url_img_user", "http://pbs.twimg.com/profile_images/1197503391242563584/CIMrWpea_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214558099786231808"], ["tweet_desc", "@SpaceX Launches 60 Starlink Satellites, Nails Rocket Landing in Record-Breaking Flight, as the launch made @SpaceX… https://t.co/ainFX1LBbB"], ["date_post", "Tue Jan 07 14:43:11 +0000 2020"], ["created_at", "2020-01-07 14:47:38.472546"], ["updated_at", "2020-01-07 14:47:38.472546"], ["user_name", "Obiaks"], ["user_screen_name", "obiaksnews"], ["url_img_user", "http://pbs.twimg.com/profile_images/748108918145056769/_KzcRFmB_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214558005573902336"], ["tweet_desc", "RT @HonDomey: Look at those who have been calling themselves they are fighting for democracy 2 Years ago starting with @RailaOdinga @orengo…"], ["date_post", "Tue Jan 07 14:42:48 +0000 2020"], ["created_at", "2020-01-07 14:47:38.481479"], ["updated_at", "2020-01-07 14:47:38.481479"], ["user_name", "🇿🇦 THANDO 🇬🇭"], ["user_screen_name", "_I_dee"], ["url_img_user", "http://pbs.twimg.com/profile_images/1214285010817171461/cc8dFmFj_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+No template found for TweetsController#search, rendering head :no_content
+Completed 204 No Content in 1264ms (ActiveRecord: 174.2ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 11:47:45 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (1.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:7
+  Rendered tweets/_feed.html.erb (5.1ms)
+  Rendered tweets/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 68ms (Views: 65.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 11:50:31 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  Rendered tweets/_feed.html.erb (1.1ms)
+  Rendered tweets/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/matbit/Documents/Projetos/MineTweet/mine-tweet/app/views/tweets/_feed.html.erb:13: `@+' is not allowed as an instance variable name
+/home/matbit/Documents/Projetos/MineTweet/mine-tweet/app/views/tweets/_feed.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+...tput_buffer.append=( truncate(@+tw.user_screen_name) );@outp...
+...                              ^):
+  
+app/views/tweets/_feed.html.erb:13: `@+' is not allowed as an instance variable name
+app/views/tweets/_feed.html.erb:13: syntax error, unexpected end-of-input, expecting ')'
+app/views/tweets/index.html.erb:7:in `_app_views_tweets_index_html_erb__1709139398247232721_70338109023700'
+Started GET "/" for ::1 at 2020-01-07 11:50:55 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:5
+  Rendered tweets/_feed.html.erb (7.6ms)
+  Rendered tweets/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 104ms (Views: 101.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 11:54:06 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:3
+  Rendered tweets/_feed.html.erb (4.6ms)
+  Rendered tweets/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 93ms (Views: 89.5ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" ORDER BY "tweets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTweet Load (1.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (1.0ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 1]]
+  [1m[35m (16.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.9ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 2]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 3]]
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 4]]
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (1.0ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 5]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 6]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 7]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 8]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 9]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 10]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 11]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 12]]
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 13]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 14]]
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 15]]
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTweet Load (0.9ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" ORDER BY "tweets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-01-07 12:05:39 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.9ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:3
+  Rendered tweets/_feed.html.erb (2.6ms)
+  Rendered tweets/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 380ms (Views: 367.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/tweets" for ::1 at 2020-01-07 12:05:45 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.9ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:3
+  Rendered tweets/_feed.html.erb (3.5ms)
+  Rendered tweets/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 88ms (Views: 84.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tweets/new" for ::1 at 2020-01-07 12:05:50 -0300
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 87ms (Views: 68.1ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-07 12:05:55 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MtusmxmFzEIoJlZ3a8kFjZhKenlZ02HvAt8N75Y8vIBw522qXYPrvQ2nAv5NWxdlHWW0/D7hrxog+BmAq8ouOQ==", "hashtag"=>"#freehongkong", "commit"=>"Buscar"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#freehongkong"], ["i_tweet", "1214563469904625676"], ["tweet_desc", "RT @humanhead26: @batchelorshow Love how you describe these Asian finest triads. Typical Communist China way to destroy our young generatio…"], ["date_post", "Tue Jan 07 15:04:31 +0000 2020"], ["created_at", "2020-01-07 15:05:56.645649"], ["updated_at", "2020-01-07 15:05:56.645649"], ["user_name", "chloewong"], ["user_screen_name", "chloewo25572748"], ["url_img_user", "http://pbs.twimg.com/profile_images/1197001530542477313/1fRSKjFg_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (34.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#freehongkong"], ["i_tweet", "1214563109660086279"], ["tweet_desc", "RT @humanhead26: @batchelorshow Love how you describe these Asian finest triads. Typical Communist China way to destroy our young generatio…"], ["date_post", "Tue Jan 07 15:03:05 +0000 2020"], ["created_at", "2020-01-07 15:05:56.684558"], ["updated_at", "2020-01-07 15:05:56.684558"], ["user_name", "mimicatdog"], ["user_screen_name", "mimicatdog"], ["url_img_user", "http://pbs.twimg.com/profile_images/1214558716197883906/rVScMEzQ_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#freehongkong"], ["i_tweet", "1214562967401852930"], ["tweet_desc", "RT @yuen_cecil: #5DemandsNot1Less \n#FreeHongKong #RevolutionNow \nCr. 壹 Next Magazine https://t.co/pEAJ35xkHn"], ["date_post", "Tue Jan 07 15:02:31 +0000 2020"], ["created_at", "2020-01-07 15:05:56.697783"], ["updated_at", "2020-01-07 15:05:56.697783"], ["user_name", "煮不烂的青豆"], ["user_screen_name", "dfy1126"], ["url_img_user", "http://pbs.twimg.com/profile_images/1163634414506528768/taUF7wZ2_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#freehongkong"], ["i_tweet", "1214562678137487364"], ["tweet_desc", "RT @FantlGrace: Sonny! Hope you breathe the free air of #HongKong when you grow up. Hope, you don't have to wear a mask to fight the #CCPCh…"], ["date_post", "Tue Jan 07 15:01:22 +0000 2020"], ["created_at", "2020-01-07 15:05:56.707693"], ["updated_at", "2020-01-07 15:05:56.707693"], ["user_name", "Freedom"], ["user_screen_name", "Freedom29003758"], ["url_img_user", "http://pbs.twimg.com/profile_images/1189339928250982406/UFgPR9GW_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#freehongkong"], ["i_tweet", "1214562374683779073"], ["tweet_desc", "@EnzoMazak @Sam70140825 We will never stop! #5DemandsNot1Less #StandWithHongKong #FreeHongKong #FreeSpeech"], ["date_post", "Tue Jan 07 15:00:10 +0000 2020"], ["created_at", "2020-01-07 15:05:56.718191"], ["updated_at", "2020-01-07 15:05:56.718191"], ["user_name", "disney 😷"], ["user_screen_name", "disney2096"], ["url_img_user", "http://pbs.twimg.com/profile_images/1181038987802136576/Gwn74mqV_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#freehongkong"], ["i_tweet", "1214562347177500682"], ["tweet_desc", "RT @Alice167167: @FinancialTimes No one wants to be hero in this movement. We just want to be free from CCP’s hands. #StandWithHongKong #Re…"], ["date_post", "Tue Jan 07 15:00:03 +0000 2020"], ["created_at", "2020-01-07 15:05:56.729001"], ["updated_at", "2020-01-07 15:05:56.729001"], ["user_name", "Just an ordinary coward"], ["user_screen_name", "Philoid2"], ["url_img_user", "http://pbs.twimg.com/profile_images/1195360516157231105/lxZDK2QJ_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#freehongkong"], ["i_tweet", "1214562330719084545"], ["tweet_desc", "RT @MasuHKger: @PENamerica @SCMPNews HK regime will not win. They lost #HongKong ppl completely. The fight maybe long but not rest. \n#Stand…"], ["date_post", "Tue Jan 07 14:59:59 +0000 2020"], ["created_at", "2020-01-07 15:05:56.741510"], ["updated_at", "2020-01-07 15:05:56.741510"], ["user_name", "tiggerkarman"], ["user_screen_name", "tiggerkarman1"], ["url_img_user", "http://pbs.twimg.com/profile_images/1194642973981466625/JQ8A1wEf_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#freehongkong"], ["i_tweet", "1214562325073518593"], ["tweet_desc", "RT @SummerSnowmanHK: @FinancialTimes We #HongKongProtesters are all ordinary people. It’s when our home being destroyed by totalitarianism…"], ["date_post", "Tue Jan 07 14:59:58 +0000 2020"], ["created_at", "2020-01-07 15:05:56.751293"], ["updated_at", "2020-01-07 15:05:56.751293"], ["user_name", "chloewong"], ["user_screen_name", "chloewo25572748"], ["url_img_user", "http://pbs.twimg.com/profile_images/1197001530542477313/1fRSKjFg_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (1.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#freehongkong"], ["i_tweet", "1214562314260606976"], ["tweet_desc", "RT @Alice167167: @FinancialTimes No one wants to be hero in this movement. We just want to be free from CCP’s hands. #StandWithHongKong #Re…"], ["date_post", "Tue Jan 07 14:59:55 +0000 2020"], ["created_at", "2020-01-07 15:05:56.774660"], ["updated_at", "2020-01-07 15:05:56.774660"], ["user_name", "chloewong"], ["user_screen_name", "chloewo25572748"], ["url_img_user", "http://pbs.twimg.com/profile_images/1197001530542477313/1fRSKjFg_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#freehongkong"], ["i_tweet", "1214562035779768326"], ["tweet_desc", "RT @MasuHKger: @PENamerica @SCMPNews HK regime will not win. They lost #HongKong ppl completely. The fight maybe long but not rest. \n#Stand…"], ["date_post", "Tue Jan 07 14:58:49 +0000 2020"], ["created_at", "2020-01-07 15:05:56.784224"], ["updated_at", "2020-01-07 15:05:56.784224"], ["user_name", "chloewong"], ["user_screen_name", "chloewo25572748"], ["url_img_user", "http://pbs.twimg.com/profile_images/1197001530542477313/1fRSKjFg_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#freehongkong"], ["i_tweet", "1214561952044703744"], ["tweet_desc", "RT @CheungToki: 身體最誠實嘅完美示範\n#多鵸  #toki_cheung\n#中國肺炎 #武漢肺炎 #漫画  #freehongkong #freehk #China_is_terrorist #ChinesePneumonia https://t.co/Zj9o…"], ["date_post", "Tue Jan 07 14:58:29 +0000 2020"], ["created_at", "2020-01-07 15:05:56.796096"], ["updated_at", "2020-01-07 15:05:56.796096"], ["user_name", "KENT"], ["user_screen_name", "kent1848"], ["url_img_user", "http://pbs.twimg.com/profile_images/1164900827846234113/_wxxQp1g_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#freehongkong"], ["i_tweet", "1214561380465987589"], ["tweet_desc", "RT @FantlGrace: Sonny! Hope you breathe the free air of #HongKong when you grow up. Hope, you don't have to wear a mask to fight the #CCPCh…"], ["date_post", "Tue Jan 07 14:56:13 +0000 2020"], ["created_at", "2020-01-07 15:05:56.806310"], ["updated_at", "2020-01-07 15:05:56.806310"], ["user_name", "fu jacky"], ["user_screen_name", "fujacky2"], ["url_img_user", "http://pbs.twimg.com/profile_images/1196807214331117568/UjCMI0hu_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (1.0ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#freehongkong"], ["i_tweet", "1214561268293488645"], ["tweet_desc", "RT @MasuHKger: @PENamerica @SCMPNews HK regime will not win. They lost #HongKong ppl completely. The fight maybe long but not rest. \n#Stand…"], ["date_post", "Tue Jan 07 14:55:46 +0000 2020"], ["created_at", "2020-01-07 15:05:56.818374"], ["updated_at", "2020-01-07 15:05:56.818374"], ["user_name", "iweyouthey"], ["user_screen_name", "iweyouthey1"], ["url_img_user", "http://pbs.twimg.com/profile_images/1199194237620781057/mQV69vFK_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#freehongkong"], ["i_tweet", "1214561163079376898"], ["tweet_desc", "此新聞轉載自Instagram, 齊上齊落廣傳最新消息 全港最齊日程 fb,ig,tg,twitter: hkerschedule disclaimer: https://t.co/n6nRx2hPEN #香港 #香港人 #日程表… https://t.co/hOXEuSKodE"], ["date_post", "Tue Jan 07 14:55:21 +0000 2020"], ["created_at", "2020-01-07 15:05:56.828588"], ["updated_at", "2020-01-07 15:05:56.828588"], ["user_name", "香港人日程表"], ["user_screen_name", "hkerschedule"], ["url_img_user", "http://pbs.twimg.com/profile_images/1181855369649221632/jdV1umIQ_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#freehongkong"], ["i_tweet", "1214561158142685184"], ["tweet_desc", "此新聞轉載自Instagram, 齊上齊落廣傳最新消息 全港最齊日程 fb,ig,tg,twitter: hkerschedule disclaimer: https://t.co/n6nRx2hPEN #香港 #香港人 #日程表… https://t.co/8VmLywpWIq"], ["date_post", "Tue Jan 07 14:55:20 +0000 2020"], ["created_at", "2020-01-07 15:05:56.839733"], ["updated_at", "2020-01-07 15:05:56.839733"], ["user_name", "香港人日程表"], ["user_screen_name", "hkerschedule"], ["url_img_user", "http://pbs.twimg.com/profile_images/1181855369649221632/jdV1umIQ_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:62
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:62
+No template found for TweetsController#search, rendering head :no_content
+Completed 204 No Content in 1741ms (ActiveRecord: 147.8ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 12:06:25 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:3
+  Rendered tweets/_feed.html.erb (44.7ms)
+  Rendered tweets/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 103ms (Views: 97.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tweets/new" for ::1 at 2020-01-07 12:08:09 -0300
+Processing by TweetsController#new as HTML
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 87ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tweets_search" for ::1 at 2020-01-07 12:08:22 -0300
+Processing by TweetsController#search as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OP10zwjzJcKPPNZorZLvk+FaEbGIheKDdXwfdBCagzp6wbX+TPUCPaq9guGLAP17ZHXfNO+3LHZXWwsbLWwRgw==", "hashtag"=>"#nasa", "commit"=>"Buscar"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214564365803745284"], ["tweet_desc", "There\u0092s no place on Earth like it. Get up close to the new Space Shuttle Atlantis and ride the Shuttle Launch Exper… https://t.co/CEx585KhkE"], ["date_post", "Tue Jan 07 15:08:04 +0000 2020"], ["created_at", "2020-01-07 15:08:23.575794"], ["updated_at", "2020-01-07 15:08:23.575794"], ["user_name", "TravelHost Orlando"], ["user_screen_name", "TravelHostOrl"], ["url_img_user", "http://pbs.twimg.com/profile_images/1193988507246776325/Yk5RI5u3_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (37.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214564329372020737"], ["tweet_desc", "RT @NASAEarth: ICONic Views of the Atmosphere https://t.co/xn817HQkMB #NASA"], ["date_post", "Tue Jan 07 15:07:56 +0000 2020"], ["created_at", "2020-01-07 15:08:23.617714"], ["updated_at", "2020-01-07 15:08:23.617714"], ["user_name", "Christian Turner"], ["user_screen_name", "Xristian806"], ["url_img_user", "http://pbs.twimg.com/profile_images/702245391144787968/9nhF1lyx_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214564304298491906"], ["tweet_desc", "📢 Por qué Neil Armstrong fue quien pisó primero la Luna y no Buzz Aldrin #NASA https://t.co/i2uhbiUncr"], ["date_post", "Tue Jan 07 15:07:50 +0000 2020"], ["created_at", "2020-01-07 15:08:23.628663"], ["updated_at", "2020-01-07 15:08:23.628663"], ["user_name", "Lecturas 24H 💧"], ["user_screen_name", "Lecturas24H"], ["url_img_user", "http://pbs.twimg.com/profile_images/1020399073181003778/EEqfSKCp_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214564188950913024"], ["tweet_desc", "RT @HonDomey: Look at those who have been calling themselves they are fighting for democracy 2 Years ago starting with @RailaOdinga @orengo…"], ["date_post", "Tue Jan 07 15:07:22 +0000 2020"], ["created_at", "2020-01-07 15:08:23.639253"], ["updated_at", "2020-01-07 15:08:23.639253"], ["user_name", "L€$LI€+ 🇬🇭🌍🇳🇬"], ["user_screen_name", "TmNappyboy"], ["url_img_user", "http://pbs.twimg.com/profile_images/1214121304066052097/jM3j9Ury_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214564061070815237"], ["tweet_desc", "RT @OfTetes: Voilà la nouvel planète trouvé par la #NASA\nElle est vraiment grosse\nIls l'ont appelé Nasa en référence à la nasa https://t.co…"], ["date_post", "Tue Jan 07 15:06:52 +0000 2020"], ["created_at", "2020-01-07 15:08:23.650093"], ["updated_at", "2020-01-07 15:08:23.650093"], ["user_name", "chenzen ⁶₆⁷"], ["user_screen_name", "mehameha_k"], ["url_img_user", "http://pbs.twimg.com/profile_images/1214513107546062848/ei7vy30a_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214564055672737794"], ["tweet_desc", "#Nasa workers... \n#we are unstoppable... https://t.co/A8erq1dgYP"], ["date_post", "Tue Jan 07 15:06:51 +0000 2020"], ["created_at", "2020-01-07 15:08:23.661587"], ["updated_at", "2020-01-07 15:08:23.661587"], ["user_name", "Simphiwe phiwe Ximba"], ["user_screen_name", "XimbaPhiwe"], ["url_img_user", "http://pbs.twimg.com/profile_images/1214287469107175432/s_ZKtp92_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (29.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214563984306626564"], ["tweet_desc", "RT @NASAEarth: ICONic Views of the Atmosphere https://t.co/xn817HQkMB #NASA"], ["date_post", "Tue Jan 07 15:06:34 +0000 2020"], ["created_at", "2020-01-07 15:08:23.697677"], ["updated_at", "2020-01-07 15:08:23.697677"], ["user_name", "Riding the wave"], ["user_screen_name", "RidingTheWave_"], ["url_img_user", "http://pbs.twimg.com/profile_images/1208359253930586112/Tgt01mkx_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (14.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214563848369266692"], ["tweet_desc", "Lost #Astronaut by @LTCartoons #humor #space #nasa #apollo #cartoons #comics #ltcartoons #moon #themoon https://t.co/2qgGeIaj7F"], ["date_post", "Tue Jan 07 15:06:01 +0000 2020"], ["created_at", "2020-01-07 15:08:23.716928"], ["updated_at", "2020-01-07 15:08:23.716928"], ["user_name", "Londons Times Comics"], ["user_screen_name", "LTCartoons"], ["url_img_user", "http://pbs.twimg.com/profile_images/460512169918861313/_n-igLAP_normal.jpeg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214563818409345034"], ["tweet_desc", "RT @AndySaunders_1: Here's another, closer version of @SpaceX #Dragon among the stars as it separated from @Space_Station this morning.\n\n50…"], ["date_post", "Tue Jan 07 15:05:54 +0000 2020"], ["created_at", "2020-01-07 15:08:23.727502"], ["updated_at", "2020-01-07 15:08:23.727502"], ["user_name", "Елена Храбрая - Докина"], ["user_screen_name", "e_plahov"], ["url_img_user", "http://pbs.twimg.com/profile_images/1214136259368632320/ACcyB2aw_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214563783676329986"], ["tweet_desc", "RT @marathon_mick69: Any Safc fans in Vancouver no of a bar showing our game on Saturday #NASA #SAFC"], ["date_post", "Tue Jan 07 15:05:46 +0000 2020"], ["created_at", "2020-01-07 15:08:23.740879"], ["updated_at", "2020-01-07 15:08:23.740879"], ["user_name", "david wardle"], ["user_screen_name", "safc777"], ["url_img_user", "http://pbs.twimg.com/profile_images/1138862317679128576/EISgvz1b_normal.png"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214563781558165505"], ["tweet_desc", "HiPOD VII Ianuarii MMXX: Strata in cratere Utopiae Planitiae\n\nnumerus: ESP_036710_2235\nacquisitum: XXVI Maii MMXIV… https://t.co/5NGZepnk94"], ["date_post", "Tue Jan 07 15:05:45 +0000 2020"], ["created_at", "2020-01-07 15:08:23.750703"], ["updated_at", "2020-01-07 15:08:23.750703"], ["user_name", "HiRISELatin (NASA)"], ["user_screen_name", "HiRISELatin"], ["url_img_user", "http://pbs.twimg.com/profile_images/925421160845602816/4kpkQor-_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214563407489159171"], ["tweet_desc", "Hacking the universe in 2020 #SpaceApps #NASA https://t.co/yWmnTs5UNH"], ["date_post", "Tue Jan 07 15:04:16 +0000 2020"], ["created_at", "2020-01-07 15:08:23.763150"], ["updated_at", "2020-01-07 15:08:23.763150"], ["user_name", "iceonaroguewave"], ["user_screen_name", "iceonaroguewave"], ["url_img_user", "http://pbs.twimg.com/profile_images/1175832283061858305/zQxzcVnh_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (1.0ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214563255265316869"], ["tweet_desc", "HiPOD 7 enero 2020: En el borde del material expulsado por un cráter de impacto\n\nnúmero: ESP_046204_2255\nfecha: 04… https://t.co/kgCtCRr6rn"], ["date_post", "Tue Jan 07 15:03:40 +0000 2020"], ["created_at", "2020-01-07 15:08:23.772505"], ["updated_at", "2020-01-07 15:08:23.772505"], ["user_name", "HiRISE Español (NASA)"], ["user_screen_name", "HiRISESpanish"], ["url_img_user", "http://pbs.twimg.com/profile_images/925418127155871744/EOSKOqYA_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214563217885650944"], ["tweet_desc", "RT @NASAEarth: ICONic Views of the Atmosphere https://t.co/xn817HQkMB #NASA"], ["date_post", "Tue Jan 07 15:03:31 +0000 2020"], ["created_at", "2020-01-07 15:08:23.783689"], ["updated_at", "2020-01-07 15:08:23.783689"], ["user_name", "♺"], ["user_screen_name", "chenvasquez"], ["url_img_user", "http://pbs.twimg.com/profile_images/1116734931537780736/eUtdbjcO_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["hashtag", "#nasa"], ["i_tweet", "1214563163233902593"], ["tweet_desc", "RT @HonDomey: Look at those who have been calling themselves they are fighting for democracy 2 Years ago starting with @RailaOdinga @orengo…"], ["date_post", "Tue Jan 07 15:03:18 +0000 2020"], ["created_at", "2020-01-07 15:08:23.796633"], ["updated_at", "2020-01-07 15:08:23.796633"], ["user_name", "Osu Sarkodie 🇬🇭 🇳🇬"], ["user_screen_name", "Nasty00007"], ["url_img_user", "http://pbs.twimg.com/profile_images/1214108680486096896/d-SGVGbV_normal.jpg"]]
+  ↳ app/controllers/tweets_controller.rb:63
+  [1m[35m (19.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tweets_controller.rb:63
+No template found for TweetsController#search, rendering head :no_content
+Completed 204 No Content in 1337ms (ActiveRecord: 190.1ms)
+
+
+Started GET "/" for ::1 at 2020-01-07 12:09:25 -0300
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" ORDER BY "tweets"."created_at" ASC[0m
+  ↳ app/views/tweets/_feed.html.erb:3
+  Rendered tweets/_feed.html.erb (7.4ms)
+  Rendered tweets/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 99ms (Views: 95.2ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" LIMIT $1[0m  [["LIMIT", 1]]

@@ -12,16 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2019_12_31_121306) do
 
+# These are extensions that must be enabled in order to support this database
+enable_extension "plpgsql"
+
   create_table "tweets", force: :cascade do |t|
-    t.string "hashtag"
+    t.string "hashtag", null: false
     t.string "i_tweet", null: false
     t.text "tweet_desc"
     t.text "date_post", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "user_name", null: false
+    t.string "user_name", null: false
     t.string "user_screen_name"
-    t.index ["i_tweet"], name: "index_tweets", unique: true
+    t.text "url_img_user", null: false
   end
 
 end

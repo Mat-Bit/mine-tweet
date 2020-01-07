@@ -1,10 +1,13 @@
-@import "bootstrap";
+// Place all the styles related to the Tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
   font-family: Arial,sans-serif;
   color: #292f33;
 }
 
+/* This element would be replaced by where you want the templates. */
 .tweetEntry-tweetHolder {
   border-left: 1px solid #e1e8ed;
   border-right: 1px solid #e1e8ed;
@@ -13,6 +16,28 @@ body {
   margin: auto;
   border-radius: 5px;
 }
+
+/* The action list is optional. */
+.tweetEntry-action-list {
+  display: block;
+  line-height: 18px;
+  margin-left: 58px;
+  margin-top: 10px;
+  color: #292f33;
+}
+
+.fa-reply:hover {
+  color: #292f33;
+}
+
+.fa-retweet:hover {
+  color: #5cd65c;
+}
+
+.fa-heart:hover {
+  color: #ff3333;
+}
+/************************/
 
 .tweetEntry {
   border-bottom: 1px solid #e1e8ed;
@@ -26,26 +51,6 @@ body {
   font-size: 14px;
   margin-left: 58px;
   font-size: 14px;
-}
-
-.tweetEntry-fullname {
-  font-weight: bold;
-  font-size: 14px;
-  color: #292f33;
-  padding: 0px;
-}
-
-.tweetEntry-username {
-  font-weight: bold;
-  font-size: 14px;
-  color: #b1bbc3;
-  padding: 0px;
-}
-
-.tweetEntry-text-container {
-  font-size: 14px;
-  color: #292f33;
-  line-height: 18px;
 }
 
 .tweetEntry-account-group {
@@ -63,10 +68,30 @@ body {
   border-radius: 5px;
 }
 
+.tweetEntry-fullname {
+  font-weight: bold;
+  font-size: 14px;
+  color: #292f33;
+  padding: 0px;
+}
+
+.tweetEntry-username {
+  font-weight: bold;
+  font-size: 14px;
+  color: #b1bbc3;
+  padding: 0px;
+}
+
 .tweetEntry-timestamp {
   font-size: 14px;
   color: #b1bbc3;
   padding: 0px;
+}
+
+.tweetEntry-text-container {
+  font-size: 14px;
+  color: #292f33;
+  line-height: 18px;
 }
 
 .optionalMedia {
@@ -78,5 +103,4 @@ body {
   border-radius: 5px;
   max-width: 506px;
   max-height: 506px;
-  
 }

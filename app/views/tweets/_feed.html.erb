@@ -1,13 +1,22 @@
 <div class="tweetEntry-tweetHolder">
-  <h2>Mostrar Tweets</h2>
 
-  <div class="tweetEntry">
-    <% @tweets.each do | tw | %>
+  <% @tweets.each do | tw | %>
+
+    <div class="tweetEntry">
+
       <div class="tweetEntry-content">
+
+        <img class="tweetEntry-avatar" src= <%= truncate(tw.url_img_user) %> >
+
         <strong class="tweetEntry-fullname"> <%= truncate(tw.user_name) %> </strong>
-        <span class="tweetEntry-username"> @ <b> <%= truncate(tw.user_screen_name) %> </b> </span> 
+
+        <span class="tweetEntry-username"> <b> @<%= truncate(tw.user_screen_name) %> </b> </span>
+
+        <span class="tweetEntry-timestamp"> <%= truncate(tw.date_post) %> </span>
+
         <div class="tweetEntry-text-container"> <%= truncate(tw.tweet_desc) %> </div>
+
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>

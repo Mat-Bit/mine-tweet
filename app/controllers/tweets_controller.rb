@@ -43,19 +43,25 @@ class TweetsController < ApplicationController
 
     parsed_resp["statuses"].each do |tw|
 
+      puts "ID Tweet:", tw["id_str"]
+      puts "Hashtag:", q
       puts "Texto:", tw["text"]
       puts "Data post:", tw["created_at"]
       puts "User:", tw["user"]["screen_name"]
+      puts "Screen name:", tw["user"]["screen_name"]
+      puts "Url_image", tw["user"]["profile_image_url"]
       puts
 
-      tweet = Tweet.create(
+      @tweet = Tweet.new(
         hashtag: q,
         i_tweet: tw["id_str"],
         tweet_desc: tw["text"],
         date_post: tw["created_at"],
         user_name: tw["user"]["name"],
-        user_screen_name: tw["user"]["screen_name"]
-      )
+        user_screen_name: tw["user"]["screen_name"],
+        url_img_user: tw["user"]["profile_image_url"]
+      ).save
+
 
     end
 
