@@ -1,0 +1,18 @@
+<!-- app/views/hashtags/new.html.erb -->
+
+<html>
+  <body>
+    
+    <%= form_with scope: :hashtag, url: hashtags_path, local: true do |form| %>
+      <p>
+        <%= form.label :buscar_hashtag %><br>
+        <%= form.text_field :tag %>
+      </p>
+      
+      <p>
+        <%= form.submit %>
+      </p>
+    <% end %>
+
+  </body>
+</html>
