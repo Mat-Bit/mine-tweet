@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2019_12_31_121306) do
   enable_extension "plpgsql"
 
   create_table "tweets", force: :cascade do |t|
-    t.string "hashtag", null: false
+    t.string "hash_id", null: false
     t.string "i_tweet", null: false
     t.text "tweet_desc"
     t.text "date_post", null: false
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 2019_12_31_121306) do
     t.string "user_name", null: false
     t.string "user_screen_name"
     t.string "url_img_user", null: false
+    t.index ["hash_id"], name: "index_tweets_on_hash_id"
+  end
+
+  create_table "hashtags", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_hashs", unique: true
   end
 
 end

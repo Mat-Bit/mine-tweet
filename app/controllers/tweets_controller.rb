@@ -27,12 +27,12 @@ class TweetsController < ApplicationController
 
   # POST /tweets_search
   def search
-    q = params["hashtag"]
+    query = params["hashtag"]
 
     base_api_url = "https://api.twitter.com/1.1/search/tweets.json"
     auth = "Bearer AAAAAAAAAAAAAAAAAAAAAOsABgEAAAAAtUA16lT7ybdFpBpamME9Dp7L4X4%3DioSiudZDIQjkRZuRor1O68dI8y7RvZTrhBlHSciNea9lOODsWH"
 
-    url = base_api_url + "?q=%23" + q[1..q.length]
+    url = base_api_url + "?q=%23" + query[1..query.length]
 
     puts url
     puts
@@ -43,17 +43,9 @@ class TweetsController < ApplicationController
 
     parsed_resp["statuses"].each do |tw|
 
-      puts "ID Tweet:", tw["id_str"]
-      puts "Hashtag:", q
-      puts "Texto:", tw["text"]
-      puts "Data post:", tw["created_at"]
-      puts "User:", tw["user"]["screen_name"]
-      puts "Screen name:", tw["user"]["screen_name"]
-      puts "Url_image", tw["user"]["profile_image_url"]
-      puts
 
       @tweet = Tweet.new(
-        hashtag: q,
+        hashtag: query,
         i_tweet: tw["id_str"],
         tweet_desc: tw["text"],
         date_post: tw["created_at"],
@@ -62,8 +54,9 @@ class TweetsController < ApplicationController
         url_img_user: tw["user"]["profile_image_url"]
       ).save
 
-
     end
+
+    redirect_back fallback_location: { action: "index"}
 
   end
 
@@ -74,7 +67,7 @@ class TweetsController < ApplicationController
 
     respond_to do |format|
       if @tweet.save
-        format.html { redirect_to @tweet, notice: 'Tweet was successfully created.' }
+        format.html { redirect_to @tweet, notice: 'Tweet was successfully created.'}
         format.json { render :show, status: :created, location: @tweet }
       else
         format.html { render :new }

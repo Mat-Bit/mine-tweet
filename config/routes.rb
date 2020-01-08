@@ -2,8 +2,10 @@ Rails.application.routes.draw do
 
   resources :tweets
 
+  resources :hashtags
+
   post '/tweets_search' => 'tweets#search'
 
-  root 'tweets#index'
+  root 'hashtags#index'
   
 end

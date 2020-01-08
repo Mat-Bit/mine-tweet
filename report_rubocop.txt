@@ -1,0 +1,680 @@
+Inspecting 52 files
+CCCCCCCWCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+
+Offenses:
+
+Gemfile:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+source 'https://rubygems.org'
+^
+Gemfile:41:1: C: Bundler/OrderedGems: Gems should be sorted in an alphabetical order within their section of the Gemfile. Gem bootstrap should appear before rest-client.
+gem 'bootstrap', '~> 4.4.1'
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Gemfile:44:1: C: Layout/EmptyLines: Extra blank line detected.
+Gemfile:46:81: C: Layout/LineLength: Line is too long. [83/80]
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+                                                                                ^^^
+Gemfile:47:28: C: Style/SymbolArray: Use %i or %I for an array of symbols.
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Gemfile:51:81: C: Layout/LineLength: Line is too long. [98/80]
+  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+                                                                                ^^^^^^^^^^^^^^^^^^
+Gemfile:53:3: C: Bundler/OrderedGems: Gems should be sorted in an alphabetical order within their section of the Gemfile. Gem listen should appear before web-console.
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Gemfile:54:81: C: Layout/LineLength: Line is too long. [130/80]
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Gemfile:57:3: C: Bundler/OrderedGems: Gems should be sorted in an alphabetical order within their section of the Gemfile. Gem rubocop should appear before spring-watcher-listen.
+  gem "rubocop", "~> 0.79.0"
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^
+Gemfile:57:7: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "rubocop", "~> 0.79.0"
+      ^^^^^^^^^
+Gemfile:57:18: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  gem "rubocop", "~> 0.79.0"
+                 ^^^^^^^^^^^
+Gemfile:69:31: C: Style/SymbolArray: Use %i or %I for an array of symbols.
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Gemfile:70:1: C: Layout/TrailingEmptyLines: 1 trailing blank lines detected.
+Rakefile:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+# Add your own tasks in files placed in lib/tasks ending in .rake,
+^
+Rakefile:2:81: C: Layout/LineLength: Line is too long. [90/80]
+# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
+                                                                                ^^^^^^^^^^
+app/channels/application_cable/channel.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+module ApplicationCable
+^
+app/channels/application_cable/connection.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+module ApplicationCable
+^
+app/controllers/application_controller.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+class ApplicationController < ActionController::Base
+^
+app/controllers/list_tweets_controller.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+require 'rest-client'
+^
+app/controllers/list_tweets_controller.rb:4:1: C: Style/Documentation: Missing top-level class documentation comment.
+class ListTweetsController < ApplicationController
+^^^^^
+app/controllers/list_tweets_controller.rb:5:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body beginning.
+app/controllers/list_tweets_controller.rb:6:1: C: Layout/EmptyLines: Extra blank line detected.
+app/controllers/list_tweets_controller.rb:7:3: C: Style/EmptyMethod: Put empty method definitions on a single line.
+  def index ...
+  ^^^^^^^^^
+app/controllers/list_tweets_controller.rb:8:1: C: Layout/EmptyLinesAroundMethodBody: Extra empty line detected at method body beginning.
+app/controllers/list_tweets_controller.rb:12:16: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+base_api_url = "https://api.twitter.com/1.1/search/tweets.json"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/list_tweets_controller.rb:13:8: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+auth = "Bearer AAAAAAAAAAAAAAAAAAAAAOsABgEAAAAAtUA16lT7ybdFpBpamME9Dp7L4X4%3DioSiudZDIQjkRZuRor1O68dI8y7RvZTrhBlHSciNea9lOODsWH"
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/list_tweets_controller.rb:13:81: C: Layout/LineLength: Line is too long. [128/80]
+auth = "Bearer AAAAAAAAAAAAAAAAAAAAAOsABgEAAAAAtUA16lT7ybdFpBpamME9Dp7L4X4%3DioSiudZDIQjkRZuRor1O68dI8y7RvZTrhBlHSciNea9lOODsWH"
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/list_tweets_controller.rb:15:5: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+q = "#freehongkong"
+    ^^^^^^^^^^^^^^^
+app/controllers/list_tweets_controller.rb:17:22: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+url = base_api_url + "?q=%23" + q[1..q.length]
+                     ^^^^^^^^
+app/controllers/list_tweets_controller.rb:25:28: C: Layout/SpaceInsideHashLiteralBraces: Space inside { missing.
+resp = RestClient.get(url, {accept: :json, authorization: auth})
+                           ^
+app/controllers/list_tweets_controller.rb:25:28: C: Style/BracesAroundHashParameters: Redundant curly braces around a hash parameter.
+resp = RestClient.get(url, {accept: :json, authorization: auth})
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/list_tweets_controller.rb:25:63: C: Layout/SpaceInsideHashLiteralBraces: Space inside } missing.
+resp = RestClient.get(url, {accept: :json, authorization: auth})
+                                                              ^
+app/controllers/list_tweets_controller.rb:29:13: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+parsed_resp["statuses"].each do |tweet|
+            ^^^^^^^^^^
+app/controllers/list_tweets_controller.rb:30:1: C: Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    puts "Texto:", tweet["text"]
+^^^^
+app/controllers/list_tweets_controller.rb:30:10: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    puts "Texto:", tweet["text"]
+         ^^^^^^^^
+app/controllers/list_tweets_controller.rb:30:26: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    puts "Texto:", tweet["text"]
+                         ^^^^^^
+app/controllers/list_tweets_controller.rb:31:10: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    puts "Data post:", tweet["created_at"]
+         ^^^^^^^^^^^^
+app/controllers/list_tweets_controller.rb:31:30: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    puts "Data post:", tweet["created_at"]
+                             ^^^^^^^^^^^^
+app/controllers/list_tweets_controller.rb:32:10: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    puts "User:", tweet["user"]["screen_name"]
+         ^^^^^^^
+app/controllers/list_tweets_controller.rb:32:25: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    puts "User:", tweet["user"]["screen_name"]
+                        ^^^^^^
+app/controllers/list_tweets_controller.rb:32:33: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    puts "User:", tweet["user"]["screen_name"]
+                                ^^^^^^^^^^^^^
+app/controllers/tweets_controller.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+require 'rest-client'
+^
+app/controllers/tweets_controller.rb:4:1: C: Style/Documentation: Missing top-level class documentation comment.
+class TweetsController < ApplicationController
+^^^^^
+app/controllers/tweets_controller.rb:5:35: C: Style/SymbolArray: Use %i or %I for an array of symbols.
+  before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/tweets_controller.rb:16:3: C: Style/EmptyMethod: Put empty method definitions on a single line.
+  def show ...
+  ^^^^^^^^
+app/controllers/tweets_controller.rb:25:3: C: Style/EmptyMethod: Put empty method definitions on a single line.
+  def edit ...
+  ^^^^^^^^
+app/controllers/tweets_controller.rb:29:3: C: Metrics/AbcSize: Assignment Branch Condition size for search is too high. [<7, 24, 0> 25/15]
+  def search ...
+  ^^^^^^^^^^
+app/controllers/tweets_controller.rb:29:3: C: Metrics/MethodLength: Method has too many lines. [20/10]
+  def search ...
+  ^^^^^^^^^^
+app/controllers/tweets_controller.rb:30:20: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    query = params["hashtag"]
+                   ^^^^^^^^^
+app/controllers/tweets_controller.rb:32:20: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    base_api_url = "https://api.twitter.com/1.1/search/tweets.json"
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/tweets_controller.rb:33:12: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    auth = "Bearer AAAAAAAAAAAAAAAAAAAAAOsABgEAAAAAtUA16lT7ybdFpBpamME9Dp7L4X4%3DioSiudZDIQjkRZuRor1O68dI8y7RvZTrhBlHSciNea9lOODsWH"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/tweets_controller.rb:33:81: C: Layout/LineLength: Line is too long. [132/80]
+    auth = "Bearer AAAAAAAAAAAAAAAAAAAAAOsABgEAAAAAtUA16lT7ybdFpBpamME9Dp7L4X4%3DioSiudZDIQjkRZuRor1O68dI8y7RvZTrhBlHSciNea9lOODsWH"
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/tweets_controller.rb:35:26: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    url = base_api_url + "?q=%23" + query[1..query.length]
+                         ^^^^^^^^
+app/controllers/tweets_controller.rb:40:32: C: Layout/SpaceInsideHashLiteralBraces: Space inside { missing.
+    resp = RestClient.get(url, {accept: :json, authorization: auth})
+                               ^
+app/controllers/tweets_controller.rb:40:32: C: Style/BracesAroundHashParameters: Redundant curly braces around a hash parameter.
+    resp = RestClient.get(url, {accept: :json, authorization: auth})
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app/controllers/tweets_controller.rb:40:67: C: Layout/SpaceInsideHashLiteralBraces: Space inside } missing.
+    resp = RestClient.get(url, {accept: :json, authorization: auth})
+                                                                  ^
+app/controllers/tweets_controller.rb:44:17: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    parsed_resp["statuses"].each do |tw|
+                ^^^^^^^^^^
+app/controllers/tweets_controller.rb:45:1: C: Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body beginning.
+app/controllers/tweets_controller.rb:46:1: C: Layout/EmptyLines: Extra blank line detected.
+app/controllers/tweets_controller.rb:49:21: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        i_tweet: tw["id_str"],
+                    ^^^^^^^^
+app/controllers/tweets_controller.rb:50:24: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        tweet_desc: tw["text"],
+                       ^^^^^^
+app/controllers/tweets_controller.rb:51:23: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        date_post: tw["created_at"],
+                      ^^^^^^^^^^^^
+app/controllers/tweets_controller.rb:52:23: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        user_name: tw["user"]["name"],
+                      ^^^^^^
+app/controllers/tweets_controller.rb:52:31: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        user_name: tw["user"]["name"],
+                              ^^^^^^
+app/controllers/tweets_controller.rb:53:30: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        user_screen_name: tw["user"]["screen_name"],
+                             ^^^^^^
+app/controllers/tweets_controller.rb:53:38: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        user_screen_name: tw["user"]["screen_name"],
+                                     ^^^^^^^^^^^^^
+app/controllers/tweets_controller.rb:54:26: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        url_img_user: tw["user"]["profile_image_url"]
+                         ^^^^^^
+app/controllers/tweets_controller.rb:54:34: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        url_img_user: tw["user"]["profile_image_url"]
+                                 ^^^^^^^^^^^^^^^^^^^
+app/controllers/tweets_controller.rb:56:1: C: Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body end.
+app/controllers/tweets_controller.rb:59:48: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    redirect_back fallback_location: { action: "index"}
+                                               ^^^^^^^
+app/controllers/tweets_controller.rb:59:55: C: Layout/SpaceInsideHashLiteralBraces: Space inside } missing.
+    redirect_back fallback_location: { action: "index"}
+                                                      ^
+app/controllers/tweets_controller.rb:60:1: C: Layout/EmptyLinesAroundMethodBody: Extra empty line detected at method body end.
+app/controllers/tweets_controller.rb:70:81: C: Layout/LineLength: Line is too long. [84/80]
+        format.html { redirect_to @tweet, notice: 'Tweet was successfully created.'}
+                                                                                ^^^^
+app/controllers/tweets_controller.rb:70:84: C: Layout/SpaceInsideBlockBraces: Space missing inside }.
+        format.html { redirect_to @tweet, notice: 'Tweet was successfully created.'}
+                                                                                   ^
+app/controllers/tweets_controller.rb:74:81: C: Layout/LineLength: Line is too long. [81/80]
+        format.json { render json: @tweet.errors, status: :unprocessable_entity }
+                                                                                ^
+app/controllers/tweets_controller.rb:84:81: C: Layout/LineLength: Line is too long. [85/80]
+        format.html { redirect_to @tweet, notice: 'Tweet was successfully updated.' }
+                                                                                ^^^^^
+app/controllers/tweets_controller.rb:88:81: C: Layout/LineLength: Line is too long. [81/80]
+        format.json { render json: @tweet.errors, status: :unprocessable_entity }
+                                                                                ^
+app/controllers/tweets_controller.rb:98:81: C: Layout/LineLength: Line is too long. [89/80]
+      format.html { redirect_to tweets_url, notice: 'Tweet was successfully destroyed.' }
+                                                                                ^^^^^^^^^
+app/controllers/tweets_controller.rb:103:3: C: Layout/EmptyLinesAroundAccessModifier: Keep a blank line before and after private.
+  private
+  ^^^^^^^
+app/controllers/tweets_controller.rb:105:1: C: Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def set_tweet
+^^^^
+app/controllers/tweets_controller.rb:105:5: C: Layout/IndentationConsistency: Inconsistent indentation detected.
+    def set_tweet ...
+    ^^^^^^^^^^^^^
+app/controllers/tweets_controller.rb:109:81: C: Layout/LineLength: Line is too long. [88/80]
+    # Never trust parameters from the scary internet, only allow the white list through.
+                                                                                ^^^^^^^^
+app/controllers/tweets_controller.rb:110:1: C: Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def tweet_params
+^^^^
+app/controllers/tweets_controller.rb:110:5: C: Layout/IndentationConsistency: Inconsistent indentation detected.
+    def tweet_params ...
+    ^^^^^^^^^^^^^^^^
+app/helpers/application_helper.rb:1:1: C: Style/Documentation: Missing top-level module documentation comment.
+module ApplicationHelper
+^^^^^^
+app/helpers/application_helper.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+module ApplicationHelper
+^
+app/helpers/application_helper.rb:2:1: C: Layout/IndentationWidth: Use 2 (not 4) spaces for indentation.
+    def alert_class(flash_type)
+^^^^
+app/helpers/application_helper.rb:5:9: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        "alert-success"
+        ^^^^^^^^^^^^^^^
+app/helpers/application_helper.rb:7:9: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        "alert-warning"
+        ^^^^^^^^^^^^^^^
+app/helpers/application_helper.rb:9:9: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+        "alert-danger"
+        ^^^^^^^^^^^^^^
+app/helpers/application_helper.rb:12:3: W: Layout/EndAlignment: end at 12, 2 is not aligned with module at 1, 0.
+  end
+  ^^^
+app/helpers/list_tweets_helper.rb:1:1: C: Style/Documentation: Missing top-level module documentation comment.
+module ListTweetsHelper
+^^^^^^
+app/helpers/list_tweets_helper.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+module ListTweetsHelper
+^
+app/helpers/tweets_helper.rb:1:1: C: Style/Documentation: Missing top-level module documentation comment.
+module TweetsHelper
+^^^^^^
+app/helpers/tweets_helper.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+module TweetsHelper
+^
+app/jobs/application_job.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+class ApplicationJob < ActiveJob::Base
+^
+app/mailers/application_mailer.rb:1:1: C: Style/Documentation: Missing top-level class documentation comment.
+class ApplicationMailer < ActionMailer::Base
+^^^^^
+app/mailers/application_mailer.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+class ApplicationMailer < ActionMailer::Base
+^
+app/models/application_record.rb:1:1: C: Style/Documentation: Missing top-level class documentation comment.
+class ApplicationRecord < ActiveRecord::Base
+^^^^^
+app/models/application_record.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+class ApplicationRecord < ActiveRecord::Base
+^
+app/models/tweet.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+class Tweet < ApplicationRecord
+^
+app/models/tweet.rb:2:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body beginning.
+app/views/tweets/_tweet.json.jbuilder:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+json.extract! tweet, :id, :created_at, :updated_at
+^
+app/views/tweets/index.json.jbuilder:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+json.array! @tweets, partial: "tweets/tweet", as: :tweet
+^
+app/views/tweets/index.json.jbuilder:1:31: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+json.array! @tweets, partial: "tweets/tweet", as: :tweet
+                              ^^^^^^^^^^^^^^
+app/views/tweets/show.json.jbuilder:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+json.partial! "tweets/tweet", tweet: @tweet
+^
+app/views/tweets/show.json.jbuilder:1:15: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+json.partial! "tweets/tweet", tweet: @tweet
+              ^^^^^^^^^^^^^^
+bin/bundle:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+#!/usr/bin/env ruby
+^
+bin/rails:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+#!/usr/bin/env ruby
+^
+bin/rake:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+#!/usr/bin/env ruby
+^
+bin/setup:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+#!/usr/bin/env ruby
+^
+bin/setup:3:1: C: Style/MixinUsage: include is used at the top level. Use inside class or module.
+include FileUtils
+^^^^^^^^^^^^^^^^^
+bin/update:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+#!/usr/bin/env ruby
+^
+bin/update:3:1: C: Style/MixinUsage: include is used at the top level. Use inside class or module.
+include FileUtils
+^^^^^^^^^^^^^^^^^
+bin/yarn:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+#!/usr/bin/env ruby
+^
+bin/yarn:4:3: C: Style/RedundantBegin: Redundant begin block detected.
+  begin
+  ^^^^^
+bin/yarn:5:10: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    exec "yarnpkg", *ARGV
+         ^^^^^^^^^
+bin/yarn:7:5: C: Style/StderrPuts: Use warn instead of $stderr.puts to allow such output to be disabled.
+    $stderr.puts "Yarn executable was not detected in the system."
+    ^^^^^^^^^^^^
+bin/yarn:7:18: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    $stderr.puts "Yarn executable was not detected in the system."
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bin/yarn:8:5: C: Style/StderrPuts: Use warn instead of $stderr.puts to allow such output to be disabled.
+    $stderr.puts "Download Yarn at https://yarnpkg.com/en/docs/install"
+    ^^^^^^^^^^^^
+bin/yarn:8:18: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    $stderr.puts "Download Yarn at https://yarnpkg.com/en/docs/install"
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+config.ru:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+# This file is used by Rack-based servers to start the application.
+^
+config/application.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+require_relative 'boot'
+^
+config/application.rb:10:3: C: Style/Documentation: Missing top-level class documentation comment.
+  class Application < Rails::Application
+  ^^^^^
+config/application.rb:14:81: C: Layout/LineLength: Line is too long. [82/80]
+    # Settings in config/environments/* take precedence over those specified here.
+                                                                                ^^
+config/boot.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __dir__)
+^
+config/environment.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+# Load the Rails application.
+^
+config/environments/development.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+Rails.application.configure do
+^
+config/environments/development.rb:2:81: C: Layout/LineLength: Line is too long. [85/80]
+  # Settings specified here will take precedence over those in config/application.rb.
+                                                                                ^^^^^
+config/environments/development.rb:30:81: C: Layout/LineLength: Line is too long. [86/80]
+  # Store uploaded files on the local file system (see config/storage.yml for options)
+                                                                                ^^^^^^
+config/environments/production.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+Rails.application.configure do
+^
+config/environments/production.rb:2:81: C: Layout/LineLength: Line is too long. [85/80]
+  # Settings specified here will take precedence over those in config/application.rb.
+                                                                                ^^^^^
+config/environments/production.rb:17:81: C: Layout/LineLength: Line is too long. [87/80]
+  # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
+                                                                                ^^^^^^^
+config/environments/production.rb:18:81: C: Layout/LineLength: Line is too long. [97/80]
+  # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
+                                                                                ^^^^^^^^^^^^^^^^^
+config/environments/production.rb:32:81: C: Layout/LineLength: Line is too long. [102/80]
+  # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^
+config/environments/production.rb:41:81: C: Layout/LineLength: Line is too long. [86/80]
+  # Store uploaded files on the local file system (see config/storage.yml for options)
+                                                                                ^^^^^^
+config/environments/production.rb:47:81: C: Layout/LineLength: Line is too long. [96/80]
+  # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
+                                                                                ^^^^^^^^^^^^^^^^
+config/environments/production.rb:49:81: C: Layout/LineLength: Line is too long. [96/80]
+  # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
+                                                                                ^^^^^^^^^^^^^^^^
+config/environments/production.rb:57:22: C: Layout/SpaceInsideArrayLiteralBrackets: Do not use space inside array brackets.
+  config.log_tags = [ :request_id ]
+                     ^
+config/environments/production.rb:57:34: C: Layout/SpaceInsideArrayLiteralBrackets: Do not use space inside array brackets.
+  config.log_tags = [ :request_id ]
+                                 ^
+config/environments/production.rb:62:81: C: Layout/LineLength: Line is too long. [83/80]
+  # Use a real queuing backend for Active Job (and separate queues per environment)
+                                                                                ^^^
+config/environments/production.rb:69:81: C: Layout/LineLength: Line is too long. [100/80]
+  # Set this to true and configure the email server for immediate delivery to raise delivery errors.
+                                                                                ^^^^^^^^^^^^^^^^^^^^
+config/environments/production.rb:84:81: C: Layout/LineLength: Line is too long. [83/80]
+  # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
+                                                                                ^^^
+config/environments/production.rb:86:10: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  if ENV["RAILS_LOG_TO_STDOUT"].present?
+         ^^^^^^^^^^^^^^^^^^^^^
+config/environments/test.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+Rails.application.configure do
+^
+config/environments/test.rb:2:81: C: Layout/LineLength: Line is too long. [85/80]
+  # Settings specified here will take precedence over those in config/application.rb.
+                                                                                ^^^^^
+config/initializers/application_controller_renderer.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+# Be sure to restart your server when you modify this file.
+^
+config/initializers/assets.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+# Be sure to restart your server when you modify this file.
+^
+config/initializers/backtrace_silencers.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+# Be sure to restart your server when you modify this file.
+^
+config/initializers/backtrace_silencers.rb:3:81: C: Layout/LineLength: Line is too long. [107/80]
+# You can add backtrace silencers for libraries that you're using but don't wish to see in your backtraces.
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+config/initializers/backtrace_silencers.rb:6:81: C: Layout/LineLength: Line is too long. [112/80]
+# You can also remove all the silencers if you're trying to debug a problem that might stem from framework code.
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+config/initializers/content_security_policy.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+# Be sure to restart your server when you modify this file.
+^
+config/initializers/content_security_policy.rb:20:81: C: Layout/LineLength: Line is too long. [107/80]
+# Rails.application.config.content_security_policy_nonce_generator = -> request { SecureRandom.base64(16) }
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+config/initializers/cookies_serializer.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+# Be sure to restart your server when you modify this file.
+^
+config/initializers/filter_parameter_logging.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+# Be sure to restart your server when you modify this file.
+^
+config/initializers/inflections.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+# Be sure to restart your server when you modify this file.
+^
+config/initializers/mime_types.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+# Be sure to restart your server when you modify this file.
+^
+config/initializers/wrap_parameters.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+# Be sure to restart your server when you modify this file.
+^
+config/initializers/wrap_parameters.rb:6:81: C: Layout/LineLength: Line is too long. [96/80]
+# Enable parameter wrapping for JSON. You can disable this by setting :format to an empty array.
+                                                                                ^^^^^^^^^^^^^^^^
+config/puma.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+# Puma can serve each request in a thread from an internal thread pool.
+^
+config/puma.rb:7:27: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
+                          ^^^^^^^^^^^^^^^^^^^
+config/puma.rb:10:81: C: Layout/LineLength: Line is too long. [85/80]
+# Specifies the `port` that Puma will listen on to receive requests; default is 3000.
+                                                                                ^^^^^
+config/puma.rb:12:23: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+port        ENV.fetch("PORT") { 3000 }
+                      ^^^^^^
+config/puma.rb:16:23: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+environment ENV.fetch("RAILS_ENV") { "development" }
+                      ^^^^^^^^^^^
+config/puma.rb:16:38: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+environment ENV.fetch("RAILS_ENV") { "development" }
+                                     ^^^^^^^^^^^^^
+config/routes.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+Rails.application.routes.draw do
+^
+config/routes.rb:2:1: C: Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body beginning.
+config/routes.rb:8:1: C: Layout/TrailingWhitespace: Trailing whitespace detected.
+config/spring.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+%w[
+^
+db/migrate/20191231121306_create_tweets.rb:1:1: C: Style/Documentation: Missing top-level class documentation comment.
+class CreateTweets < ActiveRecord::Migration[5.2]
+^^^^^
+db/migrate/20191231121306_create_tweets.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+class CreateTweets < ActiveRecord::Migration[5.2]
+^
+db/migrate/20191231121306_create_tweets.rb:3:26: C: Style/SymbolProc: Pass &:timestamps as an argument to create_table instead of a block.
+    create_table :tweets do |t| ...
+                         ^^^^^^
+db/migrate/20191231121306_create_tweets.rb:4:1: C: Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body beginning.
+db/schema.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+# This file is auto-generated from the current state of the database. Instead
+^
+db/schema.rb:3:81: C: Layout/LineLength: Line is too long. [81/80]
+# incrementally modify your database, and then regenerate this schema definition.
+                                                                                ^
+db/schema.rb:8:81: C: Layout/LineLength: Line is too long. [86/80]
+# from scratch. The latter is a flawed and unsustainable approach (the more migrations
+                                                                                ^^^^^^
+db/schema.rb:11:81: C: Layout/LineLength: Line is too long. [86/80]
+# It's strongly recommended that you check this file into your version control system.
+                                                                                ^^^^^^
+db/schema.rb:13:38: C: Style/NumericLiterals: Use underscores(_) as thousands separator and separate every 3 digits with them.
+ActiveRecord::Schema.define(version: 2019_12_31_121306) do
+                                     ^^^^^^^^^^^^^^^^^
+db/schema.rb:14:1: C: Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body beginning.
+db/schema.rb:16:20: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  enable_extension "plpgsql"
+                   ^^^^^^^^^
+db/schema.rb:18:16: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  create_table "tweets", force: :cascade do |t|
+               ^^^^^^^^
+db/schema.rb:19:14: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "hashtag", null: false
+             ^^^^^^^^^
+db/schema.rb:20:14: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "i_tweet", null: false
+             ^^^^^^^^^
+db/schema.rb:21:12: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.text "tweet_desc"
+           ^^^^^^^^^^^^
+db/schema.rb:22:12: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.text "date_post", null: false
+           ^^^^^^^^^^^
+db/schema.rb:23:16: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "created_at", null: false
+               ^^^^^^^^^^^^
+db/schema.rb:24:16: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.datetime "updated_at", null: false
+               ^^^^^^^^^^^^
+db/schema.rb:25:14: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "user_name", null: false
+             ^^^^^^^^^^^
+db/schema.rb:26:14: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "user_screen_name"
+             ^^^^^^^^^^^^^^^^^^
+db/schema.rb:27:14: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    t.string "url_img_user", null: false
+             ^^^^^^^^^^^^^^
+db/schema.rb:29:1: C: Layout/EmptyLinesAroundBlockBody: Extra empty line detected at block body end.
+db/seeds.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+# This file should contain all the record creation needed to seed the database with its default values.
+^
+db/seeds.rb:1:81: C: Layout/LineLength: Line is too long. [103/80]
+# This file should contain all the record creation needed to seed the database with its default values.
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^
+db/seeds.rb:2:81: C: Layout/LineLength: Line is too long. [111/80]
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+db/seeds.rb:6:81: C: Layout/LineLength: Line is too long. [81/80]
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+                                                                                ^
+test/application_system_test_case.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+require "test_helper"
+^
+test/application_system_test_case.rb:1:9: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "test_helper"
+        ^^^^^^^^^^^^^
+test/controllers/list_tweets_controller_test.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+require 'test_helper'
+^
+test/controllers/list_tweets_controller_test.rb:4:8: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  test "should get index" do
+       ^^^^^^^^^^^^^^^^^^
+test/controllers/list_tweets_controller_test.rb:8:1: C: Layout/EmptyLinesAroundClassBody: Extra empty line detected at class body end.
+test/controllers/tweets_controller_test.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+require 'test_helper'
+^
+test/controllers/tweets_controller_test.rb:8:8: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  test "should get index" do
+       ^^^^^^^^^^^^^^^^^^
+test/controllers/tweets_controller_test.rb:13:8: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  test "should get new" do
+       ^^^^^^^^^^^^^^^^
+test/controllers/tweets_controller_test.rb:18:8: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  test "should create tweet" do
+       ^^^^^^^^^^^^^^^^^^^^^
+test/controllers/tweets_controller_test.rb:20:42: C: Layout/ExtraSpacing: Unnecessary spacing detected.
+      post tweets_url, params: { tweet: {  } }
+                                         ^
+test/controllers/tweets_controller_test.rb:20:42: C: Layout/SpaceInsideHashLiteralBraces: Space inside empty hash literal braces detected.
+      post tweets_url, params: { tweet: {  } }
+                                         ^^
+test/controllers/tweets_controller_test.rb:26:8: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  test "should show tweet" do
+       ^^^^^^^^^^^^^^^^^^^
+test/controllers/tweets_controller_test.rb:31:8: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  test "should get edit" do
+       ^^^^^^^^^^^^^^^^^
+test/controllers/tweets_controller_test.rb:36:8: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  test "should update tweet" do
+       ^^^^^^^^^^^^^^^^^^^^^
+test/controllers/tweets_controller_test.rb:37:48: C: Layout/ExtraSpacing: Unnecessary spacing detected.
+    patch tweet_url(@tweet), params: { tweet: {  } }
+                                               ^
+test/controllers/tweets_controller_test.rb:37:48: C: Layout/SpaceInsideHashLiteralBraces: Space inside empty hash literal braces detected.
+    patch tweet_url(@tweet), params: { tweet: {  } }
+                                               ^^
+test/controllers/tweets_controller_test.rb:41:8: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  test "should destroy tweet" do
+       ^^^^^^^^^^^^^^^^^^^^^^
+test/jobs/search_api_job_test.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+require 'test_helper'
+^
+test/models/tweet_test.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+require 'test_helper'
+^
+test/system/tweets_test.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+require "application_system_test_case"
+^
+test/system/tweets_test.rb:1:9: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+require "application_system_test_case"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test/system/tweets_test.rb:8:8: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  test "visiting the index" do
+       ^^^^^^^^^^^^^^^^^^^^
+test/system/tweets_test.rb:10:21: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    assert_selector "h1", text: "Tweets"
+                    ^^^^
+test/system/tweets_test.rb:10:33: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    assert_selector "h1", text: "Tweets"
+                                ^^^^^^^^
+test/system/tweets_test.rb:13:8: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  test "creating a Tweet" do
+       ^^^^^^^^^^^^^^^^^^
+test/system/tweets_test.rb:15:14: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    click_on "New Tweet"
+             ^^^^^^^^^^^
+test/system/tweets_test.rb:17:14: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    click_on "Create Tweet"
+             ^^^^^^^^^^^^^^
+test/system/tweets_test.rb:19:17: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    assert_text "Tweet was successfully created"
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test/system/tweets_test.rb:20:14: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    click_on "Back"
+             ^^^^^^
+test/system/tweets_test.rb:23:8: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  test "updating a Tweet" do
+       ^^^^^^^^^^^^^^^^^^
+test/system/tweets_test.rb:25:14: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    click_on "Edit", match: :first
+             ^^^^^^
+test/system/tweets_test.rb:27:14: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    click_on "Update Tweet"
+             ^^^^^^^^^^^^^^
+test/system/tweets_test.rb:29:17: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    assert_text "Tweet was successfully updated"
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test/system/tweets_test.rb:30:14: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    click_on "Back"
+             ^^^^^^
+test/system/tweets_test.rb:33:8: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  test "destroying a Tweet" do
+       ^^^^^^^^^^^^^^^^^^^^
+test/system/tweets_test.rb:36:16: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+      click_on "Destroy", match: :first
+               ^^^^^^^^^
+test/system/tweets_test.rb:39:17: C: Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    assert_text "Tweet was successfully destroyed"
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test/test_helper.rb:1:1: C: Style/FrozenStringLiteralComment: Missing magic comment # frozen_string_literal: true.
+ENV['RAILS_ENV'] ||= 'test'
+^
+test/test_helper.rb:5:7: C: Style/ClassAndModuleChildren: Use nested module/class definitions instead of compact style.
+class ActiveSupport::TestCase
+      ^^^^^^^^^^^^^^^^^^^^^^^
+test/test_helper.rb:6:81: C: Layout/LineLength: Line is too long. [82/80]
+  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
+                                                                                ^^
+
+52 files inspected, 235 offenses detected
