@@ -29,7 +29,6 @@ class SearchApiService
       puts
 
       @tweet = params.tweets.new(
-        # hash_id: params[:id],
         tweet_desc: tw["text"],
         date_post: tw["created_at"],
         user_name: tw["user"]["name"],

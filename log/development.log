@@ -8623,3 +8623,2252 @@ Processing by HashtagsController#index as HTML
 Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/" for ::1 at 2020-01-08 14:19:02 -0300
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.4ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Hashtag Load (0.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Hashtag Load (0.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Hashtag Load (0.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Hashtag Load (0.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Hashtag Load (0.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Hashtag Load (0.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Hashtag Load (0.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:4
+  Rendered hashtags/index.html.erb within layouts/application (453.0ms)
+Completed 500 Internal Server Error in 470ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new' for #<#<Class:0x0000563a4417f528>:0x0000563a44117c48>):
+     7:       <table>
+     8:         <tr>
+     9:           <th>Hashtag</th>
+    10:           <th> <%= link_to 'Add', hashtag_path(new) %> </th>
+    11:         </tr>
+    12: 
+    13:         <% @hashtags.each do |hash| %>
+  
+app/views/hashtags/index.html.erb:10:in `_app_views_hashtags_index_html_erb__3532868030908278032_47404125348380'
+Started GET "/" for ::1 at 2020-01-08 14:19:24 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.8ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Hashtag Load (0.1ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Hashtag Load (0.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Hashtag Load (0.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Hashtag Load (0.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Hashtag Load (0.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Hashtag Load (0.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Hashtag Load (0.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /usr/lib/ruby/vendor_ruby/did_you_mean/core_ext/name_error.rb:4
+  Rendered hashtags/index.html.erb within layouts/application (381.1ms)
+Completed 500 Internal Server Error in 385ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new' for #<#<Class:0x0000563a4417f528>:0x00007f43bc017e38>):
+     7:       <table>
+     8:         <tr>
+     9:           <th>Hashtag</th>
+    10:           <th> <%= link_to 'New', hashtag_path(new) %> </th>
+    11:         </tr>
+    12: 
+    13:         <% @hashtags.each do |hash| %>
+  
+app/views/hashtags/index.html.erb:10:in `_app_views_hashtags_index_html_erb__3532868030908278032_47404128217600'
+Started GET "/" for ::1 at 2020-01-08 14:19:35 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:13
+  Rendered hashtags/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 317ms (Views: 314.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/hashtags/new" for ::1 at 2020-01-08 14:19:39 -0300
+Processing by HashtagsController#new as HTML
+  Rendering hashtags/new.html.erb within layouts/application
+  Rendered hashtags/new.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 83ms (Views: 81.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-08 14:19:53 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.4ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:13
+  Rendered hashtags/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 46ms (Views: 40.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/hashtags/new" for ::1 at 2020-01-08 14:19:57 -0300
+Processing by HashtagsController#new as HTML
+  Rendering hashtags/new.html.erb within layouts/application
+  Rendered hashtags/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 89ms (Views: 86.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hashtags" for ::1 at 2020-01-08 14:20:02 -0300
+Processing by HashtagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JL5eyv+IATyxHHT4WSLE02V+nKuzPVGUmBr60Hsy5Vfok6Ohk6T50qXuE+vJ08SGm0oJwWqukiYOXw7Hab5qGw==", "hashtag"=>{"tag"=>"nasa"}, "commit"=>"Save Hashtag"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:25
+  [1m[36mHashtag Create (0.7ms)[0m  [1m[32mINSERT INTO "hashtags" ("tag", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tag", "#nasa"], ["created_at", "2020-01-08 17:20:02.501030"], ["updated_at", "2020-01-08 17:20:02.501030"]]
+  ↳ app/controllers/hashtags_controller.rb:25
+  [1m[35m (44.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "Some really cool info on our next full moon #full moon #WolfMoon #nasa #solarsystem  https://t.co/xZPLW3HQXM"], ["date_post", "Wed Jan 08 17:19:49 +0000 2020"], ["created_at", "2020-01-08 17:20:03.395485"], ["updated_at", "2020-01-08 17:20:03.395485"], ["user_name", "Dear.Old.Dreamy"], ["user_screen_name", "dearolddreamy"], ["url_img_user", "http://pbs.twimg.com/profile_images/1152621658714193920/1patkQn6_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (32.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "🚀Straight outta NASA: https://t.co/xmfAMPGPZQ #space #cosmos #universe #science #astronomy #climate #NASA"], ["date_post", "Wed Jan 08 17:19:41 +0000 2020"], ["created_at", "2020-01-08 17:20:03.432781"], ["updated_at", "2020-01-08 17:20:03.432781"], ["user_name", "✨It's Full of Stars✨🚀"], ["user_screen_name", "IFOS9000"], ["url_img_user", "http://pbs.twimg.com/profile_images/1059933360070418432/VbRspMCj_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[36mTweet Create (1.1ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "🔴 Las imágenes del hombre en la Luna habrian sido imposibles de falsificar #NASA https://t.co/mHjdusKMrx"], ["date_post", "Wed Jan 08 17:19:24 +0000 2020"], ["created_at", "2020-01-08 17:20:03.445060"], ["updated_at", "2020-01-08 17:20:03.445060"], ["user_name", "ExoMedios 💧"], ["user_screen_name", "ExoMedios"], ["url_img_user", "http://pbs.twimg.com/profile_images/1021355258633773056/6odEjxdN_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @detikcom: Satelit pemburu planet milik NASA, Transiting Exoplanet Survey Satellite (TESS), menemukan planet yang ukurannya hampir sama…"], ["date_post", "Wed Jan 08 17:18:47 +0000 2020"], ["created_at", "2020-01-08 17:20:03.454554"], ["updated_at", "2020-01-08 17:20:03.454554"], ["user_name", "BeBraveBeHumble"], ["user_screen_name", "Cindi_0605"], ["url_img_user", "http://pbs.twimg.com/profile_images/1203706232034320389/9TQsw-eh_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "\"Understanding NASA's Mission Control Map\" https://t.co/YKy5H8kD7m #NASA"], ["date_post", "Wed Jan 08 17:18:21 +0000 2020"], ["created_at", "2020-01-08 17:20:03.465664"], ["updated_at", "2020-01-08 17:20:03.465664"], ["user_name", "Dánielður Gerðson 🇪🇺"], ["user_screen_name", "_Spacegeek"], ["url_img_user", "http://pbs.twimg.com/profile_images/990324858088247296/f-OGR6A4_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @bykoti: Sayın NASA\nşu Mars işi noldu. \n\nBirileri dibimizde birbirine ateş ediyor da\n\n#NASA \n#bykoti"], ["date_post", "Wed Jan 08 17:17:36 +0000 2020"], ["created_at", "2020-01-08 17:20:03.478005"], ["updated_at", "2020-01-08 17:20:03.478005"], ["user_name", "❤MeRaLL💙"], ["user_screen_name", "meral6_1"], ["url_img_user", "http://pbs.twimg.com/profile_images/1129620427217735681/xlyzbBka_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @detikcom: Satelit pemburu planet milik NASA, Transiting Exoplanet Survey Satellite (TESS), menemukan planet yang ukurannya hampir sama…"], ["date_post", "Wed Jan 08 17:17:26 +0000 2020"], ["created_at", "2020-01-08 17:20:03.487648"], ["updated_at", "2020-01-08 17:20:03.487648"], ["user_name", "rungput macang"], ["user_screen_name", "batangrumput"], ["url_img_user", "http://pbs.twimg.com/profile_images/1210790843059073031/FutmBI_P_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "Obat herbal untuk berhenti merokok dan obat kecanduan narkoba.\n#aperofublic #obatberhentimerokok #Nasa #Nchlo… https://t.co/JFSqEILr7v"], ["date_post", "Wed Jan 08 17:17:18 +0000 2020"], ["created_at", "2020-01-08 17:20:03.499705"], ["updated_at", "2020-01-08 17:20:03.499705"], ["user_name", "Apero Fublic"], ["user_screen_name", "JoniApero3"], ["url_img_user", "http://pbs.twimg.com/profile_images/1140802751892320256/weQNqqfw_normal.png"]]
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "The #InternationalSpaceStation is passing over George McInerney right now! January 08, 2020 at 05:37PM, for 620 seconds. #ISS #NASA #space"], ["date_post", "Wed Jan 08 17:17:07 +0000 2020"], ["created_at", "2020-01-08 17:20:03.516949"], ["updated_at", "2020-01-08 17:20:03.516949"], ["user_name", "George McInerney"], ["user_screen_name", "geo_mci"], ["url_img_user", "http://pbs.twimg.com/profile_images/1179151390742110208/pct9Rz96_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @Astro_FarmerBob: Dear Ellie,\nI hope so too.  I love your great drawings!  The moon and Saturn are two of my favorite things in the sola…"], ["date_post", "Wed Jan 08 17:16:55 +0000 2020"], ["created_at", "2020-01-08 17:20:03.531874"], ["updated_at", "2020-01-08 17:20:03.531874"], ["user_name", "drunkportuguese"], ["user_screen_name", "drunkportuguese"], ["url_img_user", "http://pbs.twimg.com/profile_images/1182990577060777984/1CQG8PyZ_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @detikcom: Satelit pemburu planet milik NASA, Transiting Exoplanet Survey Satellite (TESS), menemukan planet yang ukurannya hampir sama…"], ["date_post", "Wed Jan 08 17:16:50 +0000 2020"], ["created_at", "2020-01-08 17:20:03.544910"], ["updated_at", "2020-01-08 17:20:03.544910"], ["user_name", "Messed girl"], ["user_screen_name", "bucincetaim"], ["url_img_user", "http://pbs.twimg.com/profile_images/1214494327218429954/9Ek1Q5IG_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[36mTweet Create (1.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @detikcom: Satelit pemburu planet milik NASA, Transiting Exoplanet Survey Satellite (TESS), menemukan planet yang ukurannya hampir sama…"], ["date_post", "Wed Jan 08 17:16:40 +0000 2020"], ["created_at", "2020-01-08 17:20:03.557212"], ["updated_at", "2020-01-08 17:20:03.557212"], ["user_name", "ili"], ["user_screen_name", "iloeyy"], ["url_img_user", "http://pbs.twimg.com/profile_images/1212070266479579137/OKjq271__normal.jpg"]]
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (57.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "Missiles that lost their way to base in IRAQ from the attack by IRAN #UFO #AncientAliens #UFOs #disclosure @alien… https://t.co/rGcrbU9WXz"], ["date_post", "Wed Jan 08 17:15:42 +0000 2020"], ["created_at", "2020-01-08 17:20:03.620849"], ["updated_at", "2020-01-08 17:20:03.620849"], ["user_name", "THE MATRIX REPORT"], ["user_screen_name", "matrixrprt2017"], ["url_img_user", "http://pbs.twimg.com/profile_images/894784374662615041/eEaJzW84_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "What Happens When Planets Collide via #NASA https://t.co/lo9soX5uLc #photography #space https://t.co/3Rimcwdv2n"], ["date_post", "Wed Jan 08 17:15:34 +0000 2020"], ["created_at", "2020-01-08 17:20:03.632379"], ["updated_at", "2020-01-08 17:20:03.632379"], ["user_name", "Peter V. Tretter"], ["user_screen_name", "ap236"], ["url_img_user", "http://pbs.twimg.com/profile_images/1026975083838009345/tuOEhtRn_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:38
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @CharlesBunchPhD: Trump credits impeachment after his re-election campaign... - https://t.co/PrheKPXsnm #cnn #news #weather #scientists…"], ["date_post", "Wed Jan 08 17:15:03 +0000 2020"], ["created_at", "2020-01-08 17:20:03.645142"], ["updated_at", "2020-01-08 17:20:03.645142"], ["user_name", "Grassroots DNC"], ["user_screen_name", "GrassrootsDNC"], ["url_img_user", "http://pbs.twimg.com/profile_images/823697095588777984/gNZ85ofe_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:38
+  [1m[35m (57.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:38
+Redirected to http://localhost:3000/hashtags/2
+Completed 302 Found in 1222ms (ActiveRecord: 300.0ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-08 14:20:03 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.3ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:3
+  Rendered hashtags/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 45ms (Views: 39.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/hashtags/" for ::1 at 2020-01-08 14:20:42 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:13
+  Rendered hashtags/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 78ms (Views: 75.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hashtags/" for ::1 at 2020-01-08 14:38:44 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  Rendered hashtags/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/matbit/Documents/Projetos/MineTweet/mine-tweet/app/views/hashtags/index.html.erb:19: syntax error, unexpected ':', expecting ')'
+              method: :update );@output_buffer.saf...
+                    ^):
+  
+app/views/hashtags/index.html.erb:19: syntax error, unexpected ':', expecting ')'
+Started GET "/hashtags/" for ::1 at 2020-01-08 14:39:24 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (2.5ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:13
+  Rendered hashtags/index.html.erb within layouts/application (47.6ms)
+Completed 200 OK in 265ms (Views: 249.3ms | ActiveRecord: 11.6ms)
+
+
+Started POST "/hashtags/2" for ::1 at 2020-01-08 14:39:29 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/hashtags/2"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/hashtags/2" for ::1 at 2020-01-08 14:41:41 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/hashtags/2"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/hashtags/" for ::1 at 2020-01-08 14:41:53 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:13
+  Rendered hashtags/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 72ms (Views: 58.6ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-08 14:41:55 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.8ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (1.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:3
+  Rendered hashtags/show.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 132ms (Views: 103.6ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/hashtags/1" for ::1 at 2020-01-08 14:42:11 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHashtag Load (2.6ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+Completed 404 Not Found in 6ms (ActiveRecord: 2.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Hashtag with 'id'=1):
+  
+app/controllers/hashtags_controller.rb:10:in `show'
+Started GET "/hashtags/2" for ::1 at 2020-01-08 14:42:20 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (1.1ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:3
+  Rendered hashtags/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 78ms (Views: 67.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/hashtags/" for ::1 at 2020-01-08 14:42:24 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:13
+  Rendered hashtags/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 68ms (Views: 62.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hashtags/new" for ::1 at 2020-01-08 14:42:28 -0300
+Processing by HashtagsController#new as HTML
+  Rendering hashtags/new.html.erb within layouts/application
+  Rendered hashtags/new.html.erb within layouts/application (64.8ms)
+Completed 200 OK in 157ms (Views: 154.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hashtags" for ::1 at 2020-01-08 14:42:40 -0300
+Processing by HashtagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XEZV1UA+u8p1HuQL/VzFA9BUvUKEB87iVbeIve06JnCQa6i+LBJDJGHsgxhtrcVWLmAoKF2UDVDD8nyq/7apPA==", "hashtag"=>{"tag"=>"freehk"}, "commit"=>"Save Hashtag"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:25
+  [1m[36mHashtag Create (0.9ms)[0m  [1m[32mINSERT INTO "hashtags" ("tag", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tag", "#freehk"], ["created_at", "2020-01-08 17:42:40.790046"], ["updated_at", "2020-01-08 17:42:40.790046"]]
+  ↳ app/controllers/hashtags_controller.rb:25
+  [1m[35m (52.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:25
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.2ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 3], ["tweet_desc", "RT @HKoyylyyo: 打壓越大 反抗越大 這是不變定律。\n#freechina #freehk #antiCCP #FightForFreedom #StandwithHK #CHINAZI #antichinazi"], ["date_post", "Wed Jan 08 17:36:38 +0000 2020"], ["created_at", "2020-01-08 17:42:41.765605"], ["updated_at", "2020-01-08 17:42:41.765605"], ["user_name", "Snow"], ["user_screen_name", "snowlaf__"], ["url_img_user", "http://pbs.twimg.com/profile_images/1202462470104743936/BsyjbykV_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (14.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 3], ["tweet_desc", "Sourced from the Internet:\n#hk20200109 Protest Daily\n\ndisclaimer: https://t.co/gxcvY5BL7b\n\n#antiELAB… https://t.co/0TW3ij674h"], ["date_post", "Wed Jan 08 17:33:25 +0000 2020"], ["created_at", "2020-01-08 17:42:41.792486"], ["updated_at", "2020-01-08 17:42:41.792486"], ["user_name", "HongKonger Schedule (Eng)"], ["user_screen_name", "HKerScheduleEng"], ["url_img_user", "http://pbs.twimg.com/profile_images/1202793799744802816/FNoD7N7L_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 3], ["tweet_desc", "@lukedepulford @DominicRaab @tariqahmadbt thanks all for bringing solid action to stop hkpolicebrutality and justic… https://t.co/oj5H9MoQR8"], ["date_post", "Wed Jan 08 17:25:01 +0000 2020"], ["created_at", "2020-01-08 17:42:41.809785"], ["updated_at", "2020-01-08 17:42:41.809785"], ["user_name", "Zeni Mal"], ["user_screen_name", "mal_zeni"], ["url_img_user", "http://pbs.twimg.com/profile_images/1195340681021018113/OIRIroJW_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.0ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 3], ["tweet_desc", "@dwnews @cliffordcoonan Hong Kong are not free and save place.#CCPChina control everything.\n#FightForFreedom… https://t.co/y3Wqn1iKrY"], ["date_post", "Wed Jan 08 17:11:52 +0000 2020"], ["created_at", "2020-01-08 17:42:41.822334"], ["updated_at", "2020-01-08 17:42:41.822334"], ["user_name", "au yeung chui ki"], ["user_screen_name", "au_chui"], ["url_img_user", "http://pbs.twimg.com/profile_images/1213890348377755648/Tlz83aWd_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 3], ["tweet_desc", "pls #rescuehk \n#Policebrutality\n#Policeterrorism\n#Soshk\n#freehk\n#hkprotests\n#HumanitarianCrisis \n#warcrimes\n\n@time… https://t.co/juvoEjVB9J"], ["date_post", "Wed Jan 08 17:11:07 +0000 2020"], ["created_at", "2020-01-08 17:42:41.833057"], ["updated_at", "2020-01-08 17:42:41.833057"], ["user_name", "ST"], ["user_screen_name", "GalWhoSoldTora"], ["url_img_user", "http://pbs.twimg.com/profile_images/1298054761/IMG_0230_normal.JPG"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (2.4ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 3], ["tweet_desc", "#FiveDemandsNotOneLess \n#FreeHK\n#China_is_terrorist https://t.co/cTTlM57Nbe https://t.co/8gR4Pq6gFl"], ["date_post", "Wed Jan 08 17:07:45 +0000 2020"], ["created_at", "2020-01-08 17:42:41.846636"], ["updated_at", "2020-01-08 17:42:41.846636"], ["user_name", "dreamerhk"], ["user_screen_name", "hhhhhhh86470003"], ["url_img_user", "http://pbs.twimg.com/profile_images/1195051293846294533/Wp4A04gL_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 3], ["tweet_desc", "#FiveDemandsNotOneLess \n#FightForFreedomStandWithHongKong \n#FreeHK\n#China_is_terrorist https://t.co/YF4cQPPJAL https://t.co/RRtsTpySvk"], ["date_post", "Wed Jan 08 17:04:18 +0000 2020"], ["created_at", "2020-01-08 17:42:41.865880"], ["updated_at", "2020-01-08 17:42:41.865880"], ["user_name", "dreamerhk"], ["user_screen_name", "hhhhhhh86470003"], ["url_img_user", "http://pbs.twimg.com/profile_images/1195051293846294533/Wp4A04gL_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 3], ["tweet_desc", "RT @CheungToki: 身體最誠實嘅完美示範\n#多鵸  #toki_cheung\n#中國肺炎 #武漢肺炎 #漫画  #freehongkong #freehk #China_is_terrorist #ChinesePneumonia https://t.co/Zj9o…"], ["date_post", "Wed Jan 08 16:59:35 +0000 2020"], ["created_at", "2020-01-08 17:42:41.878957"], ["updated_at", "2020-01-08 17:42:41.878957"], ["user_name", "丁叮😷"], ["user_screen_name", "kk3hi3123"], ["url_img_user", "http://pbs.twimg.com/profile_images/1162648526792212480/uDGz4OzV_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 3], ["tweet_desc", "RT @CH_HONGKONG: this happened this morning, pro-CCP people with weapons destroyed the lennon wall of Tsuen Wan #hongkong and hit on those…"], ["date_post", "Wed Jan 08 16:58:23 +0000 2020"], ["created_at", "2020-01-08 17:42:41.889532"], ["updated_at", "2020-01-08 17:42:41.889532"], ["user_name", "Kelvin Ip 😷"], ["user_screen_name", "KelvinIp9"], ["url_img_user", "http://pbs.twimg.com/profile_images/1181359324188119041/mBKO-OCJ_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 3], ["tweet_desc", "RT @CH_HONGKONG: the teen in black literally DID NOTHING, #hongkongpolice arrest and hit on HK people whenever they freaking want. #policeb…"], ["date_post", "Wed Jan 08 16:58:08 +0000 2020"], ["created_at", "2020-01-08 17:42:41.899884"], ["updated_at", "2020-01-08 17:42:41.899884"], ["user_name", "XL"], ["user_screen_name", "XL93868135"], ["url_img_user", "http://pbs.twimg.com/profile_images/1136854937718050817/DvbT7R4S_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 3], ["tweet_desc", "RT @cynthia_yuk: #hongkongers did not forget about these who did not make it to 2020. #HongKongPoliceTerrorists used pepper sprays to dispe…"], ["date_post", "Wed Jan 08 16:58:04 +0000 2020"], ["created_at", "2020-01-08 17:42:41.914941"], ["updated_at", "2020-01-08 17:42:41.914941"], ["user_name", "ANA"], ["user_screen_name", "xzxzanalazy"], ["url_img_user", "http://pbs.twimg.com/profile_images/1160536884340068357/QfaNnf79_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (10.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 3], ["tweet_desc", "RT @LawMic1: @Stand_with_HK No more hope on #BloodyCarrie &amp; the puppet HK govt, we should resort to global community to establish an intl,…"], ["date_post", "Wed Jan 08 16:56:57 +0000 2020"], ["created_at", "2020-01-08 17:42:41.933821"], ["updated_at", "2020-01-08 17:42:41.933821"], ["user_name", "Otischan2046"], ["user_screen_name", "otischan2046"], ["url_img_user", "http://pbs.twimg.com/profile_images/1170683925099728898/X-W4MtNf_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.4ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 3], ["tweet_desc", "@Sharonhomhrich1 Hong Kong will never give up to fight against #CCPChina.\n\n#China_is_terrorist \n#FreeHK… https://t.co/W3SXJ42aUR"], ["date_post", "Wed Jan 08 16:54:38 +0000 2020"], ["created_at", "2020-01-08 17:42:41.956182"], ["updated_at", "2020-01-08 17:42:41.956182"], ["user_name", "dreamerhk"], ["user_screen_name", "hhhhhhh86470003"], ["url_img_user", "http://pbs.twimg.com/profile_images/1195051293846294533/Wp4A04gL_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (14.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.3ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 3], ["tweet_desc", "RT @CH_HONGKONG: this happened this morning, pro-CCP people with weapons destroyed the lennon wall of Tsuen Wan #hongkong and hit on those…"], ["date_post", "Wed Jan 08 16:51:05 +0000 2020"], ["created_at", "2020-01-08 17:42:41.980562"], ["updated_at", "2020-01-08 17:42:41.980562"], ["user_name", "Hazelle😷"], ["user_screen_name", "hkersneedavenge"], ["url_img_user", "http://pbs.twimg.com/profile_images/1179964141152325633/M6B_DJQA_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (12.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 3], ["tweet_desc", "RT @CH_HONGKONG: this happened this morning, pro-CCP people with weapons destroyed the lennon wall of Tsuen Wan #hongkong and hit on those…"], ["date_post", "Wed Jan 08 16:50:10 +0000 2020"], ["created_at", "2020-01-08 17:42:41.998697"], ["updated_at", "2020-01-08 17:42:41.998697"], ["user_name", "丁叮😷"], ["user_screen_name", "kk3hi3123"], ["url_img_user", "http://pbs.twimg.com/profile_images/1162648526792212480/uDGz4OzV_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+Redirected to http://localhost:3000/hashtags/3
+Completed 302 Found in 1223ms (ActiveRecord: 210.1ms)
+
+
+Started GET "/hashtags/3" for ::1 at 2020-01-08 14:42:42 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mHashtag Load (1.5ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 3]]
+  ↳ app/views/hashtags/show.html.erb:3
+  Rendered hashtags/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 68ms (Views: 62.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/hashtags/" for ::1 at 2020-01-08 14:42:49 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (2.4ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:13
+  Rendered hashtags/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 98ms (Views: 93.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-08 14:42:53 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.8ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (1.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:3
+  Rendered hashtags/show.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 149ms (Views: 141.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/hashtags/" for ::1 at 2020-01-08 14:42:56 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:13
+  Rendered hashtags/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 68ms (Views: 66.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/hashtags/2" for ::1 at 2020-01-08 14:42:59 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/hashtags/2"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/hashtags/2" for ::1 at 2020-01-08 14:44:56 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (2.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (2.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:3
+  Rendered hashtags/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 55ms (Views: 48.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/hashtags/" for ::1 at 2020-01-08 14:45:00 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:13
+  Rendered hashtags/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 54ms (Views: 50.0ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/hashtags/2" for ::1 at 2020-01-08 14:45:03 -0300
+Processing by HashtagsController#update as HTML
+  Parameters: {"authenticity_token"=>"iBtKh3QWWZYBdoP6oM0qFdjs3Kr61GPnednXaDHjv9PKJ4u2MBB+aST313OGXzj9XcMSL53mrRJb/sMHDBUtag==", "id"=>"2"}
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:40
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/hashtags_controller.rb:42:in `update'
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1 LIMIT $2[0m  [["hashtag_id", 2], ["LIMIT", 11]]
+Started GET "/hashtags/2" for ::1 at 2020-01-08 14:50:59 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:3
+  Rendered hashtags/show.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 337ms (Views: 299.0ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/hashtags/" for ::1 at 2020-01-08 14:51:03 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:13
+  Rendered hashtags/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/hashtags/2" for ::1 at 2020-01-08 14:51:07 -0300
+Processing by HashtagsController#update as HTML
+  Parameters: {"authenticity_token"=>"/0/Vsr3+TcjSbiAoK0NQFYWPXdXGnZsnHV683XCbK/m9cxSD+fhqN/fvdKEN0UL9AKCTUKGvVdI/eaiyTW25QA==", "id"=>"2"}
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:40
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/hashtags_controller.rb:42:in `update'
+Started GET "/hashtags/2" for ::1 at 2020-01-08 14:53:12 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:3
+  Rendered hashtags/show.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 73ms (Views: 47.2ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/hashtags/" for ::1 at 2020-01-08 14:53:16 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:13
+  Rendered hashtags/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/hashtags/2" for ::1 at 2020-01-08 14:53:18 -0300
+Processing by HashtagsController#update as HTML
+  Parameters: {"authenticity_token"=>"oY8UsCfleDNQQ56k0AB59dpCTbTDdTbOk6kUfmJro6fjs9WBY+NfzHXCyi32kmsdX22DMaRH+DuxjgARX50xHg==", "id"=>"2"}
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:40
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.8ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 16]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (66.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 17]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.8ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 18]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 19]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (3.1ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (1.0ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 21]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 22]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (1.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 23]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 24]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.8ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 25]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (13.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 26]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (1.1ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 27]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 28]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 29]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (3.0ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 30]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (14.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "NASA TV Coverage Set for Three Spacewalks in January #nasa #space #science https://t.co/jSz2Z0k8ji"], ["date_post", "Wed Jan 08 17:53:06 +0000 2020"], ["created_at", "2020-01-08 17:53:19.352516"], ["updated_at", "2020-01-08 17:53:19.352516"], ["user_name", "Norm_B"], ["user_screen_name", "_normb"], ["url_img_user", "http://pbs.twimg.com/profile_images/1003659724548726784/LzLu3UNb_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (37.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @detikcom: Satelit pemburu planet milik NASA, Transiting Exoplanet Survey Satellite (TESS), menemukan planet yang ukurannya hampir sama…"], ["date_post", "Wed Jan 08 17:52:05 +0000 2020"], ["created_at", "2020-01-08 17:53:19.395849"], ["updated_at", "2020-01-08 17:53:19.395849"], ["user_name", "ara"], ["user_screen_name", "amaranthinezz"], ["url_img_user", "http://pbs.twimg.com/profile_images/1200024585707458560/hNBxsTGt_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @NASAEarth: New Zealand in Sunglint http://t.co/S6Keu6R6Pg #NASA http://t.co/h0Wnw4x4rd"], ["date_post", "Wed Jan 08 17:51:29 +0000 2020"], ["created_at", "2020-01-08 17:53:19.406533"], ["updated_at", "2020-01-08 17:53:19.406533"], ["user_name", "CupInfo"], ["user_screen_name", "CupInfo"], ["url_img_user", "http://pbs.twimg.com/profile_images/3547663415/a89c7dd03e49d80b5b8d2c45d53e7f36_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "La NASA avrebbe distrutto delle strutture aliene sulla Luna? #alieni #cosmo #luna #nasa #spazio #universo\nhttps://t.co/58D5T2Abcw"], ["date_post", "Wed Jan 08 17:49:22 +0000 2020"], ["created_at", "2020-01-08 17:53:19.415620"], ["updated_at", "2020-01-08 17:53:19.415620"], ["user_name", "Nuovo Universo"], ["user_screen_name", "NuovoUniverso"], ["url_img_user", "http://pbs.twimg.com/profile_images/838489336257654785/g8z1U5Mo_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (18.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @detikcom: Satelit pemburu planet milik NASA, Transiting Exoplanet Survey Satellite (TESS), menemukan planet yang ukurannya hampir sama…"], ["date_post", "Wed Jan 08 17:49:09 +0000 2020"], ["created_at", "2020-01-08 17:53:19.440963"], ["updated_at", "2020-01-08 17:53:19.440963"], ["user_name", "qo~"], ["user_screen_name", "TAT_jen00"], ["url_img_user", "http://pbs.twimg.com/profile_images/1214801309250940928/792WMNZf_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (14.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @ScoopWhoop: UNESCO declared this post as the BEST POST on Twitter #NASA #kiranbedi https://t.co/decHhKXebe"], ["date_post", "Wed Jan 08 17:48:35 +0000 2020"], ["created_at", "2020-01-08 17:53:19.462215"], ["updated_at", "2020-01-08 17:53:19.462215"], ["user_name", "B Singh"], ["user_screen_name", "BindiyaKotwal"], ["url_img_user", "http://pbs.twimg.com/profile_images/1214907752339738625/JURHw585_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.0ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @matrixrprt2017: Missiles that lost their way to base in IRAQ from the attack by IRAN #UFO #AncientAliens #UFOs #disclosure @alien #alie…"], ["date_post", "Wed Jan 08 17:48:29 +0000 2020"], ["created_at", "2020-01-08 17:53:19.471606"], ["updated_at", "2020-01-08 17:53:19.471606"], ["user_name", "ancientaliens.online"], ["user_screen_name", "alienastromusic"], ["url_img_user", "http://pbs.twimg.com/profile_images/781949474176458752/YNnQJ0e1_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @detikcom: Satelit pemburu planet milik NASA, Transiting Exoplanet Survey Satellite (TESS), menemukan planet yang ukurannya hampir sama…"], ["date_post", "Wed Jan 08 17:47:26 +0000 2020"], ["created_at", "2020-01-08 17:53:19.481887"], ["updated_at", "2020-01-08 17:53:19.481887"], ["user_name", "beyours___"], ["user_screen_name", "byoungg61"], ["url_img_user", "http://pbs.twimg.com/profile_images/1152016200546713600/lj-_I0lN_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @Radio1Rai: ✨Si chiama TOI 700 d, dista 100 anni luce dalla sua 'sorella' Terra e si trova nella cosiddetta zona abitabile, ossia alla d…"], ["date_post", "Wed Jan 08 17:47:04 +0000 2020"], ["created_at", "2020-01-08 17:53:19.494436"], ["updated_at", "2020-01-08 17:53:19.494436"], ["user_name", "Marina68"], ["user_screen_name", "Mitramacco"], ["url_img_user", "http://pbs.twimg.com/profile_images/837345283570827266/pf1qnr-z_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (2.2ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @ShiCooks: #NASA astronaut Christina Koch posted a dazzling image of the Quadrantid #MeteorShower — the 1st meteor shower of 2020 — w/ a…"], ["date_post", "Wed Jan 08 17:46:46 +0000 2020"], ["created_at", "2020-01-08 17:53:19.507969"], ["updated_at", "2020-01-08 17:53:19.507969"], ["user_name", "Shi"], ["user_screen_name", "ShiCooks"], ["url_img_user", "http://pbs.twimg.com/profile_images/619323261063565312/lVyXbKeZ_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @claratahoces: #FelizMiércoles \nLa foto del día #NASA https://t.co/VVWHYUgFw6 #fotografia #photography \n#HappyWednesday https://t.co/jmd…"], ["date_post", "Wed Jan 08 17:46:24 +0000 2020"], ["created_at", "2020-01-08 17:53:19.530195"], ["updated_at", "2020-01-08 17:53:19.530195"], ["user_name", "Dolo"], ["user_screen_name", "dolo_66"], ["url_img_user", "http://pbs.twimg.com/profile_images/3603945049/5c94d97d466f1b818f80686377e32015_normal.jpeg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "NEIL A 👨‍🚀\nALIEN 👽🛸\n\nNeil A. spelled backwards is Alien. \n\n#NeilArmstrong #NASA"], ["date_post", "Wed Jan 08 17:45:28 +0000 2020"], ["created_at", "2020-01-08 17:53:19.537823"], ["updated_at", "2020-01-08 17:53:19.537823"], ["user_name", "Skoot Baylor"], ["user_screen_name", "Baylor_Gang"], ["url_img_user", "http://pbs.twimg.com/profile_images/1212653068417982465/bStQ_FZw_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @IFOS9000: 🚀Straight outta NASA: https://t.co/xmfAMPGPZQ #space #cosmos #universe #science #astronomy #climate #NASA"], ["date_post", "Wed Jan 08 17:43:48 +0000 2020"], ["created_at", "2020-01-08 17:53:19.548558"], ["updated_at", "2020-01-08 17:53:19.548558"], ["user_name", "BLUE BUZZ TO INFINITY AND BEYOND"], ["user_screen_name", "TheSpaceTheory"], ["url_img_user", "http://pbs.twimg.com/profile_images/1208860169402245120/mL0g6Jrl_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "Este es el plan de exploracion lunar para el futuro.\n\nArtemisa\n\nhttps://t.co/jiu1ZWhpqo\n#nasa #seeyouspacecowboy"], ["date_post", "Wed Jan 08 17:42:40 +0000 2020"], ["created_at", "2020-01-08 17:53:19.560454"], ["updated_at", "2020-01-08 17:53:19.560454"], ["user_name", "Dan"], ["user_screen_name", "binamonk"], ["url_img_user", "http://pbs.twimg.com/profile_images/1212762995094433795/zeNHTMRW_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "You might want to question the safety of these products. \nInvented by #nasa \nLED light masks\nhttps://t.co/p8vwQfPOWG"], ["date_post", "Wed Jan 08 17:42:39 +0000 2020"], ["created_at", "2020-01-08 17:53:19.575704"], ["updated_at", "2020-01-08 17:53:19.575704"], ["user_name", "GreyTonka"], ["user_screen_name", "GreyTonka"], ["url_img_user", "http://pbs.twimg.com/profile_images/1093110929892364290/LymTfMDz_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+Redirected to http://localhost:3000/hashtags/2
+Completed 302 Found in 1383ms (ActiveRecord: 380.7ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-08 14:53:19 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (1.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:3
+  Rendered hashtags/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 48ms (Views: 43.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/hashtags/" for ::1 at 2020-01-08 14:53:34 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (1.2ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:13
+  Rendered hashtags/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 58ms (Views: 53.4ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/hashtags/2" for ::1 at 2020-01-08 14:53:39 -0300
+Processing by HashtagsController#update as HTML
+  Parameters: {"authenticity_token"=>"gZ620Z5T+bzYiVF0J7kZVqYfCQr8tJzF17DNKSuRAzrDonfg2lXeQ/0IBf0BKwu+IzDHj5uGUjD1l9lGFmeRgw==", "id"=>"2"}
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:40
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 46]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (34.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 47]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.8ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 48]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 49]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 50]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 52]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (1.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 53]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 54]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.8ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 55]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.9ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 56]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (2.0ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 57]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (1.0ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 58]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 59]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.8ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 60]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "That's us!  @ThePSF #python3 #NASA #Earth #science #data #DataScience @ESIPfed https://t.co/s6J1uEJcj4"], ["date_post", "Wed Jan 08 17:53:22 +0000 2020"], ["created_at", "2020-01-08 17:53:40.557420"], ["updated_at", "2020-01-08 17:53:40.557420"], ["user_name", "GES DISC"], ["user_screen_name", "NASA_GESDISC"], ["url_img_user", "http://pbs.twimg.com/profile_images/1089943896749150208/jDtKGyve_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (21.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "NASA TV Coverage Set for Three Spacewalks in January #nasa #space #science https://t.co/jSz2Z0k8ji"], ["date_post", "Wed Jan 08 17:53:06 +0000 2020"], ["created_at", "2020-01-08 17:53:40.583711"], ["updated_at", "2020-01-08 17:53:40.583711"], ["user_name", "Norm_B"], ["user_screen_name", "_normb"], ["url_img_user", "http://pbs.twimg.com/profile_images/1003659724548726784/LzLu3UNb_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @detikcom: Satelit pemburu planet milik NASA, Transiting Exoplanet Survey Satellite (TESS), menemukan planet yang ukurannya hampir sama…"], ["date_post", "Wed Jan 08 17:52:05 +0000 2020"], ["created_at", "2020-01-08 17:53:40.593699"], ["updated_at", "2020-01-08 17:53:40.593699"], ["user_name", "ara"], ["user_screen_name", "amaranthinezz"], ["url_img_user", "http://pbs.twimg.com/profile_images/1200024585707458560/hNBxsTGt_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @NASAEarth: New Zealand in Sunglint http://t.co/S6Keu6R6Pg #NASA http://t.co/h0Wnw4x4rd"], ["date_post", "Wed Jan 08 17:51:29 +0000 2020"], ["created_at", "2020-01-08 17:53:40.605635"], ["updated_at", "2020-01-08 17:53:40.605635"], ["user_name", "CupInfo"], ["user_screen_name", "CupInfo"], ["url_img_user", "http://pbs.twimg.com/profile_images/3547663415/a89c7dd03e49d80b5b8d2c45d53e7f36_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "La NASA avrebbe distrutto delle strutture aliene sulla Luna? #alieni #cosmo #luna #nasa #spazio #universo\nhttps://t.co/58D5T2Abcw"], ["date_post", "Wed Jan 08 17:49:22 +0000 2020"], ["created_at", "2020-01-08 17:53:40.616724"], ["updated_at", "2020-01-08 17:53:40.616724"], ["user_name", "Nuovo Universo"], ["user_screen_name", "NuovoUniverso"], ["url_img_user", "http://pbs.twimg.com/profile_images/838489336257654785/g8z1U5Mo_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @detikcom: Satelit pemburu planet milik NASA, Transiting Exoplanet Survey Satellite (TESS), menemukan planet yang ukurannya hampir sama…"], ["date_post", "Wed Jan 08 17:49:09 +0000 2020"], ["created_at", "2020-01-08 17:53:40.627519"], ["updated_at", "2020-01-08 17:53:40.627519"], ["user_name", "qo~"], ["user_screen_name", "TAT_jen00"], ["url_img_user", "http://pbs.twimg.com/profile_images/1214801309250940928/792WMNZf_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @ScoopWhoop: UNESCO declared this post as the BEST POST on Twitter #NASA #kiranbedi https://t.co/decHhKXebe"], ["date_post", "Wed Jan 08 17:48:35 +0000 2020"], ["created_at", "2020-01-08 17:53:40.637991"], ["updated_at", "2020-01-08 17:53:40.637991"], ["user_name", "B Singh"], ["user_screen_name", "BindiyaKotwal"], ["url_img_user", "http://pbs.twimg.com/profile_images/1214907752339738625/JURHw585_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @matrixrprt2017: Missiles that lost their way to base in IRAQ from the attack by IRAN #UFO #AncientAliens #UFOs #disclosure @alien #alie…"], ["date_post", "Wed Jan 08 17:48:29 +0000 2020"], ["created_at", "2020-01-08 17:53:40.650944"], ["updated_at", "2020-01-08 17:53:40.650944"], ["user_name", "ancientaliens.online"], ["user_screen_name", "alienastromusic"], ["url_img_user", "http://pbs.twimg.com/profile_images/781949474176458752/YNnQJ0e1_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @detikcom: Satelit pemburu planet milik NASA, Transiting Exoplanet Survey Satellite (TESS), menemukan planet yang ukurannya hampir sama…"], ["date_post", "Wed Jan 08 17:47:26 +0000 2020"], ["created_at", "2020-01-08 17:53:40.661362"], ["updated_at", "2020-01-08 17:53:40.661362"], ["user_name", "beyours___"], ["user_screen_name", "byoungg61"], ["url_img_user", "http://pbs.twimg.com/profile_images/1152016200546713600/lj-_I0lN_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @Radio1Rai: ✨Si chiama TOI 700 d, dista 100 anni luce dalla sua 'sorella' Terra e si trova nella cosiddetta zona abitabile, ossia alla d…"], ["date_post", "Wed Jan 08 17:47:04 +0000 2020"], ["created_at", "2020-01-08 17:53:40.673236"], ["updated_at", "2020-01-08 17:53:40.673236"], ["user_name", "Marina68"], ["user_screen_name", "Mitramacco"], ["url_img_user", "http://pbs.twimg.com/profile_images/837345283570827266/pf1qnr-z_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.1ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @ShiCooks: #NASA astronaut Christina Koch posted a dazzling image of the Quadrantid #MeteorShower — the 1st meteor shower of 2020 — w/ a…"], ["date_post", "Wed Jan 08 17:46:46 +0000 2020"], ["created_at", "2020-01-08 17:53:40.683701"], ["updated_at", "2020-01-08 17:53:40.683701"], ["user_name", "Shi"], ["user_screen_name", "ShiCooks"], ["url_img_user", "http://pbs.twimg.com/profile_images/619323261063565312/lVyXbKeZ_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @claratahoces: #FelizMiércoles \nLa foto del día #NASA https://t.co/VVWHYUgFw6 #fotografia #photography \n#HappyWednesday https://t.co/jmd…"], ["date_post", "Wed Jan 08 17:46:24 +0000 2020"], ["created_at", "2020-01-08 17:53:40.694569"], ["updated_at", "2020-01-08 17:53:40.694569"], ["user_name", "Dolo"], ["user_screen_name", "dolo_66"], ["url_img_user", "http://pbs.twimg.com/profile_images/3603945049/5c94d97d466f1b818f80686377e32015_normal.jpeg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "NEIL A 👨‍🚀\nALIEN 👽🛸\n\nNeil A. spelled backwards is Alien. \n\n#NeilArmstrong #NASA"], ["date_post", "Wed Jan 08 17:45:28 +0000 2020"], ["created_at", "2020-01-08 17:53:40.704741"], ["updated_at", "2020-01-08 17:53:40.704741"], ["user_name", "Skoot Baylor"], ["user_screen_name", "Baylor_Gang"], ["url_img_user", "http://pbs.twimg.com/profile_images/1212653068417982465/bStQ_FZw_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @IFOS9000: 🚀Straight outta NASA: https://t.co/xmfAMPGPZQ #space #cosmos #universe #science #astronomy #climate #NASA"], ["date_post", "Wed Jan 08 17:43:48 +0000 2020"], ["created_at", "2020-01-08 17:53:40.720045"], ["updated_at", "2020-01-08 17:53:40.720045"], ["user_name", "BLUE BUZZ TO INFINITY AND BEYOND"], ["user_screen_name", "TheSpaceTheory"], ["url_img_user", "http://pbs.twimg.com/profile_images/1208860169402245120/mL0g6Jrl_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "Este es el plan de exploracion lunar para el futuro.\n\nArtemisa\n\nhttps://t.co/jiu1ZWhpqo\n#nasa #seeyouspacecowboy"], ["date_post", "Wed Jan 08 17:42:40 +0000 2020"], ["created_at", "2020-01-08 17:53:40.737174"], ["updated_at", "2020-01-08 17:53:40.737174"], ["user_name", "Dan"], ["user_screen_name", "binamonk"], ["url_img_user", "http://pbs.twimg.com/profile_images/1212762995094433795/zeNHTMRW_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+Redirected to http://localhost:3000/hashtags/2
+Completed 302 Found in 1232ms (ActiveRecord: 275.8ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-08 14:53:40 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.4ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:3
+  Rendered hashtags/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 66ms (Views: 61.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/hashtags/" for ::1 at 2020-01-08 14:53:50 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:13
+  Rendered hashtags/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 60ms (Views: 55.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/list_tweets/index" for ::1 at 2020-01-08 15:05:02 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/list_tweets/index"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/list_tweets/" for ::1 at 2020-01-08 15:05:31 -0300
+Processing by ListTweetsController#index as HTML
+  Rendering list_tweets/index.html.erb within layouts/application
+  Rendered list_tweets/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 232ms (Views: 230.4ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/stylesheets/list_tweets.scss"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.4.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.4.1) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.4.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.4.1) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/list_tweets/vendor/simple-line-icons/css/simple-line-icons.css" for ::1 at 2020-01-08 15:05:33 -0300
+Started GET "/list_tweets/vendor/fontawesome-free/css/all.min.css" for ::1 at 2020-01-08 15:05:33 -0300
+Started GET "/list_tweets/img/testimonials-1.jpg" for ::1 at 2020-01-08 15:05:33 -0300
+Started GET "/list_tweets/img/testimonials-2.jpg" for ::1 at 2020-01-08 15:05:33 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/list_tweets/vendor/simple-line-icons/css/simple-line-icons.css"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/list_tweets/img/testimonials-1.jpg"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/list_tweets/vendor/fontawesome-free/css/all.min.css"):
+  
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+ActionController::RoutingError (No route matches [GET] "/list_tweets/img/testimonials-2.jpg"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/list_tweets/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2020-01-08 15:05:33 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/list_tweets/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/list_tweets/vendor/jquery/jquery.min.js" for ::1 at 2020-01-08 15:05:33 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/list_tweets/vendor/jquery/jquery.min.js"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/list_tweets/vendor/simple-line-icons/css/simple-line-icons.css" for ::1 at 2020-01-08 15:05:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/list_tweets/vendor/simple-line-icons/css/simple-line-icons.css"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/list_tweets/img/testimonials-3.jpg" for ::1 at 2020-01-08 15:05:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/list_tweets/img/testimonials-3.jpg"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/stylesheets/list_tweets.scss"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.4.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.4.1) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.4.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.4.1) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/list_tweets/img/bg-showcase-1.jpg" for ::1 at 2020-01-08 15:05:34 -0300
+Started GET "/list_tweets/img/bg-showcase-3.jpg" for ::1 at 2020-01-08 15:05:34 -0300
+Started GET "/list_tweets/img/bg-showcase-2.jpg" for ::1 at 2020-01-08 15:05:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/list_tweets/img/bg-showcase-1.jpg"):
+  
+ActionController::RoutingError (No route matches [GET] "/list_tweets/img/bg-showcase-3.jpg"):
+  
+  
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+ActionController::RoutingError (No route matches [GET] "/list_tweets/img/bg-showcase-2.jpg"):
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+Started GET "/list_tweets/vendor/jquery/jquery.min.js" for ::1 at 2020-01-08 15:05:34 -0300
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/list_tweets/vendor/jquery/jquery.min.js"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/list_tweets/vendor/bootstrap/js/bootstrap.bundle.min.js" for ::1 at 2020-01-08 15:05:35 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/list_tweets/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-08 15:13:36 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.9ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:14
+  Rendered hashtags/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 306ms (Views: 281.0ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/list_tweets" for ::1 at 2020-01-08 15:13:39 -0300
+Processing by ListTweetsController#index as HTML
+  Rendering list_tweets/index.html.erb within layouts/application
+  Rendered list_tweets/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"hashtags"}, missing required keys: [:id]):
+    27: 
+    28:   <div class="tweetEntry-tweetHolder">
+    29: 
+    30:     <p> <% link_to 'Back to Hashtags', hashtag_path %> </p>
+    31: 
+    32:     <% @tweets.each do | tw | %>
+    33: 
+  
+app/views/list_tweets/index.html.erb:30:in `_app_views_list_tweets_index_html_erb__2032493735044075660_69826807751480'
+Started GET "/" for ::1 at 2020-01-08 15:22:21 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:14
+  Rendered hashtags/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 323ms (Views: 305.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/list_tweets" for ::1 at 2020-01-08 15:22:24 -0300
+Processing by ListTweetsController#index as HTML
+  Rendering list_tweets/index.html.erb within layouts/application
+  Rendered list_tweets/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"hashtags"}, missing required keys: [:id]):
+    27: 
+    28:   <div class="tweetEntry-tweetHolder">
+    29: 
+    30:     <p> <%= link_to 'Back to Hashtags', hashtag_path %> </p>
+    31: 
+    32:     <% @tweets.each do | tw | %>
+    33: 
+  
+app/views/list_tweets/index.html.erb:30:in `_app_views_list_tweets_index_html_erb___4225154132938040675_70179474239720'
+Started GET "/" for ::1 at 2020-01-08 15:23:56 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (2.3ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:14
+  Rendered hashtags/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 51ms (Views: 46.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/list_tweets" for ::1 at 2020-01-08 15:23:58 -0300
+Processing by ListTweetsController#index as HTML
+  Rendering list_tweets/index.html.erb within layouts/application
+  Rendered list_tweets/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"hashtags"}, missing required keys: [:id]):
+    27: 
+    28:   <div class="tweetEntry-tweetHolder">
+    29: 
+    30:     <p> <%= link_to 'Back to Hashtags', hashtag_url %> </p>
+    31: 
+    32:     <% @tweets.each do | tw | %>
+    33: 
+  
+app/views/list_tweets/index.html.erb:30:in `_app_views_list_tweets_index_html_erb___4225154132938040675_70179430128680'
+Started GET "/" for ::1 at 2020-01-08 15:25:08 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:14
+  Rendered hashtags/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 60ms (Views: 54.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-08 15:25:10 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (1.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:5
+  Rendered hashtags/show.html.erb within layouts/application (67.4ms)
+Completed 200 OK in 194ms (Views: 118.6ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-08 15:25:13 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.8ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:5
+  Rendered hashtags/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 96ms (Views: 91.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-08 15:25:18 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (1.1ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:5
+  Rendered hashtags/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 129ms (Views: 123.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-08 15:25:21 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (1.7ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (1.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:5
+  Rendered hashtags/show.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 113ms (Views: 105.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/hashtags/" for ::1 at 2020-01-08 15:25:35 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:14
+  Rendered hashtags/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 80ms (Views: 75.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-08 15:25:38 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (3.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:5
+  Rendered hashtags/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 85ms (Views: 75.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-08 15:25:40 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (1.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:5
+  Rendered hashtags/show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 94ms (Views: 90.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-08 15:25:43 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (2.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:5
+  Rendered hashtags/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 100ms (Views: 90.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-08 15:27:37 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (1.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:5
+  Rendered hashtags/show.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 106ms (Views: 99.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-08 15:27:39 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:14
+  Rendered hashtags/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 79ms (Views: 77.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/list_tweets" for ::1 at 2020-01-08 15:27:41 -0300
+Processing by ListTweetsController#index as HTML
+  Rendering list_tweets/index.html.erb within layouts/application
+  Rendered list_tweets/index.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    29: 
+    30:     <p> <%= link_to 'Back to Hashtags', hashtags_path %> </p>
+    31: 
+    32:     <% @tweets.each do | tw | %>
+    33: 
+    34:       <div class="tweetEntry">
+    35: 
+  
+app/views/list_tweets/index.html.erb:32:in `_app_views_list_tweets_index_html_erb___4225154132938040675_70179486693900'
+Started GET "/hashtags" for ::1 at 2020-01-08 15:29:34 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (1.1ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:14
+  Rendered hashtags/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 104ms (Views: 95.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/list_tweets" for ::1 at 2020-01-08 15:29:36 -0300
+Processing by ListTweetsController#index as HTML
+  Rendering list_tweets/index.html.erb within layouts/application
+  Rendered list_tweets/index.html.erb within layouts/application (17.8ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Tweets):
+    29: 
+    30:     <p> <%= link_to 'Back to Hashtags', hashtags_path %> </p>
+    31: 
+    32:     <% Tweets.each do | tw | %>
+    33: 
+    34:       <div class="tweetEntry">
+    35: 
+  
+app/views/list_tweets/index.html.erb:32:in `_app_views_list_tweets_index_html_erb___4225154132938040675_70179430656560'
+Started GET "/hashtags" for ::1 at 2020-01-08 15:29:48 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:14
+  Rendered hashtags/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 73ms (Views: 68.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/list_tweets" for ::1 at 2020-01-08 15:29:49 -0300
+Processing by ListTweetsController#index as HTML
+  Rendering list_tweets/index.html.erb within layouts/application
+  Rendered list_tweets/index.html.erb within layouts/application (15.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Class:0x00007fa7dcc3d738>):
+    29: 
+    30:     <p> <%= link_to 'Back to Hashtags', hashtags_path %> </p>
+    31: 
+    32:     <% Tweet.each do | tw | %>
+    33: 
+    34:       <div class="tweetEntry">
+    35: 
+  
+app/views/list_tweets/index.html.erb:32:in `_app_views_list_tweets_index_html_erb___4225154132938040675_70179484931600'
+Started GET "/hashtags" for ::1 at 2020-01-08 15:30:13 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (2.9ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:14
+  Rendered hashtags/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 79ms (Views: 73.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/list_tweets" for ::1 at 2020-01-08 15:30:15 -0300
+Processing by ListTweetsController#index as HTML
+  Rendering list_tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (4.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/list_tweets/index.html.erb:32
+  Rendered list_tweets/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 83ms (Views: 76.0ms | ActiveRecord: 4.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/stylesheets/list_tweets.scss"):
+Started GET "/vendor/simple-line-icons/css/simple-line-icons.css" for ::1 at 2020-01-08 15:30:15 -0300
+Started GET "/vendor/fontawesome-free/css/all.min.css" for ::1 at 2020-01-08 15:30:15 -0300
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.4.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.4.1) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.4.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.4.1) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/simple-line-icons/css/simple-line-icons.css"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/fontawesome-free/css/all.min.css"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-08 15:37:20 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (1.0ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:14
+  Rendered hashtags/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 714ms (Views: 694.6ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-08 15:38:12 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (2.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:5
+  Rendered hashtags/show.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 139ms (Views: 82.7ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-08 15:38:18 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.8ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:14
+  Rendered hashtags/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/list_tweets" for ::1 at 2020-01-08 15:38:21 -0300
+  
+ActionController::RoutingError (uninitialized constant ListTweetsController):
+  
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.8) lib/rack/etag.rb:25:in `call'
+rack (2.0.8) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.8) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.8) lib/rack/session/abstract/id.rb:259:in `context'
+rack (2.0.8) lib/rack/session/abstract/id.rb:253:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/list_tweets" for ::1 at 2020-01-08 15:41:16 -0300
+Processing by ListTweetsController#index as HTML
+  Rendering list_tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (1.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/list_tweets/index.html.erb:21
+  Rendered list_tweets/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 67ms (Views: 57.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-08 15:41:18 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:14
+  Rendered hashtags/index.html.erb within layouts/application (42.8ms)
+Completed 200 OK in 139ms (Views: 108.6ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/list_tweets" for ::1 at 2020-01-08 15:41:21 -0300
+Processing by ListTweetsController#index as HTML
+  Rendering list_tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (1.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/list_tweets/index.html.erb:21
+  Rendered list_tweets/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 120ms (Views: 117.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-08 15:41:22 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (3.2ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:14
+  Rendered hashtags/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 113ms (Views: 108.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/hashtags/new" for ::1 at 2020-01-08 15:41:22 -0300
+Processing by HashtagsController#new as HTML
+  Rendering hashtags/new.html.erb within layouts/application
+  Rendered hashtags/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 92ms (Views: 89.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hashtags" for ::1 at 2020-01-08 15:41:29 -0300
+Processing by HashtagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bkqQ/yHPPtc4wgpEjhqBuPVC76T87qm+NUV/1Y6kouiiZ22UTePGOSwwbVce64HtC3Z6ziV9agyjAIvCnCgtpA==", "hashtag"=>{"tag"=>"australiafire"}, "commit"=>"Save Hashtag"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:25
+  [1m[36mHashtag Create (0.8ms)[0m  [1m[32mINSERT INTO "hashtags" ("tag", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tag", "#australiafire"], ["created_at", "2020-01-08 18:41:29.892317"], ["updated_at", "2020-01-08 18:41:29.892317"]]
+  ↳ app/controllers/hashtags_controller.rb:25
+  [1m[35m (50.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:25
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @beautys_art: Let's put out in #australiafire by bouboudesign_ https://t.co/a0LZCRiVe7"], ["date_post", "Wed Jan 08 18:41:09 +0000 2020"], ["created_at", "2020-01-08 18:41:30.859268"], ["updated_at", "2020-01-08 18:41:30.859268"], ["user_name", "Monica Sanchez"], ["user_screen_name", "monalafeliz21"], ["url_img_user", "http://pbs.twimg.com/profile_images/589488951796236288/3Y_glX5Y_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (35.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @ozcrimenews: Western Sydney \nArsonist in Court\n- deliberately lighting fires \nNSW, charged police \n\n#bushfires #bushfireaustralia #bush…"], ["date_post", "Wed Jan 08 18:41:02 +0000 2020"], ["created_at", "2020-01-08 18:41:30.899588"], ["updated_at", "2020-01-08 18:41:30.899588"], ["user_name", "Adяienne 2.0"], ["user_screen_name", "Adrienne2_0"], ["url_img_user", "http://pbs.twimg.com/profile_images/591582412666183681/-UlMYimB_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @MunozAsusena: this is so so heartbreaking. please pray for all the animals during Australia’s devastating fires. #australiafire https:/…"], ["date_post", "Wed Jan 08 18:40:28 +0000 2020"], ["created_at", "2020-01-08 18:41:30.912731"], ["updated_at", "2020-01-08 18:41:30.912731"], ["user_name", "FAROZLU"], ["user_screen_name", "FAROZLU6"], ["url_img_user", "http://pbs.twimg.com/profile_images/1060572975248916480/C4_Qn_fv_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @Shaimaakhalil: Look at the sky!! Driving further into southern #NSW and it just feels unreal! Smoke has engulfed everything - the smell…"], ["date_post", "Wed Jan 08 18:40:26 +0000 2020"], ["created_at", "2020-01-08 18:41:30.921854"], ["updated_at", "2020-01-08 18:41:30.921854"], ["user_name", "FAROZLU"], ["user_screen_name", "FAROZLU6"], ["url_img_user", "http://pbs.twimg.com/profile_images/1060572975248916480/C4_Qn_fv_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @hishamkraitem: Can we please shed some light on what’s happening in Australia! It’s heartbreaking #australiafire https://t.co/mySGETlJxX"], ["date_post", "Wed Jan 08 18:40:23 +0000 2020"], ["created_at", "2020-01-08 18:41:30.934441"], ["updated_at", "2020-01-08 18:41:30.934441"], ["user_name", "FAROZLU"], ["user_screen_name", "FAROZLU6"], ["url_img_user", "http://pbs.twimg.com/profile_images/1060572975248916480/C4_Qn_fv_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.4ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @usmandevries: Muslims in Australia performed *Salat Ul  Istasqa\" (a special prayers for the rain) &amp; it rained in Australia now ALHAMDUL…"], ["date_post", "Wed Jan 08 18:40:17 +0000 2020"], ["created_at", "2020-01-08 18:41:30.944443"], ["updated_at", "2020-01-08 18:41:30.944443"], ["user_name", "ℳ𝒶𝒾𝓉𝒽𝒶"], ["user_screen_name", "meem_uu"], ["url_img_user", "http://pbs.twimg.com/profile_images/1175117642983776256/XwC9GjUk_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @beautys_art: Let's put out in #australiafire by bouboudesign_ https://t.co/a0LZCRiVe7"], ["date_post", "Wed Jan 08 18:39:44 +0000 2020"], ["created_at", "2020-01-08 18:41:30.954721"], ["updated_at", "2020-01-08 18:41:30.954721"], ["user_name", "Jacky Moreno 🌸"], ["user_screen_name", "jackym3110"], ["url_img_user", "http://pbs.twimg.com/profile_images/1097699153986142209/SumGiZOn_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @BUSINESSricardo: GOLDMAN SACHS | \"While Australia has experienced major bushfires in the past, the physical size of the current event i…"], ["date_post", "Wed Jan 08 18:39:38 +0000 2020"], ["created_at", "2020-01-08 18:41:30.966845"], ["updated_at", "2020-01-08 18:41:30.966845"], ["user_name", "M@"], ["user_screen_name", "matthewsinclair"], ["url_img_user", "http://pbs.twimg.com/profile_images/768771407304155136/p6HT2ruB_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (28.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @beautys_art: Let's put out in #australiafire by bouboudesign_ https://t.co/a0LZCRiVe7"], ["date_post", "Wed Jan 08 18:39:24 +0000 2020"], ["created_at", "2020-01-08 18:41:31.001875"], ["updated_at", "2020-01-08 18:41:31.001875"], ["user_name", "Abo Rayan V 44"], ["user_screen_name", "3kbobcorny"], ["url_img_user", "http://pbs.twimg.com/profile_images/1212250325719158786/DBEM300-_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (13.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "Stop trending about money making politicians, actors and selfish people.... Please search and see for this... So fa… https://t.co/WeyBC2weFB"], ["date_post", "Wed Jan 08 18:38:22 +0000 2020"], ["created_at", "2020-01-08 18:41:31.021926"], ["updated_at", "2020-01-08 18:41:31.021926"], ["user_name", "Dr.Monisha@Dentalmedicos"], ["user_screen_name", "DrMonishaDenta1"], ["url_img_user", "http://pbs.twimg.com/profile_images/1029280872808165376/73vLlAW6_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @MitchGreggas: Saddest part of this whole ordeal are the lives lost #australiafire https://t.co/RAU7UamzaD"], ["date_post", "Wed Jan 08 18:38:06 +0000 2020"], ["created_at", "2020-01-08 18:41:31.032781"], ["updated_at", "2020-01-08 18:41:31.032781"], ["user_name", "rey"], ["user_screen_name", "Reafatihah_"], ["url_img_user", "http://pbs.twimg.com/profile_images/1166777233479856128/V7Ydwnq0_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @madhyananuj: वो जान से गये , तब जाकर दुनिया को ये ख़बर हुई , कि दूर कहीं जंगल में कुछ बेज़ुबान रहते थे 🙏🏻😢🙏🏻\n\n#PrayForAustralia #Austra…"], ["date_post", "Wed Jan 08 18:37:54 +0000 2020"], ["created_at", "2020-01-08 18:41:31.043858"], ["updated_at", "2020-01-08 18:41:31.043858"], ["user_name", "Ankita Singh"], ["user_screen_name", "Ankitasingh910"], ["url_img_user", "http://pbs.twimg.com/profile_images/1153593449410486272/eIv61dzg_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @planetcaramela: Thousands of kangaroos\nand koalas died in a hell\nof a fire 🔥in Australia,\nGod bless 🙏the people\nwho help these beautifu…"], ["date_post", "Wed Jan 08 18:37:45 +0000 2020"], ["created_at", "2020-01-08 18:41:31.054355"], ["updated_at", "2020-01-08 18:41:31.054355"], ["user_name", "Cheoko"], ["user_screen_name", "Cheoko3"], ["url_img_user", "http://pbs.twimg.com/profile_images/1202812183953977345/Zz-b2om9_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @Snishaa2: Koalas Affected by Fires on Kangaroo Island. A Man Saved These Koalas From The Fire and Collected Them in His Car🐨❤\nFaith in…"], ["date_post", "Wed Jan 08 18:37:41 +0000 2020"], ["created_at", "2020-01-08 18:41:31.068276"], ["updated_at", "2020-01-08 18:41:31.068276"], ["user_name", "Juan Camilo Camacho"], ["user_screen_name", "juancacamacho89"], ["url_img_user", "http://pbs.twimg.com/profile_images/1133510102932180992/rcob_HHQ_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (2.3ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @alivenchy: คริสหมี มาอัพสตอรี่\nรวมช่องทางการบริจาคเงิน\nช่วยเหลือ #ไฟป่าออสเตรเลีย\nโดยแฟนต่างชาติก็ร่วมบริจาคได้\nจากลิ้งหน่วยงานที่วงเล็…"], ["date_post", "Wed Jan 08 18:37:14 +0000 2020"], ["created_at", "2020-01-08 18:41:31.077017"], ["updated_at", "2020-01-08 18:41:31.077017"], ["user_name", "Style 🏝"], ["user_screen_name", "WCHPBCH"], ["url_img_user", "http://pbs.twimg.com/profile_images/1205369890686652416/-_62PH2c_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+Redirected to http://localhost:3000/hashtags/4
+Completed 302 Found in 1199ms (ActiveRecord: 219.5ms)
+
+
+Started GET "/hashtags/4" for ::1 at 2020-01-08 15:41:31 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 4]]
+  ↳ app/views/hashtags/show.html.erb:5
+  Rendered hashtags/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-08 15:41:57 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:14
+  Rendered hashtags/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 77ms (Views: 75.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/list_tweets" for ::1 at 2020-01-08 15:42:03 -0300
+Processing by ListTweetsController#index as HTML
+  Rendering list_tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (2.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/list_tweets/index.html.erb:21
+  Rendered list_tweets/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 65ms (Views: 61.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-08 15:42:26 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (1.3ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:14
+  Rendered hashtags/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 94ms (Views: 90.8ms | ActiveRecord: 1.3ms)
+
+

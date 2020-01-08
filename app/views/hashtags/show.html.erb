@@ -1,5 +1,7 @@
 <div class="tweetEntry-tweetHolder">
 
+  <p> <%= link_to 'Back to Hashtags', hashtags_path %> </p>
+
   <% Tweet.where(hashtag_id: @hashtag.id).each do | tw | %>
 
     <div class="tweetEntry">

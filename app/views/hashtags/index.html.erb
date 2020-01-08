@@ -7,7 +7,8 @@
       <table>
         <tr>
           <th>Hashtag</th>
-          <th></th>
+          <th> <%= link_to 'Add', new_hashtag_path %> </th>
+          <th> <%= link_to 'Show all tweets', list_tweets_path %> </th>
         </tr>
 
         <% @hashtags.each do |hash| %>
@@ -15,6 +16,8 @@
           <tr>
             <td> <%= hash.tag %> </td>
             <td> <%= link_to 'Show', hashtag_path(hash) %> </td>
+            <td> <%= link_to 'Update', hashtag_path(hash),
+              method: :put %> </td>
             <td> <%= link_to 'Destroy', hashtag_path(hash),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
