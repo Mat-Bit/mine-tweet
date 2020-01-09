@@ -1,11 +1,18 @@
-# README
+# mine-tweets
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### This simple app search tweets by a hashtag, more hashtags can be add or removed from this search.
 
-Things you may want to cover:
+#### The APP can be acessed by this link:
+[BitMineTweets Heroku APP](https://bitminetweets.herokuapp.com/)
 
-* Ruby version
+
+## For run the app locally, follow this next steps:
+
+### Requiriments:
+
+* Ruby v2.5.1 or newer ([Install Link](https://www.ruby-lang.org/en/downloads/))
+
+* Rails v5.2.4 or newer ([Install Link](http://railsinstaller.org/en))
 
 * System dependencies
 
@@ -21,7 +28,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
 
 ## Links:
 
