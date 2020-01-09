@@ -1,32 +1,48 @@
-<section class="section">
-  <div class="container">
-    <div class="columns">
+<html>
+  <head>
+    <title>MineTweets</title>
+  </head>
 
-      <h1> Mine Tweets Hashtags</h1>
+  <body>
+    <section class="section">
+      <div class="container">
+        <div class="columns">
 
-      <table>
-        <tr>
-          <th>Hashtag</th>
-          <th> <%= link_to 'Add', new_hashtag_path %> </th>
-          <th> <%= link_to 'Show all tweets', list_tweets_path %> </th>
-        </tr>
+          <h1> Mine Tweets Hashtags</h1>
 
-        <% @hashtags.each do |hash| %>
+          <br> <p> <%= link_to 'Show all tweets', list_tweets_path %> </p>
+          <br> <p> <%= link_to 'Add Hashtag', new_hashtag_path %> </p>
 
-          <tr>
-            <td> <%= hash.tag %> </td>
-            <td> <%= link_to 'Show', hashtag_path(hash) %> </td>
-            <td> <%= link_to 'Update', hashtag_path(hash),
-              method: :put %> </td>
-            <td> <%= link_to 'Destroy', hashtag_path(hash),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-          </tr>
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Hashtag</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
 
-        <% end %>
+              <tbody>
+                <% @hashtags.each do |hash| %>
 
-      </table>
+                  <tr>
+                    <td> <%= hash.tag %> </td>
+                    <td> <%= link_to 'Show', hashtag_path(hash) %> </td>
+                    <td> <%= link_to 'Update', hashtag_path(hash),
+                      method: :put %> </td>
+                    <td> <%= link_to 'Remove', hashtag_path(hash),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+                <% end %>
 
-    </div>
-  </div>
-</section>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

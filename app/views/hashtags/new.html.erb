@@ -1,18 +1,38 @@
 <!-- app/views/hashtags/new.html.erb -->
 
 <html>
-  <body>
-    
-    <%= form_with scope: :hashtag, url: hashtags_path, local: true do |form| %>
-      <p>
-        <%= form.label :Search_Hashtag %><br>
-        <%= form.text_field :tag %>
-      </p>
-      
-      <p>
-        <%= form.submit %>
-      </p>
-    <% end %>
 
+  <head>
+    <title>MineTweets</title>
+  </head>
+
+  <body>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+
+          <h1> Mine Tweets Hashtags</h1>
+
+          <br> <p> <%= link_to 'Show all tweets', list_tweets_path %> </p>
+          <br> <p> <%= link_to 'Back to Hashtags', hashtags_path %> </p>
+
+          <div class='form-label-group'>
+          
+            <%= form_with scope: :hashtag, url: hashtags_path, local: true do |form| %>
+              <p>
+                <%= form.label :Search_Hashtag %><br>
+                <%= form.text_field :tag %>
+              </p>
+              
+              <p>
+                <%= form.submit %>
+              </p>
+            <% end %>
+
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
