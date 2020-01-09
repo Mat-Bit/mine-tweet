@@ -3,9 +3,9 @@ default: &default
   encoding: unicode
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: <%= ENV['POSTGRESQL_USERNAME'] || 'postgres' %>
-  password: <%= ENV['POSTGRESQL_PASSWORD'] || '9957' %>
-  host: <%= ENV['POSTGRESQL_HOST'] || 'localhost' %>
+  username: <%= ENV['POSTGRESQL_USERNAME'] || 'jrinskixbakhir' %>
+  password: <%= ENV['POSTGRESQL_PASSWORD'] || 'ccb6d96b62a7ce06e877d3fa104a816510fdfa57493220626b3b5ee945637975' %>
+  host: <%= ENV['POSTGRESQL_HOST'] || 'ec2-174-129-33-167.compute-1.amazonaws.com' %>
   port: <%= ENV['POSTGRESQL_PORT'] || 5432 %>
 
 development:
@@ -19,5 +19,5 @@ test:
 
 production:
   <<: *default
-  database: minetweets_production
+  database: d865iqp4aunogj
   password: <%= ENV['POSTGRESQL_PASSWORD'] %>

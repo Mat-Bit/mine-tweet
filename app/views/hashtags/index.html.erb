@@ -20,7 +20,6 @@
                   <th>Hashtag</th>
                   <th></th>
                   <th></th>
-                  <th></th>
                 </tr>
               </thead>
 
@@ -30,8 +29,6 @@
                   <tr>
                     <td> <%= hash.tag %> </td>
                     <td> <%= link_to 'Show', hashtag_path(hash) %> </td>
-                    <td> <%= link_to 'Update', hashtag_path(hash),
-                      method: :put %> </td>
                     <td> <%= link_to 'Remove', hashtag_path(hash),
                       method: :delete,
                       data: { confirm: 'Are you sure?' } %></td>

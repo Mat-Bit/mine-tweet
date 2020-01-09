@@ -11737,3 +11737,1194 @@ Processing by HashtagsController#index as HTML
 Completed 200 OK in 88ms (Views: 77.9ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/" for ::1 at 2020-01-09 17:24:32 -0300
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "minetweets_development" does not exist
+):
+  
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.4.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.4.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.4.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-09 17:26:53 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (31.0ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (87.1ms)
+Completed 200 OK in 8339ms (Views: 8228.2ms | ActiveRecord: 62.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-09 17:27:47 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 1743ms (Views: 1740.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-01-09 17:28:37 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 1691ms (Views: 1688.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-01-09 17:31:37 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-01-09 17:32:40 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-01-09 17:40:40 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (1.0ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 1706ms (Views: 1703.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-01-09 17:42:10 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.4ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1693ms (Views: 1690.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-09 17:43:35 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (3.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (65.6ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:11
+  Rendered hashtags/show.html.erb within layouts/application (128.6ms)
+Completed 200 OK in 231ms (Views: 83.0ms | ActiveRecord: 82.8ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 17:44:05 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-09 17:44:07 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.8ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (4.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:11
+  Rendered hashtags/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 68ms (Views: 59.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 17:44:47 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (3.6ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 92ms (Views: 86.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-09 17:44:49 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (1.7ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (2.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:11
+  Rendered hashtags/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 87ms (Views: 78.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 17:45:10 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (10.4ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 96ms (Views: 83.8ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-09 17:45:11 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.9ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:11
+  Rendered hashtags/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 63ms (Views: 58.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 17:45:26 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 82ms (Views: 79.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-09 17:45:27 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.8ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.9ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:11
+  Rendered hashtags/show.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 112ms (Views: 107.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 17:49:59 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (1.0ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (4.7ms)
+Started GET "/hashtags/2" for ::1 at 2020-01-09 17:50:01 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.8ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:15
+  Rendered hashtags/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 2150ms (Views: 2147.3ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 2249ms (Views: 2243.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-09 17:50:03 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:15
+  Rendered hashtags/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 77ms (Views: 71.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 17:54:07 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (1.6ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 90ms (Views: 86.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-09 17:54:08 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (6.8ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (8.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:14
+  Rendered hashtags/show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 78ms (Views: 59.3ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 17:55:15 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (5.1ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 96ms (Views: 88.9ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/list_tweets" for ::1 at 2020-01-09 17:55:16 -0300
+Processing by ListTweetsController#index as HTML
+  Rendering list_tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/list_tweets/index.html.erb:14
+  Rendered list_tweets/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 17:55:22 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (1.0ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 79ms (Views: 75.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-09 17:55:23 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (1.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:14
+  Rendered hashtags/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 88ms (Views: 83.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 17:56:02 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.9ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 104ms (Views: 101.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-09 17:56:04 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.9ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:13
+  Rendered hashtags/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 100ms (Views: 93.6ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/hashtags/773074514348839763" for ::1 at 2020-01-09 17:56:11 -0300
+Processing by HashtagsController#update as HTML
+  Parameters: {"authenticity_token"=>"ra3MAzTvcHPntlRtIncZb4N6rlbrCl+7w3a7Mw6RYOTvkQ0ycOlXjMI3AOQE5QuHBlVg04w4kU7hUa9cM2fyXQ==", "id"=>"773074514348839763"}
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 773074514348839763], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:40
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Hashtag with 'id'=773074514348839763):
+  
+app/controllers/hashtags_controller.rb:40:in `update'
+Started GET "/hashtags" for ::1 at 2020-01-09 17:56:29 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (2.2ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 118ms (Views: 114.4ms | ActiveRecord: 2.2ms)
+
+
+Started PUT "/hashtags/2" for ::1 at 2020-01-09 17:56:33 -0300
+Processing by HashtagsController#update as HTML
+  Parameters: {"authenticity_token"=>"Ex6Ado26QKGqMLJJOAGQwFIWMkXuNxNMClAF4hS5EhZRIkFHybxnXo+x5sAek4Io1zn8wIkF3bkodxGNKU+Arw==", "id"=>"2"}
+  [1m[36mHashtag Load (0.4ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:40
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (51.2ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 91]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (10.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (2.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 92]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 93]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 94]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (2.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 95]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (1.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 96]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 97]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (1.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 98]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.9ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 99]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (1.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 100]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.9ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 101]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (13.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 102]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (19.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.9ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 103]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (15.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 104]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 105]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (49.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @mahmutbozarslan: Ne İran ABD kavgası, Ne Suriye ne se başka bir şey....Asıl mesele bu fotoda...Bir kıta yanıyor...Düya adım adım yok ol…"], ["date_post", "Thu Jan 09 20:56:25 +0000 2020"], ["created_at", "2020-01-09 20:56:35.133041"], ["updated_at", "2020-01-09 20:56:35.133041"], ["user_name", "𝕱𝖓𝖚𝖗💯🇹🇷"], ["user_screen_name", "TCnur_gezi"], ["url_img_user", "http://pbs.twimg.com/profile_images/1212685846048124928/jijRp-rY_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.0ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "The #InternationalSpaceStation is passing over us right now! January 09, 2020 at 10:19PM, for 423 seconds. #ISS #NASA #space"], ["date_post", "Thu Jan 09 20:56:11 +0000 2020"], ["created_at", "2020-01-09 20:56:35.207229"], ["updated_at", "2020-01-09 20:56:35.207229"], ["user_name", "seekaywun"], ["user_screen_name", "seekaywun"], ["url_img_user", "http://pbs.twimg.com/profile_images/670690058891079680/vMDd5jLG_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @USembassyMadrid: 📢Importante descrubrimento #NASA: La misión @NASAExoplanets @NASA_TESS ha descubierto su primer exoplaneta del tamaño…"], ["date_post", "Thu Jan 09 20:55:34 +0000 2020"], ["created_at", "2020-01-09 20:56:35.215498"], ["updated_at", "2020-01-09 20:56:35.215498"], ["user_name", "ElCastellano_errante"], ["user_screen_name", "SVelascoJimenez"], ["url_img_user", "http://pbs.twimg.com/profile_images/1157788322208595969/TCagxXXE_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (2.4ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @TheAstronot: Tom Stafford trains for Gemini 6A along Galveston Bay. He flew with Wally Schirra to perform the 1st rendezvous in #space…"], ["date_post", "Thu Jan 09 20:55:21 +0000 2020"], ["created_at", "2020-01-09 20:56:35.229300"], ["updated_at", "2020-01-09 20:56:35.229300"], ["user_name", "Snoopy 💕🐾⚜️"], ["user_screen_name", "SnoopyKriss"], ["url_img_user", "http://pbs.twimg.com/profile_images/1193578478756610049/5V3ttJz0_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (13.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @techreview: To get a visual sense of the sheer scale of #Australia's fires, it’s worth looking at them from spa… https://t.co/vhTeCyvQJF"], ["date_post", "Thu Jan 09 20:55:05 +0000 2020"], ["created_at", "2020-01-09 20:56:35.250763"], ["updated_at", "2020-01-09 20:56:35.250763"], ["user_name", "Quantum Spatial"], ["user_screen_name", "QuantumSpatial"], ["url_img_user", "http://pbs.twimg.com/profile_images/568789372271460352/1CE2IInI_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "Should I write a historical novel on the Challenger disaster or I should write one on the Columbia disaster? Just f… https://t.co/v26LUm4FsV"], ["date_post", "Thu Jan 09 20:54:30 +0000 2020"], ["created_at", "2020-01-09 20:56:35.259582"], ["updated_at", "2020-01-09 20:56:35.259582"], ["user_name", "🇨🇦🎥theWanderers-notebook👣#Roadto900Subs"], ["user_screen_name", "wanderers_note"], ["url_img_user", "http://pbs.twimg.com/profile_images/977923838850691073/8oEXl7UW_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @NASAEarth: At the boundary between Earth and space, particles and gases and energy do an intricate and colorful dance that varies daily…"], ["date_post", "Thu Jan 09 20:54:20 +0000 2020"], ["created_at", "2020-01-09 20:56:35.275517"], ["updated_at", "2020-01-09 20:56:35.275517"], ["user_name", "tiniskwerl"], ["user_screen_name", "tiniskwerl"], ["url_img_user", "http://pbs.twimg.com/profile_images/412832329795522562/oxZ13kuE_normal.jpeg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "📣 En la misión espacial Apolo no habían baños ¿Cómo y dónde hicieron caca los astronautas? #NASA https://t.co/8btJjkerkd"], ["date_post", "Thu Jan 09 20:54:15 +0000 2020"], ["created_at", "2020-01-09 20:56:35.292902"], ["updated_at", "2020-01-09 20:56:35.292902"], ["user_name", "Don Sinóptico 💧"], ["user_screen_name", "DonSinoptico"], ["url_img_user", "http://pbs.twimg.com/profile_images/1021004309461389317/h6fFTYya_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.0ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @beyaz_sincap: An itibariyle NASA objektifinden Avustralya... \nAcının dili, dini ve ırkı olmaz. \n\n24 insan hayatını kaybetti,\n500 milyon…"], ["date_post", "Thu Jan 09 20:54:08 +0000 2020"], ["created_at", "2020-01-09 20:56:35.306655"], ["updated_at", "2020-01-09 20:56:35.306655"], ["user_name", "𝕱𝖓𝖚𝖗💯🇹🇷"], ["user_screen_name", "TCnur_gezi"], ["url_img_user", "http://pbs.twimg.com/profile_images/1212685846048124928/jijRp-rY_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "💠 ¿Por qué no hemos vuelto a la Luna desde hace medio siglo? #NASA https://t.co/8VO8hxmxrx"], ["date_post", "Thu Jan 09 20:53:38 +0000 2020"], ["created_at", "2020-01-09 20:56:35.319605"], ["updated_at", "2020-01-09 20:56:35.319605"], ["user_name", "Guardia Digital 💧"], ["user_screen_name", "GuardiaDigital"], ["url_img_user", "http://pbs.twimg.com/profile_images/1020682153875603457/DPTE1-83_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (12.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "#motivation #moscow #ronaldo #earth #see #sky #nature #nasa #education #knowladge #cristianoronaldo #emotions… https://t.co/5zknBjR5xx"], ["date_post", "Thu Jan 09 20:53:14 +0000 2020"], ["created_at", "2020-01-09 20:56:35.337718"], ["updated_at", "2020-01-09 20:56:35.337718"], ["user_name", "Azizkhon"], ["user_screen_name", "Azizkhon20"], ["url_img_user", "http://pbs.twimg.com/profile_images/1215238552348450818/7liY7cZf_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (2.0ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @CLFLOWERS44: #ThrowbackThursday \n\nRobert Welsh in 1958, delivered this warning about the #NWO. \n\nThere is nothing new about this warnin…"], ["date_post", "Thu Jan 09 20:52:48 +0000 2020"], ["created_at", "2020-01-09 20:56:35.348945"], ["updated_at", "2020-01-09 20:56:35.348945"], ["user_name", "Ellen.   ⭐⭐⭐"], ["user_screen_name", "ChrisOBXnc"], ["url_img_user", "http://pbs.twimg.com/profile_images/1188091841712971778/vzX2DRfo_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @NASAEarth: At the boundary between Earth and space, particles and gases and energy do an intricate and colorful dance that varies daily…"], ["date_post", "Thu Jan 09 20:51:58 +0000 2020"], ["created_at", "2020-01-09 20:56:35.359534"], ["updated_at", "2020-01-09 20:56:35.359534"], ["user_name", "Mike Pierce"], ["user_screen_name", "Elvis21CM"], ["url_img_user", "http://pbs.twimg.com/profile_images/752712345596465152/9Ru7fWvK_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "RT @IFOS9000: 🚀Straight outta NASA: https://t.co/Ijf5ug9kmk #space #cosmos #universe #science #astronomy #climate #NASA"], ["date_post", "Thu Jan 09 20:51:41 +0000 2020"], ["created_at", "2020-01-09 20:56:35.373561"], ["updated_at", "2020-01-09 20:56:35.373561"], ["user_name", "Mohammad Aadil"], ["user_screen_name", "Aadi_n"], ["url_img_user", "http://pbs.twimg.com/profile_images/1214633674391588870/pHqQ22R4_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (14.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (2.2ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 2], ["tweet_desc", "@gyneth007 @Stephengn @Goldni007 @JimFish56837379 @Jonatha55077308 @ILuvCO2 @FrankChanged @3GHtweets… https://t.co/AgxEi02ar8"], ["date_post", "Thu Jan 09 20:51:35 +0000 2020"], ["created_at", "2020-01-09 20:56:35.394664"], ["updated_at", "2020-01-09 20:56:35.394664"], ["user_name", "ClimateHawk2"], ["user_screen_name", "ClimateHawk2"], ["url_img_user", "http://pbs.twimg.com/profile_images/1060791829396779009/C19K7ZMP_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (12.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+Redirected to http://localhost:3000/hashtags/2
+Completed 302 Found in 1610ms (ActiveRecord: 429.4ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-09 17:56:35 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (0.4ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:13
+  Rendered hashtags/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/hashtags/-2714194175004966973" for ::1 at 2020-01-09 17:56:41 -0300
+Processing by HashtagsController#update as HTML
+  Parameters: {"authenticity_token"=>"4sFjkOA6Or0HkmtQg3ZiTyA/WyPsku2duqSp3WHId6ig/aKhpDwdQiITP9ml5HCnpRCVpougI2iYg72yXD7lEQ==", "id"=>"-2714194175004966973"}
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", -2714194175004966973], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:40
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Hashtag with 'id'=-2714194175004966973):
+  
+app/controllers/hashtags_controller.rb:40:in `update'
+Started GET "/hashtags" for ::1 at 2020-01-09 17:58:34 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 79ms (Views: 76.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hashtags/4" for ::1 at 2020-01-09 17:58:36 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 4]]
+  ↳ app/views/hashtags/show.html.erb:13
+  Rendered hashtags/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/hashtags/4" for ::1 at 2020-01-09 17:58:40 -0300
+Processing by HashtagsController#update as HTML
+  Parameters: {"authenticity_token"=>"6I4c6Lfjmcio2zka4sagmzKOgItj41eZvNy6hfRgrXKqst3Z8+W+N41abZPEVLJzt6FODgTRmWye+67qyZY/yw==", "id"=>"4"}
+  [1m[36mHashtag Load (0.4ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:40
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 4]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 76]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (31.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.8ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 77]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 78]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.9ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 79]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 80]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (1.1ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 81]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (2.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 82]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (11.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.9ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 83]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (1.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 84]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.9ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 85]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 86]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 87]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (2.8ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 88]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.9ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 89]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (10.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.9ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 90]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (11.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.1ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @nota_linea: #Australia \nEstas impresionantes imágenes reflejan la magnitud del incendio forestal registrado en #Australia\n\nCrédito foto…"], ["date_post", "Thu Jan 09 20:56:01 +0000 2020"], ["created_at", "2020-01-09 20:58:41.422141"], ["updated_at", "2020-01-09 20:58:41.422141"], ["user_name", "Lulu♡"], ["user_screen_name", "Gallilu20"], ["url_img_user", "http://pbs.twimg.com/profile_images/1204135351423557634/NdQtyl4p_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (32.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.2ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @kellykels_melbs: #kmart in Newcastle 👏👏👏 A much needed laugh! 😁 Photo from Facebook \n#ausfires #ScottMorrison #ScottFromMarketing #scom…"], ["date_post", "Thu Jan 09 20:55:53 +0000 2020"], ["created_at", "2020-01-09 20:58:41.463700"], ["updated_at", "2020-01-09 20:58:41.463700"], ["user_name", "Donn"], ["user_screen_name", "twodoubles"], ["url_img_user", "http://pbs.twimg.com/profile_images/1161996129539465216/kXaaLWta_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (33.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.0ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @ParveenKaswan: Somebody was asking how is it difficult to control forest fire. Just watch video you will know. Do we even have chance t…"], ["date_post", "Thu Jan 09 20:54:45 +0000 2020"], ["created_at", "2020-01-09 20:58:41.506961"], ["updated_at", "2020-01-09 20:58:41.506961"], ["user_name", "Navjot Singh"], ["user_screen_name", "NavjotNs82"], ["url_img_user", "http://pbs.twimg.com/profile_images/982828388854521856/7Fc3HHxV_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (13.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @MagdaSzubanski: 1) Ok.  #australiafire #AustraliaisBurning is huge in every way. This will define us a nation, a people and as individu…"], ["date_post", "Thu Jan 09 20:53:47 +0000 2020"], ["created_at", "2020-01-09 20:58:41.526102"], ["updated_at", "2020-01-09 20:58:41.526102"], ["user_name", "Richard Weston"], ["user_screen_name", "RichJWeston"], ["url_img_user", "http://pbs.twimg.com/profile_images/1203538009712291840/d-HmDy9S_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @ozcrimenews: Western Sydney \nArsonist in Court\n- deliberately lighting fires \nNSW, charged police \n\n#bushfires #bushfireaustralia #bush…"], ["date_post", "Thu Jan 09 20:51:50 +0000 2020"], ["created_at", "2020-01-09 20:58:41.539258"], ["updated_at", "2020-01-09 20:58:41.539258"], ["user_name", "Qui vivra verra♦️🕯️"], ["user_screen_name", "Ch_Dul"], ["url_img_user", "http://pbs.twimg.com/profile_images/1141952788253085697/LB9tuJMi_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @VertDuFerk: Americans aren't all assholes...it's mostly just our leaders and the people who voted for them. We'll be fixing that very s…"], ["date_post", "Thu Jan 09 20:50:16 +0000 2020"], ["created_at", "2020-01-09 20:58:41.549292"], ["updated_at", "2020-01-09 20:58:41.549292"], ["user_name", "Loving Life 🔥🌊"], ["user_screen_name", "LovingLife366"], ["url_img_user", "http://pbs.twimg.com/profile_images/923997832238964736/W8E2W3dd_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.1ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @MagdaSzubanski: 1) Ok.  #australiafire #AustraliaisBurning is huge in every way. This will define us a nation, a people and as individu…"], ["date_post", "Thu Jan 09 20:49:49 +0000 2020"], ["created_at", "2020-01-09 20:58:41.566761"], ["updated_at", "2020-01-09 20:58:41.566761"], ["user_name", "Liz Hessian"], ["user_screen_name", "kabalexa39"], ["url_img_user", "http://pbs.twimg.com/profile_images/787566456523272192/vfdK3FG6_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @MagdaSzubanski: 1) Ok.  #australiafire #AustraliaisBurning is huge in every way. This will define us a nation, a people and as individu…"], ["date_post", "Thu Jan 09 20:49:09 +0000 2020"], ["created_at", "2020-01-09 20:58:41.584334"], ["updated_at", "2020-01-09 20:58:41.584334"], ["user_name", "pivot-to-the-pup"], ["user_screen_name", "LizDolphinfluff"], ["url_img_user", "http://pbs.twimg.com/profile_images/1196332403981029376/MCfSznwX_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.1ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @futurasciences: [🌏] Alors que les feux ravagent toujours l’ #Australie, #Kangaroo Island, véritable réserve pour les animaux sauvages,…"], ["date_post", "Thu Jan 09 20:48:26 +0000 2020"], ["created_at", "2020-01-09 20:58:41.599526"], ["updated_at", "2020-01-09 20:58:41.599526"], ["user_name", "kinky linking"], ["user_screen_name", "pensueurs"], ["url_img_user", "http://pbs.twimg.com/profile_images/1199065381345910784/JfXoNYbe_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @EveyHammond19: 💔\n\nMaybe we'll get a second chance\nAnd watch our flora and fauna grow\nWe'll have to take a mighty stance\nAgainst those *…"], ["date_post", "Thu Jan 09 20:47:53 +0000 2020"], ["created_at", "2020-01-09 20:58:41.616080"], ["updated_at", "2020-01-09 20:58:41.616080"], ["user_name", "gabriell"], ["user_screen_name", "gabriellby"], ["url_img_user", "http://pbs.twimg.com/profile_images/1215076235614793729/sNg5P1hV_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.1ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "Happy Friday Twitter peeps let's get it done with a smile on our face in God's Grace. Let's hope for great weather… https://t.co/gyN6piuoMU"], ["date_post", "Thu Jan 09 20:47:01 +0000 2020"], ["created_at", "2020-01-09 20:58:41.630982"], ["updated_at", "2020-01-09 20:58:41.630982"], ["user_name", "Master Bear"], ["user_screen_name", "Dinger1982"], ["url_img_user", "http://pbs.twimg.com/profile_images/497362399721046017/lNYhvzAr_normal.jpeg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (23.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "RT @GoldingCartoons: “Why this is hell, nor am I out of it”: Mephistopheles.\n\nSandra Torpey, Hawthorn\n@theage letters #auspol\n#ausfires #au…"], ["date_post", "Thu Jan 09 20:44:54 +0000 2020"], ["created_at", "2020-01-09 20:58:41.660053"], ["updated_at", "2020-01-09 20:58:41.660053"], ["user_name", "Barry Gittins"], ["user_screen_name", "BarryGittins1"], ["url_img_user", "http://pbs.twimg.com/profile_images/890447394793439233/kusITPGj_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 4], ["tweet_desc", "@In_The_Taratory It's shocking and heart breaking and we were warned repeatedly, and specifically, in September las… https://t.co/u29K6LXqgG"], ["date_post", "Thu Jan 09 20:44:18 +0000 2020"], ["created_at", "2020-01-09 20:58:41.670516"], ["updated_at", "2020-01-09 20:58:41.670516"], ["user_name", "Ian McLeod"], ["user_screen_name", "ianpmcleod"], ["url_img_user", "http://pbs.twimg.com/profile_images/684354204635238400/NTlojcpz_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+Redirected to http://localhost:3000/hashtags/4
+Completed 302 Found in 1368ms (ActiveRecord: 355.8ms)
+
+
+Started GET "/hashtags/4" for ::1 at 2020-01-09 17:58:41 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mHashtag Load (0.4ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.9ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 4]]
+  ↳ app/views/hashtags/show.html.erb:13
+  Rendered hashtags/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 40ms (Views: 34.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 17:58:54 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:28
+  Rendered hashtags/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 79ms (Views: 76.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 17:59:37 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hashtags/2" for ::1 at 2020-01-09 17:59:49 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHashtag Load (1.1ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 2]]
+  ↳ app/views/hashtags/show.html.erb:13
+  Rendered hashtags/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 70ms (Views: 65.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 17:59:57 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.8ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 77ms (Views: 72.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/hashtags/5" for ::1 at 2020-01-09 17:59:59 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mHashtag Load (0.5ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 5]]
+  ↳ app/views/hashtags/show.html.erb:13
+  Rendered hashtags/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/hashtags/5" for ::1 at 2020-01-09 18:00:02 -0300
+Processing by HashtagsController#update as HTML
+  Parameters: {"authenticity_token"=>"moH8oteqN7JBRmIzMN2dND+nJ3smfRYNrirPnScSma7YvT2Tk6wQTWTHNroWT4/cuojp/kFP2PiMDdvyGuQLFw==", "id"=>"5"}
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:40
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 5]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 106]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (47.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.9ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 107]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 108]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 109]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 110]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 111]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 112]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 113]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 114]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 115]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (1.0ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 116]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 117]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 118]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (1.0ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 119]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 120]]
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 5], ["tweet_desc", "NUUK is the heart of a nation. Greenland’s largest city and capital is fueled on fresh air, strong coffee and diver… https://t.co/bSvHfoZECV"], ["date_post", "Thu Jan 09 21:00:01 +0000 2020"], ["created_at", "2020-01-09 21:00:03.922172"], ["updated_at", "2020-01-09 21:00:03.922172"], ["user_name", "XcelTrip"], ["user_screen_name", "xceltrip"], ["url_img_user", "http://pbs.twimg.com/profile_images/996646464712577024/rqCvDk5Z_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (39.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 5], ["tweet_desc", "A new post: Bugs Found in Compiler for Readable Ethereum Smart Contracts, Team Downplays Concerns is added on… https://t.co/BYspvC5nHl"], ["date_post", "Thu Jan 09 21:00:01 +0000 2020"], ["created_at", "2020-01-09 21:00:03.965889"], ["updated_at", "2020-01-09 21:00:03.965889"], ["user_name", "Crypto Giraffe"], ["user_screen_name", "thomas_lub"], ["url_img_user", "http://pbs.twimg.com/profile_images/943437632033435648/uSfpmh1v_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 5], ["tweet_desc", "Staying Compliant: Is #Bitcoin Trading Taxable?\nhttps://t.co/dS1QksXZ12 https://t.co/WE28Nn63wz"], ["date_post", "Thu Jan 09 21:00:00 +0000 2020"], ["created_at", "2020-01-09 21:00:03.981995"], ["updated_at", "2020-01-09 21:00:03.981995"], ["user_name", "The Silicon Review"], ["user_screen_name", "Dsiliconreview"], ["url_img_user", "http://pbs.twimg.com/profile_images/1045264348472467456/agkftem7_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (12.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 5], ["tweet_desc", "RT @CoinDeal_: Let’s celebrate #Bitcoin 11th #Birthday! 🎉\n\nOnce again we reward you for #inviting friends and also for #creating an account…"], ["date_post", "Thu Jan 09 20:59:59 +0000 2020"], ["created_at", "2020-01-09 21:00:03.998679"], ["updated_at", "2020-01-09 21:00:03.998679"], ["user_name", "Dudu Abdullah"], ["user_screen_name", "DuduAbdullah10"], ["url_img_user", "http://pbs.twimg.com/profile_images/1215373377210204160/9zx9pq1o_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 5], ["tweet_desc", "It doesn’t matter if your are...\n\nIranian or American.\n\nRepublican or Democrat.\n\nBlack or White.\n\n#BITCOIN is bette… https://t.co/cFWMJuob1P"], ["date_post", "Thu Jan 09 20:59:57 +0000 2020"], ["created_at", "2020-01-09 21:00:04.011815"], ["updated_at", "2020-01-09 21:00:04.011815"], ["user_name", "Cryptopig"], ["user_screen_name", "cryptopigmedia"], ["url_img_user", "http://pbs.twimg.com/profile_images/1165663800462315520/0K2siTuY_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 5], ["tweet_desc", "RT @PetroDivisa: Compañeros debemos tener confianza, entiendo que el venezolano le gusta la inmediatez, pero debe saber que el #Bitcoin le…"], ["date_post", "Thu Jan 09 20:59:37 +0000 2020"], ["created_at", "2020-01-09 21:00:04.022695"], ["updated_at", "2020-01-09 21:00:04.022695"], ["user_name", "belkys piñero"], ["user_screen_name", "PineroBelkys"], ["url_img_user", "http://pbs.twimg.com/profile_images/1215348438390530048/4dnm94LA_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 5], ["tweet_desc", "RT @CoinDeal_: Let’s celebrate #Bitcoin 11th #Birthday! 🎉\n\nOnce again we reward you for #inviting friends and also for #creating an account…"], ["date_post", "Thu Jan 09 20:59:29 +0000 2020"], ["created_at", "2020-01-09 21:00:04.031856"], ["updated_at", "2020-01-09 21:00:04.031856"], ["user_name", "Prima Al"], ["user_screen_name", "prim0698"], ["url_img_user", "http://pbs.twimg.com/profile_images/1193975461597995008/yhs5qNQr_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 5], ["tweet_desc", "RT @TheCryptoDog: #Bitcoin fixes this https://t.co/8dMemUIq2r"], ["date_post", "Thu Jan 09 20:59:21 +0000 2020"], ["created_at", "2020-01-09 21:00:04.042949"], ["updated_at", "2020-01-09 21:00:04.042949"], ["user_name", "trade hard"], ["user_screen_name", "_hardbargain"], ["url_img_user", "http://pbs.twimg.com/profile_images/1206314341127118853/KINng8g__normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 5], ["tweet_desc", "RT @doktor_crypto: Silkeleye silkeleye anasını siktiniz piyasanın!👊 #btc #bitcoin $btc"], ["date_post", "Thu Jan 09 20:59:19 +0000 2020"], ["created_at", "2020-01-09 21:00:04.055911"], ["updated_at", "2020-01-09 21:00:04.055911"], ["user_name", "bitcoin"], ["user_screen_name", "eren8001"], ["url_img_user", "http://pbs.twimg.com/profile_images/1047076050377822208/iX6w-W9A_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 5], ["tweet_desc", "👨‍🚀Bitcoin touches $8,000 then immediately starts dumping to $7,800. Crazy yo! #CelsiusAmbassador #DYOR #BTSE $NEXO… https://t.co/l8H5rZ78wu"], ["date_post", "Thu Jan 09 20:59:11 +0000 2020"], ["created_at", "2020-01-09 21:00:04.065081"], ["updated_at", "2020-01-09 21:00:04.065081"], ["user_name", "∞Brian Michael∞"], ["user_screen_name", "CryptoNaut11"], ["url_img_user", "http://pbs.twimg.com/profile_images/971079302472114176/52IyrCMq_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 5], ["tweet_desc", "RT @AlexSaundersAU: Let's show the world the power of #bitcoin. All donations are going to the Rural Fire Service. 🇦🇺👨‍🚒🚒 #AustraliaBurning…"], ["date_post", "Thu Jan 09 20:59:06 +0000 2020"], ["created_at", "2020-01-09 21:00:04.078551"], ["updated_at", "2020-01-09 21:00:04.078551"], ["user_name", "trade hard"], ["user_screen_name", "_hardbargain"], ["url_img_user", "http://pbs.twimg.com/profile_images/1206314341127118853/KINng8g__normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 5], ["tweet_desc", "Inflation has devalued the US dollar by ≈49% over the last 20 years.\n\nIn other words, $100 in 2000 is equivalent in… https://t.co/xwgoP1BVdw"], ["date_post", "Thu Jan 09 20:59:01 +0000 2020"], ["created_at", "2020-01-09 21:00:04.090844"], ["updated_at", "2020-01-09 21:00:04.090844"], ["user_name", "Altcoin Daily"], ["user_screen_name", "AltcoinDailyio"], ["url_img_user", "http://pbs.twimg.com/profile_images/959000053267415041/FMOGeFYe_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+Redirected to http://localhost:3000/hashtags/5
+Completed 302 Found in 1254ms (ActiveRecord: 305.0ms)
+
+
+Started GET "/hashtags/5" for ::1 at 2020-01-09 18:00:04 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mHashtag Load (0.8ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 5]]
+  ↳ app/views/hashtags/show.html.erb:13
+  Rendered hashtags/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 36ms (Views: 31.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 18:00:49 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 78ms (Views: 74.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/list_tweets" for ::1 at 2020-01-09 18:00:53 -0300
+Processing by ListTweetsController#index as HTML
+  Rendering list_tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/list_tweets/index.html.erb:14
+  Rendered list_tweets/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 54ms (Views: 51.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 18:01:02 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (4.7ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 81ms (Views: 74.2ms | ActiveRecord: 4.7ms)
+
+
+Started DELETE "/hashtags/6" for ::1 at 2020-01-09 18:01:09 -0300
+Processing by HashtagsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IzDtwHP06oEf9Ss8MVXqFVnncOWOfs3Tqfb/oDGCgJNhDCzxN/LNfjp0f7UXx/j93Mi+YOlMAyaL0evPDHQSKg==", "id"=>"6"}
+  [1m[36mHashtag Load (0.4ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Load (0.4ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 6]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 121]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 122]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Destroy (1.9ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 123]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 124]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 125]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 126]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 127]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 128]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Destroy (0.8ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 129]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Destroy (1.1ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 130]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Destroy (1.1ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 131]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Destroy (1.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 132]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 133]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 134]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 135]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[36mHashtag Destroy (0.6ms)[0m  [1m[31mDELETE FROM "hashtags" WHERE "hashtags"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/hashtags_controller.rb:59
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:59
+Redirected to http://localhost:3000/hashtags
+Completed 302 Found in 81ms (ActiveRecord: 54.2ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 18:01:10 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.8ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/hashtags/" for ::1 at 2020-01-09 18:02:16 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 330ms (Views: 310.5ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/hashtags/new" for ::1 at 2020-01-09 18:02:18 -0300
+Processing by HashtagsController#new as HTML
+  Rendering hashtags/new.html.erb within layouts/application
+  Rendered hashtags/new.html.erb within layouts/application (88.5ms)
+Completed 200 OK in 159ms (Views: 115.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 18:02:20 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hashtags/new" for ::1 at 2020-01-09 18:02:22 -0300
+Processing by HashtagsController#new as HTML
+  Rendering hashtags/new.html.erb within layouts/application
+  Rendered hashtags/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 18:02:25 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (6.5ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 66ms (Views: 58.6ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/hashtags/new" for ::1 at 2020-01-09 18:02:29 -0300
+Processing by HashtagsController#new as HTML
+  Rendering hashtags/new.html.erb within layouts/application
+  Rendered hashtags/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 68ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 18:02:32 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 74ms (Views: 71.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/hashtags/4" for ::1 at 2020-01-09 18:02:38 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mHashtag Load (1.0ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 4]]
+  ↳ app/views/hashtags/show.html.erb:13
+  Rendered hashtags/show.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 108ms (Views: 90.3ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 18:02:42 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (1.2ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 75ms (Views: 63.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/list_tweets" for ::1 at 2020-01-09 18:02:45 -0300
+Processing by ListTweetsController#index as HTML
+  Rendering list_tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (1.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/list_tweets/index.html.erb:14
+  Rendered list_tweets/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-09 18:02:50 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.8ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.8ms)
+
+

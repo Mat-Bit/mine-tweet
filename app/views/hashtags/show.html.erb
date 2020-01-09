@@ -5,7 +5,10 @@
 <body>
 
   <div class="tweetEntry-tweetHolder">
-    <br> <p> <%= link_to 'Back to Home', hashtags_path %> </p>
+
+    <p> <%= link_to 'Back to Home', hashtags_path %> </p>
+
+    <div class="link-update"> <%= link_to 'Update', hashtag_path(@hashtag.id), method: :put %> </div>
 
     <% Tweet.where(hashtag_id: @hashtag.id).each do | tw | %>
 

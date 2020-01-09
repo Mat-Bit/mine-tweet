@@ -1,4 +1,4 @@
-# mine-tweets
+# mine-tweet
 
 #### This simple app search tweets by a hashtag, more hashtags can be add or removed from this search.
 
