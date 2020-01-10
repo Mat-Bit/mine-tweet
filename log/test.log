@@ -112,3 +112,238 @@ INSERT INTO "tweets" ("id", "hashtag", "i_tweet", "tweet_desc", "date_post", "cr
   [1m[36mFixtures Load (1.2ms)[0m  [1m[31mDELETE FROM "tweets";
 INSERT INTO "tweets" ("id", "hashtag", "i_tweet", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-07 19:54:49.249850', '2020-01-07 19:54:49.249850', DEFAULT, DEFAULT, DEFAULT), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2020-01-07 19:54:49.249850', '2020-01-07 19:54:49.249850', DEFAULT, DEFAULT, DEFAULT)[0m
   [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (33.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (20.6ms)[0m  [1m[35mALTER TABLE "hashtags" DISABLE TRIGGER ALL;ALTER TABLE "tweets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (14.0ms)[0m  [1m[31mDELETE FROM "hashtags";
+DELETE FROM "tweets";
+INSERT INTO "hashtags" ("id", "tag", "created_at", "updated_at") VALUES (980190962, DEFAULT, '2020-01-09 22:47:24.126822', '2020-01-09 22:47:24.126822'), (298486374, DEFAULT, '2020-01-09 22:47:24.126822', '2020-01-09 22:47:24.126822');
+INSERT INTO "tweets" ("id", "hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-09 22:47:24.149428', '2020-01-09 22:47:24.149428', DEFAULT, DEFAULT, DEFAULT), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-09 22:47:24.149428', '2020-01-09 22:47:24.149428', DEFAULT, DEFAULT, DEFAULT)[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "hashtags" DISABLE TRIGGER ALL;ALTER TABLE "tweets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "hashtags";
+DELETE FROM "tweets";
+INSERT INTO "hashtags" ("id", "tag", "created_at", "updated_at") VALUES (980190962, DEFAULT, '2020-01-09 22:48:51.839471', '2020-01-09 22:48:51.839471'), (298486374, DEFAULT, '2020-01-09 22:48:51.839471', '2020-01-09 22:48:51.839471');
+INSERT INTO "tweets" ("id", "hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-09 22:48:51.848044', '2020-01-09 22:48:51.848044', DEFAULT, DEFAULT, DEFAULT), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-09 22:48:51.848044', '2020-01-09 22:48:51.848044', DEFAULT, DEFAULT, DEFAULT)[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "hashtags" DISABLE TRIGGER ALL;ALTER TABLE "tweets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.2ms)[0m  [1m[31mDELETE FROM "hashtags";
+DELETE FROM "tweets";
+INSERT INTO "hashtags" ("id", "tag", "created_at", "updated_at") VALUES (980190962, DEFAULT, '2020-01-09 22:51:03.031990', '2020-01-09 22:51:03.031990'), (298486374, DEFAULT, '2020-01-09 22:51:03.031990', '2020-01-09 22:51:03.031990');
+INSERT INTO "tweets" ("id", "hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-09 22:51:03.041653', '2020-01-09 22:51:03.041653', DEFAULT, DEFAULT, DEFAULT), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-09 22:51:03.041653', '2020-01-09 22:51:03.041653', DEFAULT, DEFAULT, DEFAULT)[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "hashtags" DISABLE TRIGGER ALL;ALTER TABLE "tweets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.1ms)[0m  [1m[31mDELETE FROM "hashtags";
+DELETE FROM "tweets";
+INSERT INTO "hashtags" ("id", "tag", "created_at", "updated_at") VALUES (980190962, 'hello world', NULL, NULL), (298486374, DEFAULT, '2020-01-10 02:49:20.491639', '2020-01-10 02:49:20.491639');
+INSERT INTO "tweets" ("id", "hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-10 02:49:20.499957', '2020-01-10 02:49:20.499957', DEFAULT, DEFAULT, DEFAULT), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-10 02:49:20.499957', '2020-01-10 02:49:20.499957', DEFAULT, DEFAULT, DEFAULT)[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "hashtags" DISABLE TRIGGER ALL;ALTER TABLE "tweets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (2.0ms)[0m  [1m[31mDELETE FROM "hashtags";
+DELETE FROM "tweets";
+INSERT INTO "hashtags" ("id", "tag", "created_at", "updated_at") VALUES (980190962, 'hello world', '2019-01-14 15:03:01', '2020-01-09 15:03:01'), (298486374, DEFAULT, '2020-01-10 02:58:24.257297', '2020-01-10 02:58:24.257297');
+INSERT INTO "tweets" ("id", "hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-10 02:58:24.265259', '2020-01-10 02:58:24.265259', DEFAULT, DEFAULT, DEFAULT), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-10 02:58:24.265259', '2020-01-10 02:58:24.265259', DEFAULT, DEFAULT, DEFAULT)[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "hashtags" DISABLE TRIGGER ALL;ALTER TABLE "tweets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.5ms)[0m  [1m[31mDELETE FROM "hashtags";
+DELETE FROM "tweets";
+INSERT INTO "hashtags" ("id", "tag", "created_at", "updated_at") VALUES (980190962, 'hello world', '2019-01-14 15:03:01', '2020-01-09 15:03:01'), (298486374, DEFAULT, '2020-01-10 02:59:05.460188', '2020-01-10 02:59:05.460188');
+INSERT INTO "tweets" ("id", "hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-10 02:59:05.467979', '2020-01-10 02:59:05.467979', DEFAULT, DEFAULT, DEFAULT), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-10 02:59:05.467979', '2020-01-10 02:59:05.467979', DEFAULT, DEFAULT, DEFAULT)[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "hashtags" DISABLE TRIGGER ALL;ALTER TABLE "tweets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (2.4ms)[0m  [1m[31mDELETE FROM "hashtags";
+DELETE FROM "tweets";
+INSERT INTO "hashtags" ("id", "tag", "created_at", "updated_at") VALUES (980190962, 'hello_world', '2019-01-14 15:03:01', '2020-01-09 15:03:01'), (298486374, DEFAULT, '2020-01-10 02:59:45.693054', '2020-01-10 02:59:45.693054');
+INSERT INTO "tweets" ("id", "hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-10 02:59:45.700505', '2020-01-10 02:59:45.700505', DEFAULT, DEFAULT, DEFAULT), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-10 02:59:45.700505', '2020-01-10 02:59:45.700505', DEFAULT, DEFAULT, DEFAULT)[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "hashtags" DISABLE TRIGGER ALL;ALTER TABLE "tweets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (2.3ms)[0m  [1m[31mDELETE FROM "hashtags";
+DELETE FROM "tweets";
+INSERT INTO "hashtags" ("id", "tag", "created_at", "updated_at") VALUES (980190962, 'hello world', '2019-01-14 15:03:01', '2020-01-09 15:03:01'), (298486374, '#hashtag with spaces', '2020-01-10 03:01:33.225453', '2020-01-10 03:01:33.225453');
+INSERT INTO "tweets" ("id", "hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-10 03:01:33.234077', '2020-01-10 03:01:33.234077', DEFAULT, DEFAULT, DEFAULT), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-10 03:01:33.234077', '2020-01-10 03:01:33.234077', DEFAULT, DEFAULT, DEFAULT)[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "hashtags" DISABLE TRIGGER ALL;ALTER TABLE "tweets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.7ms)[0m  [1m[31mDELETE FROM "hashtags";
+DELETE FROM "tweets";
+INSERT INTO "hashtags" ("id", "tag", "created_at", "updated_at") VALUES (980190962, 'hello world', '2019-01-14 15:03:01', '2020-01-09 15:03:01'), (298486374, '#hashtag with spaces', '2019-01-14 15:03:01', '2020-01-09 15:03:01');
+INSERT INTO "tweets" ("id", "hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, '2020-01-10 03:02:06.531874', '2020-01-10 03:02:06.531874', DEFAULT, DEFAULT, DEFAULT), (298486374, DEFAULT, DEFAULT, DEFAULT, '2020-01-10 03:02:06.531874', '2020-01-10 03:02:06.531874', DEFAULT, DEFAULT, DEFAULT)[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "hashtags" DISABLE TRIGGER ALL;ALTER TABLE "tweets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.1ms)[0m  [1m[31mDELETE FROM "hashtags";
+DELETE FROM "tweets";
+INSERT INTO "hashtags" ("id", "tag", "created_at", "updated_at") VALUES (980190962, 'hello world', '2019-01-14 15:03:01', '2020-01-09 15:03:01'), (298486374, '#hashtag with spaces', '2019-01-14 15:03:01', '2020-01-09 15:03:01')[0m
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "hashtags" ENABLE TRIGGER ALL;ALTER TABLE "tweets" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------
+HashtagTest: test_tag_should_not_have_white_spaces
+--------------------------------------------------
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "hashtags" DISABLE TRIGGER ALL;ALTER TABLE "tweets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (0.9ms)[0m  [1m[31mDELETE FROM "hashtags";
+DELETE FROM "tweets";
+INSERT INTO "hashtags" ("id", "tag", "created_at", "updated_at") VALUES (980190962, 'hello world', '2019-01-14 15:03:01', '2020-01-09 15:03:01'), (298486374, '#hashtag with spaces', '2019-01-14 15:03:01', '2020-01-09 15:03:01')[0m
+  [1m[35m (31.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "hashtags" ENABLE TRIGGER ALL;ALTER TABLE "tweets" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------
+HashtagTest: test_tag_should_not_have_white_spaces
+--------------------------------------------------
+  [1m[36mHashtag Load (0.3ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "hashtags" DISABLE TRIGGER ALL;ALTER TABLE "tweets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "hashtags";
+DELETE FROM "tweets";
+INSERT INTO "hashtags" ("id", "tag", "created_at", "updated_at") VALUES (980190962, 'hello world', '2019-01-14 15:03:01', '2020-01-09 15:03:01'), (298486374, '#hashtag with spaces', '2019-01-14 15:03:01', '2020-01-09 15:03:01')[0m
+  [1m[35m (33.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "hashtags" ENABLE TRIGGER ALL;ALTER TABLE "tweets" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------
+HashtagTest: test_tag_should_not_have_white_spaces
+--------------------------------------------------
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "hashtags" DISABLE TRIGGER ALL;ALTER TABLE "tweets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "hashtags";
+DELETE FROM "tweets";
+INSERT INTO "hashtags" ("id", "tag", "created_at", "updated_at") VALUES (980190962, 'hello world', '2019-01-14 15:03:01', '2020-01-09 15:03:01'), (298486374, '#hashtag with spaces', '2019-01-14 15:03:01', '2020-01-09 15:03:01')[0m
+  [1m[35m (12.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "hashtags" ENABLE TRIGGER ALL;ALTER TABLE "tweets" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+---------------------------------
+TweetsTest: test_creating_a_Tweet
+---------------------------------
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------
+TweetsTest: test_destroying_a_Tweet
+-----------------------------------
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+---------------------------------
+TweetsTest: test_updating_a_Tweet
+---------------------------------
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------
+TweetsTest: test_visiting_the_index
+-----------------------------------
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (31.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (34.0ms)[0m  [1m[35mALTER TABLE "hashtags" DISABLE TRIGGER ALL;ALTER TABLE "tweets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (44.3ms)[0m  [1m[31mDELETE FROM "hashtags";
+DELETE FROM "tweets";
+INSERT INTO "hashtags" ("id", "tag", "created_at", "updated_at") VALUES (980190962, 'hello world', '2019-01-14 15:03:01', '2020-01-09 15:03:01'), (298486374, '#hashtag with spaces', '2019-01-14 15:03:01', '2020-01-09 15:03:01');
+INSERT INTO "tweets" ("id", "hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES (980190962, 1, 'Text description of a post #something', 'Fri Jan 13 19:01:08 +0000 2020', '2019-01-14 15:03:01', '2020-01-08 15:03:01', 'Little Jon', 'little_jon with space', 'url/for/photo_of_little_jon.jpg')[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "hashtags" ENABLE TRIGGER ALL;ALTER TABLE "tweets" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------
+TweetTest: test_screen_name_should_not_have_white_spaces
+--------------------------------------------------------
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------
+ListTweetsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------
+HashtagTest: test_tag_should_not_have_white_spaces
+--------------------------------------------------
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "hashtags" DISABLE TRIGGER ALL;ALTER TABLE "tweets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.1ms)[0m  [1m[31mDELETE FROM "hashtags";
+DELETE FROM "tweets";
+INSERT INTO "hashtags" ("id", "tag", "created_at", "updated_at") VALUES (980190962, 'hello world', '2019-01-14 15:03:01', '2020-01-09 15:03:01'), (298486374, '#hashtag with spaces', '2019-01-14 15:03:01', '2020-01-09 15:03:01');
+INSERT INTO "tweets" ("id", "hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES (980190962, 1, 'Text description of a post #something', 'Fri Jan 13 19:01:08 +0000 2020', '2019-01-14 15:03:01', '2020-01-08 15:03:01', 'Little Jon', 'little_jon with space', 'url/for/photo_of_little_jon.jpg')[0m
+  [1m[35m (36.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "hashtags" ENABLE TRIGGER ALL;ALTER TABLE "tweets" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------
+HashtagTest: test_tag_should_not_have_white_spaces
+--------------------------------------------------
+  [1m[36mHashtag Load (0.3ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------------------
+TweetTest: test_screen_name_should_not_have_white_spaces
+--------------------------------------------------------
+  [1m[36mTweet Load (0.5ms)[0m  [1m[34mSELECT  "tweets".* FROM "tweets" WHERE "tweets"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------
+ListTweetsControllerTest: test_should_get_index
+-----------------------------------------------
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m

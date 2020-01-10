@@ -12928,3 +12928,421 @@ Processing by HashtagsController#index as HTML
 Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for ::1 at 2020-01-10 16:40:21 -0300
+  [1m[35m (14.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/matbit/Documents/Projetos/MineTweet/mine-tweet/app/controllers/hashtags_controller.rb:12: syntax error, unexpected ':', expecting keyword_then or ';' or '\n'
+    if @hashtag:
+               ^
+/home/matbit/Documents/Projetos/MineTweet/mine-tweet/app/controllers/hashtags_controller.rb:99: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/hashtags_controller.rb:12: syntax error, unexpected ':', expecting keyword_then or ';' or '\n'
+app/controllers/hashtags_controller.rb:99: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/" for ::1 at 2020-01-10 16:41:39 -0300
+  
+ActionController::RoutingError (uninitialized constant ApplicationController::Error):
+  
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/hashtags_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2020-01-10 16:42:26 -0300
+  
+ActionController::RoutingError (uninitialized constant ApplicationController::Error):
+  
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/hashtags_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2020-01-10 16:43:24 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (33.6ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (70.9ms)
+Completed 200 OK in 1153ms (Views: 1051.1ms | ActiveRecord: 63.8ms)
+
+
+Started GET "/hashtags/new" for ::1 at 2020-01-10 16:43:30 -0300
+Processing by HashtagsController#new as HTML
+  Rendering hashtags/new.html.erb within layouts/application
+  Rendered hashtags/new.html.erb within layouts/application (62.7ms)
+Completed 200 OK in 118ms (Views: 99.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hashtags" for ::1 at 2020-01-10 16:43:43 -0300
+Processing by HashtagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jAvNRg+cNASBAZ/LavGTxL3UkenFx1O0w0dXSMCn98VAJjAtY7DM6pXz+Nj6AJORQ+AEgxxUkAZVAqNf0it4iQ==", "hashtag"=>{"tag"=>"#software development"}, "commit"=>"Save Hashtag"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:29
+  [1m[36mHashtag Create (86.0ms)[0m  [1m[32mINSERT INTO "hashtags" ("tag", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tag", "#software development"], ["created_at", "2020-01-10 19:43:43.270468"], ["updated_at", "2020-01-10 19:43:43.270468"]]
+  ↳ app/controllers/hashtags_controller.rb:29
+  [1m[35m (74.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:29
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (65.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 7], ["tweet_desc", "RT @Unidev: Do you know what to look for in a #software development company? https://t.co/WosgKHCzEd https://t.co/PqyfGmUol2"], ["date_post", "Fri Jan 10 19:23:27 +0000 2020"], ["created_at", "2020-01-10 19:43:44.461485"], ["updated_at", "2020-01-10 19:43:44.461485"], ["user_name", "Jennifer C."], ["user_screen_name", "JennyImpact"], ["url_img_user", "http://pbs.twimg.com/profile_images/609018010230222849/V4ZUWfSa_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 7], ["tweet_desc", "Do you know what to look for in a #software development company? https://t.co/WosgKHCzEd https://t.co/PqyfGmUol2"], ["date_post", "Fri Jan 10 19:01:01 +0000 2020"], ["created_at", "2020-01-10 19:43:44.551610"], ["updated_at", "2020-01-10 19:43:44.551610"], ["user_name", "UNIDEV"], ["user_screen_name", "Unidev"], ["url_img_user", "http://pbs.twimg.com/profile_images/684068432287895552/AVkkYN_f_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (13.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 7], ["tweet_desc", "RT @Websystemer: Software Development Practices as recommended by Gene Kim - https://t.co/5yGI8rhMdW\n\n #devops #devopspractice #software #s…"], ["date_post", "Fri Jan 10 18:58:48 +0000 2020"], ["created_at", "2020-01-10 19:43:44.570149"], ["updated_at", "2020-01-10 19:43:44.570149"], ["user_name", "Danny Wonda"], ["user_screen_name", "DanAlongE"], ["url_img_user", "http://pbs.twimg.com/profile_images/1166842455066578945/Ab19_tQi_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.1ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 7], ["tweet_desc", "RT @openteamsinc: MicroEJ is releasing studio V5 for fast open source embedded software development.\n\nhttps://t.co/mi4kjwMIUj\n#OpenSource #…"], ["date_post", "Fri Jan 10 18:01:02 +0000 2020"], ["created_at", "2020-01-10 19:43:44.586243"], ["updated_at", "2020-01-10 19:43:44.586243"], ["user_name", "#100daysOfCode"], ["user_screen_name", "codedailybot"], ["url_img_user", "http://pbs.twimg.com/profile_images/1204131757534171136/Hdf5uixg_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 7], ["tweet_desc", "MicroEJ is releasing studio V5 for fast open source embedded software development.\n\nhttps://t.co/mi4kjwMIUj… https://t.co/HLDjnWC7Oz"], ["date_post", "Fri Jan 10 18:00:41 +0000 2020"], ["created_at", "2020-01-10 19:43:44.604559"], ["updated_at", "2020-01-10 19:43:44.604559"], ["user_name", "OpenTeams"], ["user_screen_name", "openteamsinc"], ["url_img_user", "http://pbs.twimg.com/profile_images/1126170884656566272/kCrGF6IG_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 7], ["tweet_desc", "Samsung sets up anti-corruption panel as chief faces trials #innovation #science #blockchain #technology #edge… https://t.co/yl9FiBs7fV"], ["date_post", "Fri Jan 10 17:44:51 +0000 2020"], ["created_at", "2020-01-10 19:43:44.616276"], ["updated_at", "2020-01-10 19:43:44.616276"], ["user_name", "Richard Swart"], ["user_screen_name", "richardswart"], ["url_img_user", "http://pbs.twimg.com/profile_images/471467522365988864/Sw3cM3EV_normal.jpeg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 7], ["tweet_desc", "RT @ayokasystems: #Facebook critics torch the #software #development #company feature that allows users to see fewer #political advertising…"], ["date_post", "Fri Jan 10 17:41:36 +0000 2020"], ["created_at", "2020-01-10 19:43:44.631236"], ["updated_at", "2020-01-10 19:43:44.631236"], ["user_name", "Chad King"], ["user_screen_name", "chadoking"], ["url_img_user", "http://pbs.twimg.com/profile_images/3704467938/27a3603a07c5332ccd86b1a3e4c433e5_normal.jpeg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (10.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 7], ["tweet_desc", "RT @high_programmrr: It's true⠀\n----------------------------- ⠀ ⠀\n#developer #machinelearning #machine #ProgrammerHumor #Programmer #Develo…"], ["date_post", "Fri Jan 10 17:31:02 +0000 2020"], ["created_at", "2020-01-10 19:43:44.648897"], ["updated_at", "2020-01-10 19:43:44.648897"], ["user_name", "#100daysOfCode"], ["user_screen_name", "codedailybot"], ["url_img_user", "http://pbs.twimg.com/profile_images/1204131757534171136/Hdf5uixg_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 7], ["tweet_desc", "It's true⠀\n----------------------------- ⠀ ⠀\n#developer #machinelearning #machine #ProgrammerHumor #Programmer… https://t.co/ea9fH6pIKB"], ["date_post", "Fri Jan 10 17:29:30 +0000 2020"], ["created_at", "2020-01-10 19:43:44.675888"], ["updated_at", "2020-01-10 19:43:44.675888"], ["user_name", "TerminalBytes.com"], ["user_screen_name", "high_programmrr"], ["url_img_user", "http://pbs.twimg.com/profile_images/1103369941380710406/hum_cbaI_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 7], ["tweet_desc", "RT @avacadcam: Earlier this week we discussed at @heimtextil ,how our specialised software&amp;colour management solutions can benefit the prin…"], ["date_post", "Fri Jan 10 17:27:41 +0000 2020"], ["created_at", "2020-01-10 19:43:44.692838"], ["updated_at", "2020-01-10 19:43:44.692838"], ["user_name", "magnus mighall"], ["user_screen_name", "magnusmighall"], ["url_img_user", "http://pbs.twimg.com/profile_images/1576932375/Smart_Identity_main_with_web_address_small_for_sign_uk_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 7], ["tweet_desc", "RT @navarra54865041: #software \n #tools \n #sebastiandelavega \n #python3 \n #freelance \n #github \n Navarra Software Solutions \n Freelance Pyt…"], ["date_post", "Fri Jan 10 17:07:51 +0000 2020"], ["created_at", "2020-01-10 19:43:44.706073"], ["updated_at", "2020-01-10 19:43:44.706073"], ["user_name", "Mayur Shingote"], ["user_screen_name", "mayur_shingote"], ["url_img_user", "http://pbs.twimg.com/profile_images/950068518652755968/3Mp1PnIt_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 7], ["tweet_desc", "#coding #codingbootcamp #codmobile #coding #javascript #javaprogramming #html #css #css3 #python… https://t.co/EcKJpW634i"], ["date_post", "Fri Jan 10 16:49:54 +0000 2020"], ["created_at", "2020-01-10 19:43:44.723918"], ["updated_at", "2020-01-10 19:43:44.723918"], ["user_name", "Rajasikandar"], ["user_screen_name", "Rajasikandar361"], ["url_img_user", "http://pbs.twimg.com/profile_images/1175049142604898305/XIFWq__S_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 7], ["tweet_desc", "RT @totallynoob: Fluent In #Python T-Shirt\n#Backend #Coding #DataScience #Developer #Development #Engineer #Engineering #Fullstack #Funny #…"], ["date_post", "Fri Jan 10 16:46:02 +0000 2020"], ["created_at", "2020-01-10 19:43:44.738397"], ["updated_at", "2020-01-10 19:43:44.738397"], ["user_name", "#100daysOfCode"], ["user_screen_name", "codedailybot"], ["url_img_user", "http://pbs.twimg.com/profile_images/1204131757534171136/Hdf5uixg_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 7], ["tweet_desc", "Fluent In #Python T-Shirt\n#Backend #Coding #DataScience #Developer #Development #Engineer #Engineering #Fullstack… https://t.co/wIC6kwQmBo"], ["date_post", "Fri Jan 10 16:45:06 +0000 2020"], ["created_at", "2020-01-10 19:43:44.746738"], ["updated_at", "2020-01-10 19:43:44.746738"], ["user_name", "totallynoob.com"], ["user_screen_name", "totallynoob"], ["url_img_user", "http://pbs.twimg.com/profile_images/3259415733/4ad1abab54b802acf214afb59fb449f4_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 7], ["tweet_desc", "RT @Websystemer: Software Development Practices as recommended by Gene Kim - https://t.co/5yGI8rhMdW\n\n #devops #devopspractice #software #s…"], ["date_post", "Fri Jan 10 16:37:30 +0000 2020"], ["created_at", "2020-01-10 19:43:44.762286"], ["updated_at", "2020-01-10 19:43:44.762286"], ["user_name", "kripa shankar"], ["user_screen_name", "krishzen"], ["url_img_user", "http://pbs.twimg.com/profile_images/1198449693245628418/0myGJQg0_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+Redirected to http://localhost:3000/hashtags/7
+Completed 302 Found in 1513ms (ActiveRecord: 396.8ms)
+
+
+Started GET "/hashtags/7" for ::1 at 2020-01-10 16:43:44 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mHashtag Load (1.6ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (35.0ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 7]]
+  ↳ app/views/hashtags/show.html.erb:13
+  Rendered hashtags/show.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 104ms (Views: 33.5ms | ActiveRecord: 37.1ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-10 16:43:57 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.8ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 79ms (Views: 76.8ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/hashtags/7" for ::1 at 2020-01-10 16:47:32 -0300
+Processing by HashtagsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IZVE9pzTyrf/iWYd+Cb4uPMyHvrgjEk4AQ+4r5sAIDdjqYXH2NXtSNoIMpTetOpQdh3Qf4e+h80jKKzApvayjg==", "id"=>"7"}
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:62
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Load (0.7ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 7]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Destroy (0.5ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 176]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Destroy (0.8ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 177]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Destroy (0.9ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 178]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Destroy (0.8ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 179]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Destroy (1.1ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 180]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Destroy (1.2ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 181]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 182]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Destroy (0.9ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 183]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 184]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Destroy (0.8ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 185]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Destroy (1.4ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 186]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 187]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 188]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Destroy (0.7ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 189]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mTweet Destroy (0.6ms)[0m  [1m[31mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 190]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[36mHashtag Destroy (0.6ms)[0m  [1m[31mDELETE FROM "hashtags" WHERE "hashtags"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/hashtags_controller.rb:63
+  [1m[35m (54.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:63
+Redirected to http://localhost:3000/hashtags
+Completed 302 Found in 144ms (ActiveRecord: 82.6ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-10 16:47:32 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (0.6ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hashtags/new" for ::1 at 2020-01-10 16:47:33 -0300
+Processing by HashtagsController#new as HTML
+  Rendering hashtags/new.html.erb within layouts/application
+  Rendered hashtags/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 102ms (Views: 90.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hashtags" for ::1 at 2020-01-10 16:47:44 -0300
+Processing by HashtagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7Ef66r+24AgP+0rGsC6rSzSOeku0ZPK0neIrl+lVH9MgageB05oY5hsJLdUg36seyrrvIW33MQYLp9+A+9mQnw==", "hashtag"=>{"tag"=>"#software development"}, "commit"=>"Save Hashtag"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hashtags_controller.rb:29
+  [1m[36mHashtag Create (0.5ms)[0m  [1m[32mINSERT INTO "hashtags" ("tag", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tag", "#software development"], ["created_at", "2020-01-10 19:47:44.195847"], ["updated_at", "2020-01-10 19:47:44.195847"]]
+  ↳ app/controllers/hashtags_controller.rb:29
+  [1m[35m (38.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hashtags_controller.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.3ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 8], ["tweet_desc", "RT @Unidev: Do you know what to look for in a #software development company? https://t.co/WosgKHCzEd https://t.co/PqyfGmUol2"], ["date_post", "Fri Jan 10 19:23:27 +0000 2020"], ["created_at", "2020-01-10 19:47:45.066698"], ["updated_at", "2020-01-10 19:47:45.066698"], ["user_name", "Jennifer C."], ["user_screen_name", "JennyImpact"], ["url_img_user", "http://pbs.twimg.com/profile_images/609018010230222849/V4ZUWfSa_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (53.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.5ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 8], ["tweet_desc", "Do you know what to look for in a #software development company? https://t.co/WosgKHCzEd https://t.co/PqyfGmUol2"], ["date_post", "Fri Jan 10 19:01:01 +0000 2020"], ["created_at", "2020-01-10 19:47:45.126455"], ["updated_at", "2020-01-10 19:47:45.126455"], ["user_name", "UNIDEV"], ["user_screen_name", "Unidev"], ["url_img_user", "http://pbs.twimg.com/profile_images/684068432287895552/AVkkYN_f_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (15.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 8], ["tweet_desc", "RT @Websystemer: Software Development Practices as recommended by Gene Kim - https://t.co/5yGI8rhMdW\n\n #devops #devopspractice #software #s…"], ["date_post", "Fri Jan 10 18:58:48 +0000 2020"], ["created_at", "2020-01-10 19:47:45.146141"], ["updated_at", "2020-01-10 19:47:45.146141"], ["user_name", "Danny Wonda"], ["user_screen_name", "DanAlongE"], ["url_img_user", "http://pbs.twimg.com/profile_images/1166842455066578945/Ab19_tQi_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 8], ["tweet_desc", "RT @openteamsinc: MicroEJ is releasing studio V5 for fast open source embedded software development.\n\nhttps://t.co/mi4kjwMIUj\n#OpenSource #…"], ["date_post", "Fri Jan 10 18:01:02 +0000 2020"], ["created_at", "2020-01-10 19:47:45.157510"], ["updated_at", "2020-01-10 19:47:45.157510"], ["user_name", "#100daysOfCode"], ["user_screen_name", "codedailybot"], ["url_img_user", "http://pbs.twimg.com/profile_images/1204131757534171136/Hdf5uixg_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.2ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 8], ["tweet_desc", "MicroEJ is releasing studio V5 for fast open source embedded software development.\n\nhttps://t.co/mi4kjwMIUj… https://t.co/HLDjnWC7Oz"], ["date_post", "Fri Jan 10 18:00:41 +0000 2020"], ["created_at", "2020-01-10 19:47:45.173447"], ["updated_at", "2020-01-10 19:47:45.173447"], ["user_name", "OpenTeams"], ["user_screen_name", "openteamsinc"], ["url_img_user", "http://pbs.twimg.com/profile_images/1126170884656566272/kCrGF6IG_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (11.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (2.9ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 8], ["tweet_desc", "Samsung sets up anti-corruption panel as chief faces trials #innovation #science #blockchain #technology #edge… https://t.co/yl9FiBs7fV"], ["date_post", "Fri Jan 10 17:44:51 +0000 2020"], ["created_at", "2020-01-10 19:47:45.191037"], ["updated_at", "2020-01-10 19:47:45.191037"], ["user_name", "Richard Swart"], ["user_screen_name", "richardswart"], ["url_img_user", "http://pbs.twimg.com/profile_images/471467522365988864/Sw3cM3EV_normal.jpeg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (12.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 8], ["tweet_desc", "RT @ayokasystems: #Facebook critics torch the #software #development #company feature that allows users to see fewer #political advertising…"], ["date_post", "Fri Jan 10 17:41:36 +0000 2020"], ["created_at", "2020-01-10 19:47:45.214136"], ["updated_at", "2020-01-10 19:47:45.214136"], ["user_name", "Chad King"], ["user_screen_name", "chadoking"], ["url_img_user", "http://pbs.twimg.com/profile_images/3704467938/27a3603a07c5332ccd86b1a3e4c433e5_normal.jpeg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 8], ["tweet_desc", "RT @high_programmrr: It's true⠀\n----------------------------- ⠀ ⠀\n#developer #machinelearning #machine #ProgrammerHumor #Programmer #Develo…"], ["date_post", "Fri Jan 10 17:31:02 +0000 2020"], ["created_at", "2020-01-10 19:47:45.223666"], ["updated_at", "2020-01-10 19:47:45.223666"], ["user_name", "#100daysOfCode"], ["user_screen_name", "codedailybot"], ["url_img_user", "http://pbs.twimg.com/profile_images/1204131757534171136/Hdf5uixg_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (1.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 8], ["tweet_desc", "It's true⠀\n----------------------------- ⠀ ⠀\n#developer #machinelearning #machine #ProgrammerHumor #Programmer… https://t.co/ea9fH6pIKB"], ["date_post", "Fri Jan 10 17:29:30 +0000 2020"], ["created_at", "2020-01-10 19:47:45.235166"], ["updated_at", "2020-01-10 19:47:45.235166"], ["user_name", "TerminalBytes.com"], ["user_screen_name", "high_programmrr"], ["url_img_user", "http://pbs.twimg.com/profile_images/1103369941380710406/hum_cbaI_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 8], ["tweet_desc", "RT @avacadcam: Earlier this week we discussed at @heimtextil ,how our specialised software&amp;colour management solutions can benefit the prin…"], ["date_post", "Fri Jan 10 17:27:41 +0000 2020"], ["created_at", "2020-01-10 19:47:45.245296"], ["updated_at", "2020-01-10 19:47:45.245296"], ["user_name", "magnus mighall"], ["user_screen_name", "magnusmighall"], ["url_img_user", "http://pbs.twimg.com/profile_images/1576932375/Smart_Identity_main_with_web_address_small_for_sign_uk_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 8], ["tweet_desc", "RT @navarra54865041: #software \n #tools \n #sebastiandelavega \n #python3 \n #freelance \n #github \n Navarra Software Solutions \n Freelance Pyt…"], ["date_post", "Fri Jan 10 17:07:51 +0000 2020"], ["created_at", "2020-01-10 19:47:45.262428"], ["updated_at", "2020-01-10 19:47:45.262428"], ["user_name", "Mayur Shingote"], ["user_screen_name", "mayur_shingote"], ["url_img_user", "http://pbs.twimg.com/profile_images/950068518652755968/3Mp1PnIt_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (13.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 8], ["tweet_desc", "#coding #codingbootcamp #codmobile #coding #javascript #javaprogramming #html #css #css3 #python… https://t.co/EcKJpW634i"], ["date_post", "Fri Jan 10 16:49:54 +0000 2020"], ["created_at", "2020-01-10 19:47:45.281881"], ["updated_at", "2020-01-10 19:47:45.281881"], ["user_name", "Rajasikandar"], ["user_screen_name", "Rajasikandar361"], ["url_img_user", "http://pbs.twimg.com/profile_images/1175049142604898305/XIFWq__S_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.6ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 8], ["tweet_desc", "RT @totallynoob: Fluent In #Python T-Shirt\n#Backend #Coding #DataScience #Developer #Development #Engineer #Engineering #Fullstack #Funny #…"], ["date_post", "Fri Jan 10 16:46:02 +0000 2020"], ["created_at", "2020-01-10 19:47:45.291543"], ["updated_at", "2020-01-10 19:47:45.291543"], ["user_name", "#100daysOfCode"], ["user_screen_name", "codedailybot"], ["url_img_user", "http://pbs.twimg.com/profile_images/1204131757534171136/Hdf5uixg_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.7ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 8], ["tweet_desc", "Fluent In #Python T-Shirt\n#Backend #Coding #DataScience #Developer #Development #Engineer #Engineering #Fullstack… https://t.co/wIC6kwQmBo"], ["date_post", "Fri Jan 10 16:45:06 +0000 2020"], ["created_at", "2020-01-10 19:47:45.305274"], ["updated_at", "2020-01-10 19:47:45.305274"], ["user_name", "totallynoob.com"], ["user_screen_name", "totallynoob"], ["url_img_user", "http://pbs.twimg.com/profile_images/3259415733/4ad1abab54b802acf214afb59fb449f4_normal.png"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (13.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/services/search_api_service.rb:37
+  [1m[36mTweet Create (0.8ms)[0m  [1m[32mINSERT INTO "tweets" ("hashtag_id", "tweet_desc", "date_post", "created_at", "updated_at", "user_name", "user_screen_name", "url_img_user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["hashtag_id", 8], ["tweet_desc", "RT @Websystemer: Software Development Practices as recommended by Gene Kim - https://t.co/5yGI8rhMdW\n\n #devops #devopspractice #software #s…"], ["date_post", "Fri Jan 10 16:37:30 +0000 2020"], ["created_at", "2020-01-10 19:47:45.324073"], ["updated_at", "2020-01-10 19:47:45.324073"], ["user_name", "kripa shankar"], ["user_screen_name", "krishzen"], ["url_img_user", "http://pbs.twimg.com/profile_images/1198449693245628418/0myGJQg0_normal.jpg"]]
+  ↳ app/services/search_api_service.rb:37
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/services/search_api_service.rb:37
+Redirected to http://localhost:3000/hashtags/8
+Completed 302 Found in 1145ms (ActiveRecord: 241.3ms)
+
+
+Started GET "/hashtags/8" for ::1 at 2020-01-10 16:47:45 -0300
+Processing by HashtagsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mHashtag Load (0.7ms)[0m  [1m[34mSELECT  "hashtags".* FROM "hashtags" WHERE "hashtags"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/hashtags_controller.rb:10
+  Rendering hashtags/show.html.erb within layouts/application
+  [1m[36mTweet Load (0.8ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."hashtag_id" = $1[0m  [["hashtag_id", 8]]
+  ↳ app/views/hashtags/show.html.erb:13
+  Rendered hashtags/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 51ms (Views: 46.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/hashtags" for ::1 at 2020-01-10 16:47:49 -0300
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (1.3ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 70ms (Views: 67.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-01-10 17:53:51 -0300
+  
+PG::ConnectionBad (could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+):
+  
+pg (0.18.4) lib/pg.rb:45:in `initialize'
+pg (0.18.4) lib/pg.rb:45:in `new'
+pg (0.18.4) lib/pg.rb:45:in `connect'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.4.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.4.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.4.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.8) lib/rack/method_override.rb:22:in `call'
+rack (2.0.8) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.8) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-01-10 17:54:20 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by HashtagsController#index as HTML
+  Rendering hashtags/index.html.erb within layouts/application
+  [1m[36mHashtag Load (2.2ms)[0m  [1m[34mSELECT "hashtags".* FROM "hashtags"[0m
+  ↳ app/views/hashtags/index.html.erb:27
+  Rendered hashtags/index.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 359ms (Views: 330.8ms | ActiveRecord: 11.7ms)
+
+

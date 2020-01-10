@@ -21,6 +21,10 @@ class HashtagsController < ApplicationController
     if @hashtag.tag[0] != '#'
       @hashtag.tag = '#' + @hashtag.tag
     end
+    
+    if @hashtag.tag.match(/\S\s+/)
+      @hashtag.tag = @hashtag.tag.strip
+    end
 
     @hashtag.save
 
