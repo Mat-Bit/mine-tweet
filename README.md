@@ -69,6 +69,10 @@ Arter, run the command that you up the application:
 
 In the main directory of application, run:
 
+`bundle install`
+
+And finally, to run the app execute:
+
 `rails server` or `rails s`
 
 If all occurred well, the application will up at this address: <http://localhost:3000/>
